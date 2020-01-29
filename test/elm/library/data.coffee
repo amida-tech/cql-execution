@@ -42,28 +42,46 @@ module.exports['In Age Demographic'] = {
             "localId" : "11",
             "name" : "MeasurementPeriod",
             "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "default" : {
                "localId" : "10",
                "lowClosed" : true,
                "highClosed" : false,
                "type" : "Interval",
+               "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "low" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2013",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -71,21 +89,25 @@ module.exports['In Age Demographic'] = {
                },
                "high" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2014",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -108,6 +130,7 @@ module.exports['In Age Demographic'] = {
             }
          }, {
             "localId" : "23",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "InDemographic",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -173,12 +196,15 @@ module.exports['In Age Demographic'] = {
             } ],
             "expression" : {
                "localId" : "22",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "And",
                "operand" : [ {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "GreaterOrEqual",
                   "operand" : [ {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Year",
                      "type" : "CalculateAgeAt",
                      "operand" : [ {
@@ -190,24 +216,35 @@ module.exports['In Age Demographic'] = {
                         }
                      }, {
                         "localId" : "13",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "type" : "Start",
                         "operand" : {
                            "localId" : "12",
                            "name" : "MeasurementPeriod",
-                           "type" : "ParameterRef"
+                           "type" : "ParameterRef",
+                           "resultTypeSpecifier" : {
+                              "type" : "IntervalTypeSpecifier",
+                              "pointType" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
                         }
                      } ]
                   }, {
                      "localId" : "15",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   } ]
                }, {
                   "localId" : "21",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Less",
                   "operand" : [ {
                      "localId" : "19",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Year",
                      "type" : "CalculateAgeAt",
                      "operand" : [ {
@@ -219,15 +256,24 @@ module.exports['In Age Demographic'] = {
                         }
                      }, {
                         "localId" : "18",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "type" : "Start",
                         "operand" : {
                            "localId" : "17",
                            "name" : "MeasurementPeriod",
-                           "type" : "ParameterRef"
+                           "type" : "ParameterRef",
+                           "resultTypeSpecifier" : {
+                              "type" : "IntervalTypeSpecifier",
+                              "pointType" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
                         }
                      } ]
                   }, {
                      "localId" : "20",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "18",
                      "type" : "Literal"
@@ -292,28 +338,46 @@ module.exports['CommonLib'] = {
             "localId" : "15",
             "name" : "MeasurementPeriod",
             "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "default" : {
                "localId" : "14",
                "lowClosed" : true,
                "highClosed" : false,
                "type" : "Interval",
+               "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "low" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2013",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -321,21 +385,25 @@ module.exports['CommonLib'] = {
                },
                "high" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "10",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2014",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -349,19 +417,34 @@ module.exports['CommonLib'] = {
             "localId" : "3",
             "name" : "SNOMEDCT",
             "id" : "2.16.840.1.113883.6.96",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "codes" : {
          "def" : [ {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "directReferenceCode",
             "id" : "428371000124100",
             "display" : "directReferenceCode",
             "accessLevel" : "Public",
             "codeSystem" : {
                "localId" : "4",
-               "name" : "SNOMEDCT"
+               "name" : "SNOMEDCT",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       },
@@ -379,6 +462,7 @@ module.exports['CommonLib'] = {
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "InDemographic",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -444,12 +528,15 @@ module.exports['CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "And",
                "operand" : [ {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "GreaterOrEqual",
                   "operand" : [ {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Year",
                      "type" : "CalculateAgeAt",
                      "operand" : [ {
@@ -461,24 +548,35 @@ module.exports['CommonLib'] = {
                         }
                      }, {
                         "localId" : "17",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "type" : "Start",
                         "operand" : {
                            "localId" : "16",
                            "name" : "MeasurementPeriod",
-                           "type" : "ParameterRef"
+                           "type" : "ParameterRef",
+                           "resultTypeSpecifier" : {
+                              "type" : "IntervalTypeSpecifier",
+                              "pointType" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
                         }
                      } ]
                   }, {
                      "localId" : "19",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   } ]
                }, {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Less",
                   "operand" : [ {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Year",
                      "type" : "CalculateAgeAt",
                      "operand" : [ {
@@ -490,15 +588,24 @@ module.exports['CommonLib'] = {
                         }
                      }, {
                         "localId" : "22",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "type" : "Start",
                         "operand" : {
                            "localId" : "21",
                            "name" : "MeasurementPeriod",
-                           "type" : "ParameterRef"
+                           "type" : "ParameterRef",
+                           "resultTypeSpecifier" : {
+                              "type" : "IntervalTypeSpecifier",
+                              "pointType" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
                         }
                      } ]
                   }, {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "18",
                      "type" : "Literal"
@@ -507,6 +614,7 @@ module.exports['CommonLib'] = {
             }
          }, {
             "localId" : "33",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -554,13 +662,16 @@ module.exports['CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "32",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "a",
                   "type" : "OperandRef"
                }, {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "b",
                   "type" : "OperandRef"
                } ]
@@ -569,6 +680,7 @@ module.exports['CommonLib'] = {
                "name" : "a",
                "operandTypeSpecifier" : {
                   "localId" : "28",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
@@ -576,12 +688,14 @@ module.exports['CommonLib'] = {
                "name" : "b",
                "operandTypeSpecifier" : {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
             "localId" : "42",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "SupportLibDef",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -651,23 +765,28 @@ module.exports['CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "41",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "38",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "Add",
                   "operand" : [ {
                      "localId" : "35",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "TheParameter",
                      "libraryName" : "common2",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "TwoPlusOne",
                      "libraryName" : "common2",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "40",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "TwoTimesThree",
                   "libraryName" : "common2",
                   "type" : "ExpressionRef"
@@ -726,28 +845,46 @@ module.exports['Using CommonLib'] = {
             "localId" : "12",
             "name" : "MeasurementPeriod",
             "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "default" : {
                "localId" : "11",
                "lowClosed" : true,
                "highClosed" : false,
                "type" : "Interval",
+               "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "low" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2013",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -755,21 +892,25 @@ module.exports['Using CommonLib'] = {
                },
                "high" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2014",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -792,6 +933,7 @@ module.exports['Using CommonLib'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ID",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -821,12 +963,14 @@ module.exports['Using CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "InDemographic",
                "libraryName" : "common",
                "type" : "ExpressionRef"
             }
          }, {
             "localId" : "24",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "L",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -885,28 +1029,47 @@ module.exports['Using CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "23",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Length",
                "operand" : {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "type" : "Indexer",
                   "operand" : [ {
                      "localId" : "20",
                      "path" : "given",
                      "type" : "Property",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "source" : {
                         "localId" : "19",
+                        "resultTypeName" : "{http://hl7.org/fhir}HumanName",
                         "type" : "Indexer",
                         "operand" : [ {
                            "localId" : "17",
                            "path" : "name",
                            "type" : "Property",
+                           "resultTypeSpecifier" : {
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "name" : "{http://hl7.org/fhir}HumanName",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           },
                            "source" : {
                               "localId" : "16",
+                              "resultTypeName" : "{http://hl7.org/fhir}Patient",
                               "name" : "Patient",
                               "type" : "ExpressionRef"
                            }
                         }, {
                            "localId" : "18",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "0",
                            "type" : "Literal"
@@ -914,6 +1077,7 @@ module.exports['Using CommonLib'] = {
                      }
                   }, {
                      "localId" : "21",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -922,6 +1086,7 @@ module.exports['Using CommonLib'] = {
             }
          }, {
             "localId" : "29",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FuncTest",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -952,16 +1117,19 @@ module.exports['Using CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "28",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "foo",
                "libraryName" : "common",
                "type" : "FunctionRef",
                "operand" : [ {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
                }, {
                   "localId" : "27",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
@@ -969,6 +1137,7 @@ module.exports['Using CommonLib'] = {
             }
          }, {
             "localId" : "32",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "supportLibCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -998,6 +1167,7 @@ module.exports['Using CommonLib'] = {
             } ],
             "expression" : {
                "localId" : "31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "directReferenceCode",
                "libraryName" : "common",
                "type" : "CodeRef"
@@ -1064,10 +1234,12 @@ module.exports['CommonLib2'] = {
       "parameters" : {
          "def" : [ {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "SomeNumber",
             "accessLevel" : "Public",
             "default" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "17",
                "type" : "Literal"
@@ -1088,6 +1260,7 @@ module.exports['CommonLib2'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "TheParameter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1107,11 +1280,13 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "SomeNumber",
                "type" : "ParameterRef"
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "addToParameter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1152,13 +1327,16 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "SomeNumber",
                   "type" : "ParameterRef"
                }, {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "a",
                   "type" : "OperandRef"
                } ]
@@ -1167,12 +1345,14 @@ module.exports['CommonLib2'] = {
                "name" : "a",
                "operandTypeSpecifier" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "multiply",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1220,13 +1400,16 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "a",
                   "type" : "OperandRef"
                }, {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "b",
                   "type" : "OperandRef"
                } ]
@@ -1235,6 +1418,7 @@ module.exports['CommonLib2'] = {
                "name" : "a",
                "operandTypeSpecifier" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
@@ -1242,12 +1426,14 @@ module.exports['CommonLib2'] = {
                "name" : "b",
                "operandTypeSpecifier" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "square",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1292,14 +1478,17 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "multiply",
                "type" : "FunctionRef",
                "operand" : [ {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "a",
                   "type" : "OperandRef"
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "a",
                   "type" : "OperandRef"
                } ]
@@ -1308,12 +1497,14 @@ module.exports['CommonLib2'] = {
                "name" : "a",
                "operandTypeSpecifier" : {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
             "localId" : "25",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "TwoTimesThree",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1334,15 +1525,18 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "24",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "multiply",
                "type" : "FunctionRef",
                "operand" : [ {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
                }, {
                   "localId" : "23",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
@@ -1350,6 +1544,7 @@ module.exports['CommonLib2'] = {
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Two",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1365,12 +1560,14 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "2",
                "type" : "Literal"
             }
          }, {
             "localId" : "32",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "addTwo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1411,13 +1608,16 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "a",
                   "type" : "OperandRef"
                }, {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Two",
                   "type" : "ExpressionRef"
                } ]
@@ -1426,12 +1626,14 @@ module.exports['CommonLib2'] = {
                "name" : "a",
                "operandTypeSpecifier" : {
                   "localId" : "28",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
             "localId" : "36",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "TwoPlusOne",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1457,13 +1659,16 @@ module.exports['CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "35",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "33",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Two",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "34",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -1551,37 +1756,82 @@ module.exports['CommonLib2'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "N",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "51",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "N",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "43",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "42",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "37",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
                      }, {
                         "localId" : "38",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "39",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "40",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "5",
                         "type" : "Literal"
                      }, {
                         "localId" : "41",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
@@ -1591,13 +1841,37 @@ module.exports['CommonLib2'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "46",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "N",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "45",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "N",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "N",
                         "value" : {
                            "localId" : "44",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "name" : "N",
                            "type" : "AliasRef"
                         }
@@ -1608,14 +1882,17 @@ module.exports['CommonLib2'] = {
                   "localId" : "50",
                   "by" : [ {
                      "localId" : "49",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "direction" : "asc",
                      "type" : "ByExpression",
                      "expression" : {
                         "localId" : "48",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "name" : "square",
                         "type" : "FunctionRef",
                         "operand" : [ {
                            "localId" : "47",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "name" : "N",
                            "type" : "IdentifierRef"
                         } ]
@@ -1686,6 +1963,7 @@ module.exports['Using CommonLib2'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "ExprUsesParam",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1715,12 +1993,14 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "TheParameter",
                "libraryName" : "common2",
                "type" : "ExpressionRef"
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "ExprUsesParamDirectly",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1750,12 +2030,14 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "SomeNumber",
                "libraryName" : "common2",
                "type" : "ParameterRef"
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FuncUsesParam",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1786,11 +2068,13 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "addToParameter",
                "libraryName" : "common2",
                "type" : "FunctionRef",
                "operand" : [ {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
@@ -1798,6 +2082,7 @@ module.exports['Using CommonLib2'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "ExprCallsFunc",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1827,12 +2112,14 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "TwoTimesThree",
                "libraryName" : "common2",
                "type" : "ExpressionRef"
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FuncCallsFunc",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1863,11 +2150,13 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "square",
                "libraryName" : "common2",
                "type" : "FunctionRef",
                "operand" : [ {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
@@ -1875,6 +2164,7 @@ module.exports['Using CommonLib2'] = {
             }
          }, {
             "localId" : "22",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "ExprUsesExpr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1904,12 +2194,14 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "21",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "TwoPlusOne",
                "libraryName" : "common2",
                "type" : "ExpressionRef"
             }
          }, {
             "localId" : "26",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FuncUsesExpr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1940,11 +2232,13 @@ module.exports['Using CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "25",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "addTwo",
                "libraryName" : "common2",
                "type" : "FunctionRef",
                "operand" : [ {
                   "localId" : "24",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
@@ -1979,11 +2273,37 @@ module.exports['Using CommonLib2'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "N",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "28",
                "name" : "SortUsingFunction",
                "libraryName" : "common2",
-               "type" : "ExpressionRef"
+               "type" : "ExpressionRef",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "N",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               }
             }
          } ]
       }
@@ -2047,6 +2367,7 @@ module.exports['Using CommonLib and CommonLib2'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "testCommonLib",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2076,6 +2397,7 @@ module.exports['Using CommonLib and CommonLib2'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "name" : "SupportLibDef",
                "libraryName" : "common",
                "type" : "ExpressionRef"
@@ -2109,11 +2431,37 @@ module.exports['Using CommonLib and CommonLib2'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "N",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "8",
                "name" : "SortUsingFunction",
                "libraryName" : "common2",
-               "type" : "ExpressionRef"
+               "type" : "ExpressionRef",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "N",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               }
             }
          } ]
       }

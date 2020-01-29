@@ -49,6 +49,7 @@ module.exports['Date'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "Year",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -69,9 +70,11 @@ module.exports['Date'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2012",
                   "type" : "Literal"
@@ -79,6 +82,7 @@ module.exports['Date'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "Month",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -99,15 +103,18 @@ module.exports['Date'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2012",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -115,6 +122,7 @@ module.exports['Date'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "Day",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -135,21 +143,25 @@ module.exports['Date'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2012",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "15",
                   "type" : "Literal"
@@ -211,6 +223,7 @@ module.exports['DateComponentFrom'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "IdesOfMarch",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -231,21 +244,25 @@ module.exports['DateComponentFrom'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2000",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "15",
                   "type" : "Literal"
@@ -253,6 +270,7 @@ module.exports['DateComponentFrom'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Year",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -277,16 +295,19 @@ module.exports['DateComponentFrom'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "DateTimeComponentFrom",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "IdesOfMarch",
                   "type" : "ExpressionRef"
                }
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Month",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -311,16 +332,19 @@ module.exports['DateComponentFrom'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Month",
                "type" : "DateTimeComponentFrom",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "IdesOfMarch",
                   "type" : "ExpressionRef"
                }
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Day",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -345,16 +369,19 @@ module.exports['DateComponentFrom'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Day",
                "type" : "DateTimeComponentFrom",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "IdesOfMarch",
                   "type" : "ExpressionRef"
                }
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "ImpreciseIdesOfMarch",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -375,15 +402,18 @@ module.exports['DateComponentFrom'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2000",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
@@ -456,17 +486,63 @@ module.exports['DateComponentFrom'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "TupleTypeSpecifier",
+               "element" : [ {
+                  "name" : "Year",
+                  "type" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "name" : "Month",
+                  "type" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "name" : "Day",
+                  "type" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ]
+            },
             "expression" : {
                "localId" : "26",
                "type" : "Tuple",
+               "resultTypeSpecifier" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "Year",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "Month",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "Day",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
                "element" : [ {
                   "name" : "Year",
                   "value" : {
                      "localId" : "21",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Year",
                      "type" : "DateTimeComponentFrom",
                      "operand" : {
                         "localId" : "20",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                         "name" : "ImpreciseIdesOfMarch",
                         "type" : "ExpressionRef"
                      }
@@ -475,10 +551,12 @@ module.exports['DateComponentFrom'] = {
                   "name" : "Month",
                   "value" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Month",
                      "type" : "DateTimeComponentFrom",
                      "operand" : {
                         "localId" : "22",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                         "name" : "ImpreciseIdesOfMarch",
                         "type" : "ExpressionRef"
                      }
@@ -487,10 +565,12 @@ module.exports['DateComponentFrom'] = {
                   "name" : "Day",
                   "value" : {
                      "localId" : "25",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "precision" : "Day",
                      "type" : "DateTimeComponentFrom",
                      "operand" : {
                         "localId" : "24",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                         "name" : "ImpreciseIdesOfMarch",
                         "type" : "ExpressionRef"
                      }
@@ -499,6 +579,7 @@ module.exports['DateComponentFrom'] = {
             }
          }, {
             "localId" : "32",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "NullDate",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -536,18 +617,22 @@ module.exports['DateComponentFrom'] = {
             } ],
             "expression" : {
                "localId" : "31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "DateTimeComponentFrom",
                "operand" : {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "29",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -611,6 +696,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -643,46 +729,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -691,6 +786,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NotSameYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -723,46 +819,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -771,6 +876,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -803,46 +909,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "26",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -851,6 +966,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NotSameMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -883,46 +999,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -931,6 +1056,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameMonthWrongYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -963,46 +1089,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -1011,6 +1146,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "61",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1043,46 +1179,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "60",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "55",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "59",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "57",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "58",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -1091,6 +1236,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "71",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NotSameDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1123,46 +1269,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "70",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "65",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "69",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "68",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -1171,6 +1326,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDayWrongMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1203,46 +1359,55 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "80",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "75",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "73",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "74",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "76",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -1251,6 +1416,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "91",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Same",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1283,45 +1449,54 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "90",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "82",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "89",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "86",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "87",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "88",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -1330,6 +1505,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "101",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NotSame",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1362,45 +1538,54 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "100",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "95",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "92",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "93",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "94",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "99",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "96",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "97",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "98",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -1409,6 +1594,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "108",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullLeft",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1435,31 +1621,37 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "107",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameAs",
                "operand" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "As",
                   "operand" : {
                      "localId" : "102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "106",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "103",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "104",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "105",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -1468,6 +1660,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "117",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullRight",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1512,38 +1705,46 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "116",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "112",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "109",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "110",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "111",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "115",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "113",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -1551,6 +1752,7 @@ module.exports['SameAs'] = {
             }
          }, {
             "localId" : "123",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullBoth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1589,17 +1791,21 @@ module.exports['SameAs'] = {
             } ],
             "expression" : {
                "localId" : "122",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameAs",
                "operand" : [ {
                   "localId" : "120",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "118",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "119",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -1608,6 +1814,7 @@ module.exports['SameAs'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "121",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
@@ -1678,6 +1885,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1710,46 +1918,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -1758,6 +1975,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1790,46 +2008,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1999",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -1838,6 +2065,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1870,46 +2098,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "26",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -1918,6 +2155,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1950,46 +2188,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -1998,6 +2245,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2030,46 +2278,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -2078,6 +2335,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "61",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2110,46 +2368,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "60",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "55",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "59",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "57",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "58",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -2158,6 +2425,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "71",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2190,46 +2458,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "70",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "65",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "69",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "68",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -2238,6 +2515,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2270,46 +2548,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "80",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "75",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "73",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "74",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "76",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
@@ -2318,6 +2605,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "91",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2350,46 +2638,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "90",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "82",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "89",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "86",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "87",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "88",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -2398,6 +2695,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "101",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Same",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2430,45 +2728,54 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "100",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "95",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "92",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "93",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "94",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "99",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "96",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "97",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "98",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -2477,6 +2784,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "111",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "After",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2509,45 +2817,54 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "110",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "105",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "103",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "104",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "109",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "106",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "107",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "108",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -2556,6 +2873,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "121",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Before",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2588,45 +2906,54 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "120",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "115",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "112",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "113",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "119",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "116",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "117",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "118",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -2635,6 +2962,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "131",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDayMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2667,46 +2995,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "130",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "125",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "122",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "123",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "124",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "129",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "126",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "127",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "128",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -2715,6 +3052,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "141",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayAfterMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2747,46 +3085,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "140",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "135",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "132",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "133",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "134",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "139",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "136",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "137",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "138",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
@@ -2795,6 +3142,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "151",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayBeforeMonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2827,46 +3175,55 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "150",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "145",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "142",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "143",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "144",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "149",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "146",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "147",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "148",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -2875,6 +3232,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "160",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2907,40 +3265,48 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "159",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "155",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "152",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "153",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "154",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "158",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "156",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "157",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
@@ -2949,6 +3315,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "169",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2981,40 +3348,48 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "168",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "164",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "161",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "162",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "163",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "167",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "165",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "166",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -3023,6 +3398,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "178",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3055,40 +3431,48 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "177",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "173",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "170",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "171",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "172",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "176",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "174",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "175",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
@@ -3097,6 +3481,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "185",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullLeft",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3123,31 +3508,37 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "184",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "As",
                   "operand" : {
                      "localId" : "179",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "183",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "180",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "181",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "182",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -3156,6 +3547,7 @@ module.exports['SameOrAfter'] = {
             }
          }, {
             "localId" : "192",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullRight",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3182,24 +3574,29 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "191",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "189",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "186",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "187",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "188",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -3209,12 +3606,14 @@ module.exports['SameOrAfter'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "190",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
             }
          }, {
             "localId" : "198",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullBoth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3253,17 +3652,21 @@ module.exports['SameOrAfter'] = {
             } ],
             "expression" : {
                "localId" : "197",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrAfter",
                "operand" : [ {
                   "localId" : "195",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "193",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "194",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -3272,6 +3675,7 @@ module.exports['SameOrAfter'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "196",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
@@ -3342,6 +3746,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3374,46 +3779,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -3422,6 +3836,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3454,46 +3869,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1999",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -3502,6 +3926,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3534,46 +3959,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "26",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -3582,6 +4016,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3614,46 +4049,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -3662,6 +4106,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3694,46 +4139,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -3742,6 +4196,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "61",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3774,46 +4229,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "60",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "55",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "59",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "57",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "58",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -3822,6 +4286,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "71",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3854,46 +4319,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "70",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "65",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "69",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "68",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -3902,6 +4376,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3934,46 +4409,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "80",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "75",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "73",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "74",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "76",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
@@ -3982,6 +4466,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "91",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4014,46 +4499,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "90",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "82",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "89",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "86",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "87",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "88",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -4062,6 +4556,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "101",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Same",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4094,45 +4589,54 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "100",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "95",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "92",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "93",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "94",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "99",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "96",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "97",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "98",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -4141,6 +4645,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "111",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "After",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4173,45 +4678,54 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "110",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "105",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "103",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "104",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "109",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "106",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "107",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "108",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -4220,6 +4734,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "121",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Before",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4252,45 +4767,54 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "120",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "115",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "112",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "113",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "119",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "116",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "117",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "118",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -4299,6 +4823,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "131",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDayMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4331,46 +4856,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "130",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "125",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "122",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "123",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "124",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "129",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "126",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "127",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "128",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -4379,6 +4913,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "141",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayAfterMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4411,46 +4946,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "140",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "135",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "132",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "133",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "134",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "139",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "136",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "137",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "138",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
@@ -4459,6 +5003,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "151",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayBeforeMonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4491,46 +5036,55 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "150",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "145",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "142",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "143",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "144",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "149",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "146",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "147",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "148",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -4539,6 +5093,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "160",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4571,40 +5126,48 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "159",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "155",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "152",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "153",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "154",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "158",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "156",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "157",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
@@ -4613,6 +5176,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "169",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4645,40 +5209,48 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "168",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "164",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "161",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "162",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "163",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "167",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "165",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "166",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -4687,6 +5259,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "178",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4719,40 +5292,48 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "177",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "173",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "170",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "171",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "172",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "176",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "174",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "175",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
@@ -4761,6 +5342,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "185",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullLeft",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4787,31 +5369,37 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "184",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "As",
                   "operand" : {
                      "localId" : "179",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "183",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "180",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "181",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "182",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -4820,6 +5408,7 @@ module.exports['SameOrBefore'] = {
             }
          }, {
             "localId" : "192",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullRight",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4846,24 +5435,29 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "191",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "189",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "186",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "187",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "188",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -4873,12 +5467,14 @@ module.exports['SameOrBefore'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "190",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
             }
          }, {
             "localId" : "198",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullBoth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4917,17 +5513,21 @@ module.exports['SameOrBefore'] = {
             } ],
             "expression" : {
                "localId" : "197",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "SameOrBefore",
                "operand" : [ {
                   "localId" : "195",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "193",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "194",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -4936,6 +5536,7 @@ module.exports['SameOrBefore'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "196",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
@@ -5003,6 +5604,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5035,46 +5637,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "After",
                "operand" : [ {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -5083,6 +5694,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5115,46 +5727,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "After",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1999",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -5163,6 +5784,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5195,46 +5817,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "After",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "26",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -5243,6 +5874,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5275,46 +5907,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "After",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "25",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -5323,6 +5964,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5355,46 +5997,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "After",
                "operand" : [ {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "25",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -5403,6 +6054,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "61",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5435,46 +6087,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "60",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "After",
                "operand" : [ {
                   "localId" : "55",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "25",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "59",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "57",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "58",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -5483,6 +6144,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "71",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5515,46 +6177,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "70",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "After",
                "operand" : [ {
                   "localId" : "65",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "69",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "68",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -5563,6 +6234,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5595,46 +6267,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "80",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "After",
                "operand" : [ {
                   "localId" : "75",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "73",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "74",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "76",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
@@ -5643,6 +6324,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "91",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5675,46 +6357,55 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "90",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "After",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "82",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "89",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "86",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "87",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "88",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -5723,6 +6414,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "101",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Same",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5755,45 +6447,54 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "100",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "After",
                "operand" : [ {
                   "localId" : "95",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "92",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "93",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "94",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "99",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "96",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "97",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "98",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -5802,6 +6503,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "111",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "After",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5834,45 +6536,54 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "110",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "After",
                "operand" : [ {
                   "localId" : "105",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "103",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "104",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "109",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "106",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "107",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "108",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -5881,6 +6592,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "121",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Before",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5913,45 +6625,54 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "120",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "After",
                "operand" : [ {
                   "localId" : "115",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "112",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "113",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "119",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "116",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "117",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "118",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -5960,6 +6681,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5992,40 +6714,48 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "129",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "After",
                "operand" : [ {
                   "localId" : "125",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "122",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "123",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "124",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "128",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "126",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "127",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
@@ -6034,6 +6764,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "139",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6066,40 +6797,48 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "138",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "After",
                "operand" : [ {
                   "localId" : "134",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "131",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "132",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "133",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "137",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "135",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "136",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -6108,6 +6847,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "148",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6140,40 +6880,48 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "147",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "After",
                "operand" : [ {
                   "localId" : "143",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "140",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "141",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "142",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "146",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "144",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "145",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
@@ -6182,6 +6930,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "155",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullLeft",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6208,31 +6957,37 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "154",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "After",
                "operand" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "As",
                   "operand" : {
                      "localId" : "149",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "153",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "150",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "151",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "152",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -6241,6 +6996,7 @@ module.exports['After'] = {
             }
          }, {
             "localId" : "162",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullRight",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6267,24 +7023,29 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "161",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "After",
                "operand" : [ {
                   "localId" : "159",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "156",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "157",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "158",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -6294,12 +7055,14 @@ module.exports['After'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "160",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
             }
          }, {
             "localId" : "168",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullBoth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6338,17 +7101,21 @@ module.exports['After'] = {
             } ],
             "expression" : {
                "localId" : "167",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "After",
                "operand" : [ {
                   "localId" : "165",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "163",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "164",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -6357,6 +7124,7 @@ module.exports['After'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "166",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
@@ -6424,6 +7192,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameYear",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6456,46 +7225,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -6504,6 +7282,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6536,46 +7315,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1999",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -6584,6 +7372,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "YearBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6616,46 +7405,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Year",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "26",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "11",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -6664,6 +7462,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameMonth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6696,46 +7495,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "22",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -6744,6 +7552,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6776,46 +7585,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "22",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -6824,6 +7642,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "61",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6856,46 +7675,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "60",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Month",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "55",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "22",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "59",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "57",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "58",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
@@ -6904,6 +7732,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "71",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SameDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6936,46 +7765,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "70",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "65",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "69",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "68",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -6984,6 +7822,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7016,46 +7855,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "80",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "75",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "73",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "74",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "76",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
@@ -7064,6 +7912,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "91",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DayBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7096,46 +7945,55 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "90",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "82",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "89",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "86",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "87",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "88",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -7144,6 +8002,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "101",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Same",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7176,45 +8035,54 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "100",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "95",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "92",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "93",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "94",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "99",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "96",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "97",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "98",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -7223,6 +8091,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "111",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "After",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7255,45 +8124,54 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "110",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "105",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "103",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "104",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "109",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "106",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "107",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "108",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -7302,6 +8180,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "121",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Before",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7334,45 +8213,54 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "120",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "115",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "112",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "113",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "14",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "119",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "116",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "117",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "118",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -7381,6 +8269,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDay",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7413,40 +8302,48 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "129",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "125",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "122",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "123",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "124",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "128",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "126",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "127",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
@@ -7455,6 +8352,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "139",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7487,40 +8385,48 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "138",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "134",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "131",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "132",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "133",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "137",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "135",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "136",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -7529,6 +8435,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "148",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImpreciseDayMonthBefore",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7561,40 +8468,48 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "147",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "precision" : "Day",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "143",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "140",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "141",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "142",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "146",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "144",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "145",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
@@ -7603,6 +8518,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "155",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullLeft",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7629,31 +8545,37 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "154",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Before",
                "operand" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "As",
                   "operand" : {
                      "localId" : "149",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "153",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "150",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "151",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "152",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -7662,6 +8584,7 @@ module.exports['Before'] = {
             }
          }, {
             "localId" : "162",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullRight",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7688,24 +8611,29 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "161",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "159",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "156",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2000",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "157",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "158",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "15",
                      "type" : "Literal"
@@ -7715,12 +8643,14 @@ module.exports['Before'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "160",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
             }
          }, {
             "localId" : "168",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullBoth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7759,17 +8689,21 @@ module.exports['Before'] = {
             } ],
             "expression" : {
                "localId" : "167",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Before",
                "operand" : [ {
                   "localId" : "165",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "163",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "164",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -7778,6 +8712,7 @@ module.exports['Before'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "166",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                } ]
@@ -7838,6 +8773,7 @@ module.exports['DifferenceBetween'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "NewYear2013",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7858,21 +8794,25 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2013",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -7880,6 +8820,7 @@ module.exports['DifferenceBetween'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "NewYear2014",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7900,21 +8841,25 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2014",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -7922,6 +8867,7 @@ module.exports['DifferenceBetween'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "January2014",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7942,15 +8888,18 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2014",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -7958,6 +8907,7 @@ module.exports['DifferenceBetween'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "YearsBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7989,20 +8939,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "23",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MonthsBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8034,20 +8988,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "22",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Month",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "21",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "WeeksBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8079,20 +9037,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Week",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "24",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "DaysBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8124,20 +9086,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Day",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "28",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "35",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "YearsBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8169,20 +9135,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "34",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "32",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "33",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "39",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MonthsBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8214,20 +9184,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "38",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Month",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "36",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "37",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "43",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "WeeksBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8259,20 +9233,24 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "42",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Week",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "40",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "41",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2014",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "47",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "DaysBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8304,14 +9282,17 @@ module.exports['DifferenceBetween'] = {
             } ],
             "expression" : {
                "localId" : "46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Day",
                "type" : "DifferenceBetween",
                "operand" : [ {
                   "localId" : "44",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "NewYear2014",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2014",
                   "type" : "ExpressionRef"
                } ]
@@ -8381,6 +9362,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "NewYear2014",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8401,21 +9383,25 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2014",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -8423,6 +9409,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "February2014",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8443,15 +9430,18 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2014",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -8459,6 +9449,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "GreaterThan25DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8496,22 +9487,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Greater",
                "operand" : [ {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
@@ -8519,6 +9515,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "22",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "GreaterThan40DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8556,22 +9553,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "21",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Greater",
                "operand" : [ {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "40",
                   "type" : "Literal"
@@ -8579,6 +9581,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "28",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "GreaterThan80DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8616,22 +9619,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Greater",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "80",
                   "type" : "Literal"
@@ -8639,6 +9647,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "GreaterOrEqualTo25DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8676,22 +9685,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "33",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "GreaterOrEqual",
                "operand" : [ {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "29",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "30",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "32",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
@@ -8699,6 +9713,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "40",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "GreaterOrEqualTo40DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8736,22 +9751,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "GreaterOrEqual",
                "operand" : [ {
                   "localId" : "37",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "35",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "38",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "40",
                   "type" : "Literal"
@@ -8759,6 +9779,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "46",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "GreaterOrEqualTo80DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8796,22 +9817,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "45",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "GreaterOrEqual",
                "operand" : [ {
                   "localId" : "43",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "41",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "44",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "80",
                   "type" : "Literal"
@@ -8819,6 +9845,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "52",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "EqualTo25DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8856,22 +9883,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "50",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
@@ -8879,6 +9911,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "58",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "EqualTo40DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8916,22 +9949,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "55",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "56",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "40",
                   "type" : "Literal"
@@ -8939,6 +9977,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "64",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "EqualTo80DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8976,22 +10015,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "63",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "61",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "59",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "60",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "62",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "80",
                   "type" : "Literal"
@@ -8999,6 +10043,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "70",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LessOrEqualTo25DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9036,22 +10081,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "69",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "LessOrEqual",
                "operand" : [ {
                   "localId" : "67",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "65",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "68",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
@@ -9059,6 +10109,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "76",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LessOrEqualTo40DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9096,22 +10147,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "75",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "LessOrEqual",
                "operand" : [ {
                   "localId" : "73",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "71",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "74",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "40",
                   "type" : "Literal"
@@ -9119,6 +10175,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "82",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LessOrEqualTo80DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9156,22 +10213,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "81",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "LessOrEqual",
                "operand" : [ {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "80",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "80",
                   "type" : "Literal"
@@ -9179,6 +10241,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "88",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LessThan25DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9216,22 +10279,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "87",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Less",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "86",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
@@ -9239,6 +10307,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "94",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LessThan40DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9276,22 +10345,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "93",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Less",
                "operand" : [ {
                   "localId" : "91",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "89",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "90",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "92",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "40",
                   "type" : "Literal"
@@ -9299,6 +10373,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "100",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LessThan80DaysAfter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9336,22 +10411,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "99",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Less",
                "operand" : [ {
                   "localId" : "97",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "95",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "96",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "98",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "80",
                   "type" : "Literal"
@@ -9359,6 +10439,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "106",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "TwentyFiveDaysLessThanDaysBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9396,22 +10477,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "105",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Less",
                "operand" : [ {
                   "localId" : "101",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
                }, {
                   "localId" : "104",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "103",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
@@ -9419,6 +10505,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "112",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "FortyDaysEqualToDaysBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9456,22 +10543,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "111",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "107",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "40",
                   "type" : "Literal"
                }, {
                   "localId" : "110",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "108",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "109",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
@@ -9479,6 +10571,7 @@ module.exports['DifferenceBetween Comparisons'] = {
             }
          }, {
             "localId" : "118",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "TwentyFiveDaysGreaterThanDaysBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9516,22 +10609,27 @@ module.exports['DifferenceBetween Comparisons'] = {
             } ],
             "expression" : {
                "localId" : "117",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Greater",
                "operand" : [ {
                   "localId" : "113",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "25",
                   "type" : "Literal"
                }, {
                   "localId" : "116",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Day",
                   "type" : "DifferenceBetween",
                   "operand" : [ {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "NewYear2014",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "115",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "February2014",
                      "type" : "ExpressionRef"
                   } ]
@@ -9593,6 +10691,7 @@ module.exports['DurationBetween'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "DecTen2013",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9613,21 +10712,25 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2013",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "12",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
@@ -9635,6 +10738,7 @@ module.exports['DurationBetween'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "JanOne2015",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9655,21 +10759,25 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2015",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -9677,6 +10785,7 @@ module.exports['DurationBetween'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "January2015",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9697,15 +10806,18 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2015",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -9713,6 +10825,7 @@ module.exports['DurationBetween'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "YearsBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9744,20 +10857,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "DecTen2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "23",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MonthsBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9789,20 +10906,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "22",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Month",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "DecTen2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "21",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "WeeksBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9834,20 +10955,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Week",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "24",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "DecTen2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "DaysBetween",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9879,20 +11004,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Day",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "28",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "DecTen2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "35",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "YearsBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9924,20 +11053,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "34",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "32",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "33",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "39",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MonthsBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9969,20 +11102,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "38",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Month",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "36",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "37",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "43",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "WeeksBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10014,20 +11151,24 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "42",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Week",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "40",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "41",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2015",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "47",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "DaysBetweenUncertainty",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10059,14 +11200,17 @@ module.exports['DurationBetween'] = {
             } ],
             "expression" : {
                "localId" : "46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Day",
                "type" : "DurationBetween",
                "operand" : [ {
                   "localId" : "44",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "JanOne2015",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "January2015",
                   "type" : "ExpressionRef"
                } ]
@@ -10125,6 +11269,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "June15th2013",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10145,21 +11290,25 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2013",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "6",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "15",
                   "type" : "Literal"
@@ -10167,6 +11316,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "PlusThreeYears",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10196,13 +11346,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 3,
                   "unit" : "years",
                   "type" : "Quantity"
@@ -10210,6 +11363,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "MinusThreeYears",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10239,13 +11393,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 3,
                   "unit" : "years",
                   "type" : "Quantity"
@@ -10253,6 +11410,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "18",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "PlusEightMonths",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10282,13 +11440,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "17",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 8,
                   "unit" : "months",
                   "type" : "Quantity"
@@ -10296,6 +11457,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "22",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "MinusEightMonths",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10325,13 +11487,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "21",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 8,
                   "unit" : "months",
                   "type" : "Quantity"
@@ -10339,6 +11504,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "26",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "PlusThreeWeeks",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10368,13 +11534,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "25",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "23",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "24",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 3,
                   "unit" : "weeks",
                   "type" : "Quantity"
@@ -10382,6 +11551,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "30",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "MinusThreeWeeks",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10411,13 +11581,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "29",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "27",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "28",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 3,
                   "unit" : "weeks",
                   "type" : "Quantity"
@@ -10425,6 +11598,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "PlusTwentyDays",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10454,13 +11628,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "33",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "32",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 20,
                   "unit" : "days",
                   "type" : "Quantity"
@@ -10468,6 +11645,7 @@ module.exports['DateMath'] = {
             }
          }, {
             "localId" : "38",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "MinusTwentyDays",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10497,13 +11675,16 @@ module.exports['DateMath'] = {
             } ],
             "expression" : {
                "localId" : "37",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "name" : "June15th2013",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "36",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 20,
                   "unit" : "days",
                   "type" : "Quantity"

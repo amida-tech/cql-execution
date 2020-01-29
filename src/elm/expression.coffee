@@ -8,6 +8,8 @@ module.exports.Expression = class Expression
       if typeIsArray(json.operand) then @args = op else @arg = op
     if json.localId?
       @localId = json.localId
+    if json.resultTypeName?
+      @resultTypeName = json.resultTypeName
 
   execute: (ctx) ->
     if @localId?

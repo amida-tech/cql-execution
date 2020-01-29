@@ -21,7 +21,13 @@ module.exports.Library = class Library
       @concepts[concept.name] = new ConceptDef(concept)
     @expressions = {}
     for expr in json.library.statements?.def ? []
-      @expressions[expr.name] = if expr.type == "FunctionDef"  then new FunctionDef(expr) else new ExpressionDef(expr)
+      if expr.type == "FunctionDef"
+        if @expressions[expr.name]?
+          @expressions[expr.name].addOverload(expr)
+        else
+          @expressions[expr.name] = new OverloadableFunctionDef(expr)
+      else
+        @expressions[expr.name] = new ExpressionDef(expr)
     @includes = {}
     for expr in json.library.includes?.def ? []
       if libraryManager then @includes[expr.localIdentifier] =  libraryManager.resolve(expr.path,expr.version)
@@ -47,5 +53,5 @@ module.exports.Library = class Library
     @parameters[name]
 # These requires are at the end of the file because having them first in the
 # file creates errors due to the order that the libraries are loaded.
-{ ExpressionDef, FunctionDef, ParameterDef, ValueSetDef, CodeSystemDef, CodeDef, ConceptDef } = require './expressions'
+{ ExpressionDef, FunctionDef, OverloadableFunctionDef, ParameterDef, ValueSetDef, CodeSystemDef, CodeDef, ConceptDef } = require './expressions'
 { Results } = require '../runtime/results'

@@ -53,6 +53,7 @@ module.exports['Literal'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "BoolTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -68,12 +69,14 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                "value" : "true",
                "type" : "Literal"
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "BoolFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -89,12 +92,14 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                "value" : "false",
                "type" : "Literal"
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "IntOne",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -110,12 +115,14 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "1",
                "type" : "Literal"
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "DecimalTenth",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -131,12 +138,14 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                "value" : "0.1",
                "type" : "Literal"
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "StringTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -156,12 +165,14 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "valueType" : "{urn:hl7-org:elm-types:r1}String",
                "value" : "true",
                "type" : "Literal"
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "DateTimeX",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -177,6 +188,7 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "DateTime",
                "year" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -221,6 +233,7 @@ module.exports['Literal'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeX",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -236,6 +249,7 @@ module.exports['Literal'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "Time",
                "hour" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",

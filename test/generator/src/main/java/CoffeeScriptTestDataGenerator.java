@@ -91,7 +91,7 @@ public class CoffeeScriptTestDataGenerator {
                 ModelManager modelManager = new ModelManager();
                 LibraryManager libraryManager = new LibraryManager(modelManager);
                 libraryManager.getLibrarySourceLoader().registerProvider(new DefaultLibrarySourceProvider(file.getParent()));
-                CqlTranslator.Options[] options = {CqlTranslator.Options.EnableDateRangeOptimization, CqlTranslator.Options.EnableAnnotations};
+                CqlTranslator.Options[] options = {CqlTranslator.Options.EnableDateRangeOptimization, CqlTranslator.Options.EnableAnnotations, CqlTranslator.Options.EnableResultTypes};
                 CqlTranslator cqlt = CqlTranslator.fromText(snippet, modelManager, libraryManager, options);
                 if (! cqlt.getErrors().isEmpty()) {
                     pw.println("###");

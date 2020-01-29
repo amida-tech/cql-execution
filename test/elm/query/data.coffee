@@ -42,28 +42,46 @@ module.exports['DateRangeOptimizedQuery'] = {
             "localId" : "12",
             "name" : "MeasurementPeriod",
             "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "default" : {
                "localId" : "11",
                "lowClosed" : true,
                "highClosed" : false,
                "type" : "Interval",
+               "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "low" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2013",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -71,21 +89,25 @@ module.exports['DateRangeOptimizedQuery'] = {
                },
                "high" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2014",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -99,7 +121,14 @@ module.exports['DateRangeOptimizedQuery'] = {
             "localId" : "2",
             "name" : "Ambulatory/ED Visit",
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1061",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "statements" : {
@@ -179,22 +208,57 @@ module.exports['DateRangeOptimizedQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "19",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "14",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "13",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
                      "dateProperty" : "period",
                      "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "dateRange" : {
                         "localId" : "17",
                         "name" : "MeasurementPeriod",
-                        "type" : "ParameterRef"
+                        "type" : "ParameterRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                } ],
@@ -271,12 +335,33 @@ module.exports['DateRangeOptimizedQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "27",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "22",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "21",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
@@ -284,14 +369,35 @@ module.exports['DateRangeOptimizedQuery'] = {
                      "codeProperty" : "type",
                      "dateProperty" : "period",
                      "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "codes" : {
                         "name" : "Ambulatory/ED Visit",
-                        "type" : "ValueSetRef"
+                        "type" : "ValueSetRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      },
                      "dateRange" : {
                         "localId" : "25",
                         "name" : "MeasurementPeriod",
-                        "type" : "ParameterRef"
+                        "type" : "ParameterRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                } ],
@@ -368,12 +474,33 @@ module.exports['DateRangeOptimizedQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "35",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "30",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "29",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
@@ -381,14 +508,35 @@ module.exports['DateRangeOptimizedQuery'] = {
                      "codeProperty" : "type",
                      "dateProperty" : "period",
                      "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "codes" : {
                         "name" : "Ambulatory/ED Visit",
-                        "type" : "ValueSetRef"
+                        "type" : "ValueSetRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      },
                      "dateRange" : {
                         "localId" : "33",
                         "name" : "MeasurementPeriod",
-                        "type" : "ParameterRef"
+                        "type" : "ParameterRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                } ],
@@ -441,6 +589,7 @@ module.exports['FunctionQuery'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FunctionWithThis",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -509,16 +658,47 @@ module.exports['FunctionQuery'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Count",
                "source" : {
                   "localId" : "8",
                   "type" : "Query",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "IntervalTypeSpecifier",
+                        "pointType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
+                  },
                   "source" : [ {
                      "localId" : "5",
                      "alias" : "EncounterPeriod",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     },
                      "expression" : {
                         "localId" : "4",
                         "type" : "Query",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "type" : "IntervalTypeSpecifier",
+                              "pointType" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        },
                         "source" : [ {
                            "alias" : "$this",
                            "expression" : {
@@ -555,10 +735,27 @@ module.exports['FunctionQuery'] = {
                   "relationship" : [ ],
                   "return" : {
                      "localId" : "7",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     },
                      "expression" : {
                         "localId" : "6",
                         "name" : "EncounterPeriod",
-                        "type" : "AliasRef"
+                        "type" : "AliasRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                }
@@ -568,8 +765,16 @@ module.exports['FunctionQuery'] = {
                "operandTypeSpecifier" : {
                   "localId" : "3",
                   "type" : "ListTypeSpecifier",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "elementType" : {
                      "localId" : "2",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "{http://hl7.org/fhir}Encounter",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -577,6 +782,7 @@ module.exports['FunctionQuery'] = {
             } ]
          }, {
             "localId" : "17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "queryWithThis",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -622,28 +828,52 @@ module.exports['FunctionQuery'] = {
             } ],
             "expression" : {
                "localId" : "16",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Greater",
                "operand" : [ {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "FunctionWithThis",
                   "type" : "FunctionRef",
                   "operand" : [ {
                      "localId" : "13",
                      "type" : "Query",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "source" : [ {
                         "localId" : "12",
                         "alias" : "E",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        },
                         "expression" : {
                            "localId" : "11",
                            "dataType" : "{http://hl7.org/fhir}Encounter",
                            "templateId" : "encounter-qicore-qicore-encounter",
-                           "type" : "Retrieve"
+                           "type" : "Retrieve",
+                           "resultTypeSpecifier" : {
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "name" : "{http://hl7.org/fhir}Encounter",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
                         }
                      } ],
                      "relationship" : [ ]
                   } ]
                }, {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "0",
                   "type" : "Literal"
@@ -688,28 +918,46 @@ module.exports['IncludesQuery'] = {
             "localId" : "12",
             "name" : "MeasurementPeriod",
             "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "default" : {
                "localId" : "11",
                "lowClosed" : true,
                "highClosed" : false,
                "type" : "Interval",
+               "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "low" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2013",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -717,21 +965,25 @@ module.exports['IncludesQuery'] = {
                },
                "high" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2014",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -745,7 +997,14 @@ module.exports['IncludesQuery'] = {
             "localId" : "2",
             "name" : "Ambulatory/ED Visit",
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1061",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "statements" : {
@@ -831,37 +1090,87 @@ module.exports['IncludesQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "19",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "14",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "13",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
                      "codeProperty" : "type",
                      "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "codes" : {
                         "name" : "Ambulatory/ED Visit",
-                        "type" : "ValueSetRef"
+                        "type" : "ValueSetRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                } ],
                "relationship" : [ ],
                "where" : {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Includes",
                   "operand" : [ {
                      "localId" : "15",
                      "name" : "MeasurementPeriod",
-                     "type" : "ParameterRef"
+                     "type" : "ParameterRef",
+                     "resultTypeSpecifier" : {
+                        "type" : "IntervalTypeSpecifier",
+                        "pointType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }, {
                      "localId" : "17",
                      "path" : "period",
                      "scope" : "E",
-                     "type" : "Property"
+                     "type" : "Property",
+                     "resultTypeSpecifier" : {
+                        "type" : "IntervalTypeSpecifier",
+                        "pointType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   } ]
                }
             }
@@ -910,28 +1219,46 @@ module.exports['MultiSourceQuery'] = {
             "localId" : "11",
             "name" : "MeasurementPeriod",
             "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "default" : {
                "localId" : "10",
                "lowClosed" : true,
                "highClosed" : false,
                "type" : "Interval",
+               "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "low" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2013",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "4",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -939,21 +1266,25 @@ module.exports['MultiSourceQuery'] = {
                },
                "high" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2014",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -1056,32 +1387,105 @@ module.exports['MultiSourceQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "C",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "20",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "C",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "13",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "12",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
                      "dateProperty" : "period",
                      "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "dateRange" : {
                         "localId" : "18",
                         "name" : "MeasurementPeriod",
-                        "type" : "ParameterRef"
+                        "type" : "ParameterRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                }, {
                   "localId" : "15",
                   "alias" : "C",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "14",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
@@ -1217,45 +1621,121 @@ module.exports['MultiSourceQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "C",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "35",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "C",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "23",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "22",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
                      "dateProperty" : "period",
                      "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "dateRange" : {
                         "localId" : "28",
                         "name" : "MeasurementPeriod",
-                        "type" : "ParameterRef"
+                        "type" : "ParameterRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   }
                }, {
                   "localId" : "25",
                   "alias" : "C",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "24",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "where" : {
                   "localId" : "33",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equal",
                   "operand" : [ {
                      "localId" : "31",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "path" : "id",
                      "scope" : "C",
                      "type" : "Property"
                   }, {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "http://cqframework.org/3/2",
                      "type" : "Literal"
@@ -1364,38 +1844,140 @@ module.exports['MultiSourceQuery'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "C",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "45",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "C",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "38",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "37",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                }, {
                   "localId" : "40",
                   "alias" : "C",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "39",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "44",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "C",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Condition",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "43",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "C",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Condition",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "E",
                         "value" : {
                            "localId" : "41",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "E",
                            "type" : "AliasRef"
                         }
@@ -1403,6 +1985,7 @@ module.exports['MultiSourceQuery'] = {
                         "name" : "C",
                         "value" : {
                            "localId" : "42",
+                           "resultTypeName" : "{http://hl7.org/fhir}Condition",
                            "name" : "C",
                            "type" : "AliasRef"
                         }
@@ -1543,39 +2126,84 @@ module.exports['QueryRelationship'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "11",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "3",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "2",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "10",
                   "alias" : "C",
                   "type" : "With",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "4",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   },
                   "suchThat" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "7",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "8",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3/2",
                         "type" : "Literal"
@@ -1662,39 +2290,84 @@ module.exports['QueryRelationship'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "22",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "14",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "13",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "21",
                   "alias" : "C",
                   "type" : "With",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "15",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   },
                   "suchThat" : {
                      "localId" : "20",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "18",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "19",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3",
                         "type" : "Literal"
@@ -1781,39 +2454,84 @@ module.exports['QueryRelationship'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "33",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "25",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "24",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "32",
                   "alias" : "C",
                   "type" : "Without",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "26",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   },
                   "suchThat" : {
                      "localId" : "31",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "29",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "30",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3/",
                         "type" : "Literal"
@@ -1900,39 +2618,84 @@ module.exports['QueryRelationship'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "44",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "36",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "35",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "43",
                   "alias" : "C",
                   "type" : "Without",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "37",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   },
                   "suchThat" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "40",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "41",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3/2",
                         "type" : "Literal"
@@ -2068,24 +2831,78 @@ module.exports['QueryLet'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "a",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "10",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "a",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "3",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "2",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "let" : [ {
                   "localId" : "5",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "identifier" : "a",
                   "expression" : {
                      "localId" : "4",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "E",
                      "type" : "AliasRef"
                   }
@@ -2093,13 +2910,49 @@ module.exports['QueryLet'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "9",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "8",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "E",
                         "value" : {
                            "localId" : "6",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "E",
                            "type" : "AliasRef"
                         }
@@ -2107,6 +2960,7 @@ module.exports['QueryLet'] = {
                         "name" : "a",
                         "value" : {
                            "localId" : "7",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "a",
                            "type" : "QueryLetRef"
                         }
@@ -2244,29 +3098,117 @@ module.exports['Tuple'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "id",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "thing",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}EncounterState",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "10",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "id",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "thing",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}EncounterState",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "3",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "2",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "9",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "id",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "thing",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}EncounterState",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "8",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "id",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "thing",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}EncounterState",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "id",
                         "value" : {
                            "localId" : "5",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "path" : "id",
                            "scope" : "E",
                            "type" : "Property"
@@ -2275,6 +3217,7 @@ module.exports['Tuple'] = {
                         "name" : "thing",
                         "value" : {
                            "localId" : "7",
+                           "resultTypeName" : "{http://hl7.org/fhir}EncounterState",
                            "path" : "status",
                            "scope" : "E",
                            "type" : "Property"
@@ -2397,24 +3340,54 @@ module.exports['QueryFilterNulls'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "11",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "8",
                   "alias" : "I",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "7",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "asType" : "{urn:hl7-org:elm-types:r1}String",
                         "type" : "As",
                         "operand" : {
                            "localId" : "2",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                            "type" : "Null"
                         }
                      }, {
                         "localId" : "3",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "One",
                         "type" : "Literal"
@@ -2423,10 +3396,12 @@ module.exports['QueryFilterNulls'] = {
                         "type" : "As",
                         "operand" : {
                            "localId" : "4",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                            "type" : "Null"
                         }
                      }, {
                         "localId" : "5",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "Two",
                         "type" : "Literal"
@@ -2435,6 +3410,7 @@ module.exports['QueryFilterNulls'] = {
                         "type" : "As",
                         "operand" : {
                            "localId" : "6",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                            "type" : "Null"
                         }
                      } ]
@@ -2443,11 +3419,14 @@ module.exports['QueryFilterNulls'] = {
                "relationship" : [ ],
                "where" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "operand" : {
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "IsNull",
                      "operand" : {
                         "localId" : "9",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "name" : "I",
                         "type" : "AliasRef"
                      }
@@ -2563,17 +3542,45 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "7",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "3",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "2",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
@@ -2581,6 +3588,7 @@ module.exports['Sorting'] = {
                   "localId" : "6",
                   "by" : [ {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "direction" : "asc",
                      "path" : "id",
                      "type" : "ByColumn"
@@ -2646,24 +3654,60 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "16",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "10",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "9",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "12",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "11",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "E",
                      "type" : "AliasRef"
                   }
@@ -2672,6 +3716,7 @@ module.exports['Sorting'] = {
                   "localId" : "15",
                   "by" : [ {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "direction" : "asc",
                      "path" : "id",
                      "type" : "ByColumn"
@@ -2758,29 +3803,93 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "27",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "19",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "18",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "22",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "21",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "E",
                         "value" : {
                            "localId" : "20",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "E",
                            "type" : "AliasRef"
                         }
@@ -2791,14 +3900,17 @@ module.exports['Sorting'] = {
                   "localId" : "26",
                   "by" : [ {
                      "localId" : "25",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "direction" : "asc",
                      "type" : "ByExpression",
                      "expression" : {
                         "localId" : "24",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "type" : "Property",
                         "source" : {
                            "localId" : "23",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "E",
                            "type" : "IdentifierRef"
                         }
@@ -2855,17 +3967,45 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "34",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "30",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "29",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
@@ -2873,6 +4013,7 @@ module.exports['Sorting'] = {
                   "localId" : "33",
                   "by" : [ {
                      "localId" : "32",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "direction" : "desc",
                      "path" : "id",
                      "type" : "ByColumn"
@@ -2940,24 +4081,60 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "43",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "37",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "36",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "39",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "38",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "E",
                      "type" : "AliasRef"
                   }
@@ -2966,6 +4143,7 @@ module.exports['Sorting'] = {
                   "localId" : "42",
                   "by" : [ {
                      "localId" : "41",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "direction" : "desc",
                      "path" : "id",
                      "type" : "ByColumn"
@@ -3054,29 +4232,93 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "54",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "46",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "45",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "49",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "48",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "E",
+                           "type" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "E",
                         "value" : {
                            "localId" : "47",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "E",
                            "type" : "AliasRef"
                         }
@@ -3087,14 +4329,17 @@ module.exports['Sorting'] = {
                   "localId" : "53",
                   "by" : [ {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "direction" : "desc",
                      "type" : "ByExpression",
                      "expression" : {
                         "localId" : "51",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "type" : "Property",
                         "source" : {
                            "localId" : "50",
+                           "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                            "name" : "E",
                            "type" : "IdentifierRef"
                         }
@@ -3156,24 +4401,60 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "61",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "57",
                   "alias" : "C",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "56",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
                "return" : {
                   "localId" : "60",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "59",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "path" : "onsetDateTime",
                      "scope" : "C",
                      "type" : "Property"
@@ -3182,6 +4463,7 @@ module.exports['Sorting'] = {
             }
          }, {
             "localId" : "65",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "lastDateUnsorted",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3208,15 +4490,24 @@ module.exports['Sorting'] = {
             } ],
             "expression" : {
                "localId" : "64",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Last",
                "source" : {
                   "localId" : "63",
                   "name" : "ConditionDates",
-                  "type" : "ExpressionRef"
+                  "type" : "ExpressionRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "73",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "lastDateByThis",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3268,17 +4559,39 @@ module.exports['Sorting'] = {
             } ],
             "expression" : {
                "localId" : "72",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Last",
                "source" : {
                   "localId" : "71",
                   "type" : "Query",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "source" : [ {
                      "localId" : "67",
                      "alias" : "CD",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "expression" : {
                         "localId" : "66",
                         "name" : "ConditionDates",
-                        "type" : "ExpressionRef"
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   } ],
                   "relationship" : [ ],
@@ -3286,6 +4599,7 @@ module.exports['Sorting'] = {
                      "localId" : "70",
                      "by" : [ {
                         "localId" : "69",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "direction" : "asc",
                         "path" : "$this",
                         "type" : "ByColumn"
@@ -3333,47 +4647,82 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "84",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "82",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "81",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "74",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "8",
                         "type" : "Literal"
                      }, {
                         "localId" : "75",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "6",
                         "type" : "Literal"
                      }, {
                         "localId" : "76",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "7",
                         "type" : "Literal"
                      }, {
                         "localId" : "77",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "5",
                         "type" : "Literal"
                      }, {
                         "localId" : "78",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "79",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "0",
                         "type" : "Literal"
                      }, {
                         "localId" : "80",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "9",
                         "type" : "Literal"
@@ -3441,47 +4790,82 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "98",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "94",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "93",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "86",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "8",
                         "type" : "Literal"
                      }, {
                         "localId" : "87",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "6",
                         "type" : "Literal"
                      }, {
                         "localId" : "88",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "7",
                         "type" : "Literal"
                      }, {
                         "localId" : "89",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "5",
                         "type" : "Literal"
                      }, {
                         "localId" : "90",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "91",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "0",
                         "type" : "Literal"
                      }, {
                         "localId" : "92",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "9",
                         "type" : "Literal"
@@ -3491,8 +4875,16 @@ module.exports['Sorting'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "96",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "95",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "N",
                      "type" : "AliasRef"
                   }
@@ -3545,47 +4937,82 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "110",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "108",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "107",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "100",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "8",
                         "type" : "Literal"
                      }, {
                         "localId" : "101",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "6",
                         "type" : "Literal"
                      }, {
                         "localId" : "102",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "7",
                         "type" : "Literal"
                      }, {
                         "localId" : "103",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "5",
                         "type" : "Literal"
                      }, {
                         "localId" : "104",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "105",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "0",
                         "type" : "Literal"
                      }, {
                         "localId" : "106",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "9",
                         "type" : "Literal"
@@ -3653,47 +5080,82 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "124",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "120",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "119",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "112",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "8",
                         "type" : "Literal"
                      }, {
                         "localId" : "113",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "6",
                         "type" : "Literal"
                      }, {
                         "localId" : "114",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "7",
                         "type" : "Literal"
                      }, {
                         "localId" : "115",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "5",
                         "type" : "Literal"
                      }, {
                         "localId" : "116",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "117",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "0",
                         "type" : "Literal"
                      }, {
                         "localId" : "118",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "9",
                         "type" : "Literal"
@@ -3703,8 +5165,16 @@ module.exports['Sorting'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "122",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "121",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "N",
                      "type" : "AliasRef"
                   }
@@ -3791,37 +5261,70 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "134",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "132",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "131",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "126",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "jenny",
                         "type" : "Literal"
                      }, {
                         "localId" : "127",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "dont",
                         "type" : "Literal"
                      }, {
                         "localId" : "128",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "change",
                         "type" : "Literal"
                      }, {
                         "localId" : "129",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "your",
                         "type" : "Literal"
                      }, {
                         "localId" : "130",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "number",
                         "type" : "Literal"
@@ -3923,37 +5426,70 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "146",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "142",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "141",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "136",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "jenny",
                         "type" : "Literal"
                      }, {
                         "localId" : "137",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "dont",
                         "type" : "Literal"
                      }, {
                         "localId" : "138",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "change",
                         "type" : "Literal"
                      }, {
                         "localId" : "139",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "your",
                         "type" : "Literal"
                      }, {
                         "localId" : "140",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "number",
                         "type" : "Literal"
@@ -3963,8 +5499,16 @@ module.exports['Sorting'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "144",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "143",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "S",
                      "type" : "AliasRef"
                   }
@@ -4051,37 +5595,70 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "156",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "154",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "153",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "148",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "jenny",
                         "type" : "Literal"
                      }, {
                         "localId" : "149",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "dont",
                         "type" : "Literal"
                      }, {
                         "localId" : "150",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "change",
                         "type" : "Literal"
                      }, {
                         "localId" : "151",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "your",
                         "type" : "Literal"
                      }, {
                         "localId" : "152",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "number",
                         "type" : "Literal"
@@ -4183,37 +5760,70 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "168",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "164",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "163",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "158",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "jenny",
                         "type" : "Literal"
                      }, {
                         "localId" : "159",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "dont",
                         "type" : "Literal"
                      }, {
                         "localId" : "160",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "change",
                         "type" : "Literal"
                      }, {
                         "localId" : "161",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "your",
                         "type" : "Literal"
                      }, {
                         "localId" : "162",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "number",
                         "type" : "Literal"
@@ -4223,8 +5833,16 @@ module.exports['Sorting'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "166",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "165",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "S",
                      "type" : "AliasRef"
                   }
@@ -4239,6 +5857,7 @@ module.exports['Sorting'] = {
             }
          }, {
             "localId" : "171",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "five",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4254,6 +5873,7 @@ module.exports['Sorting'] = {
             } ],
             "expression" : {
                "localId" : "170",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "5",
                "type" : "Literal"
@@ -4350,47 +5970,94 @@ module.exports['Sorting'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "N",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "189",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "N",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "180",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "179",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "172",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "8",
                         "type" : "Literal"
                      }, {
                         "localId" : "173",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "6",
                         "type" : "Literal"
                      }, {
                         "localId" : "174",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "7",
                         "type" : "Literal"
                      }, {
                         "localId" : "175",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "5",
                         "type" : "Literal"
                      }, {
                         "localId" : "176",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "177",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "0",
                         "type" : "Literal"
                      }, {
                         "localId" : "178",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "9",
                         "type" : "Literal"
@@ -4400,13 +6067,37 @@ module.exports['Sorting'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "183",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "N",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "182",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "N",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "N",
                         "value" : {
                            "localId" : "181",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "name" : "N",
                            "type" : "AliasRef"
                         }
@@ -4417,17 +6108,21 @@ module.exports['Sorting'] = {
                   "localId" : "188",
                   "by" : [ {
                      "localId" : "187",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "direction" : "asc",
                      "type" : "ByExpression",
                      "expression" : {
                         "localId" : "186",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "type" : "Add",
                         "operand" : [ {
                            "localId" : "184",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "name" : "five",
                            "type" : "ExpressionRef"
                         }, {
                            "localId" : "185",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "name" : "N",
                            "type" : "IdentifierRef"
                         } ]
@@ -4536,92 +6231,136 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "22",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "19",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "18",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "2",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
                      }, {
                         "localId" : "3",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "4",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "5",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "6",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "7",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "8",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "9",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "10",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "11",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "12",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "13",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "14",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "15",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "16",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "17",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
@@ -4631,8 +6370,16 @@ module.exports['Distinct'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "21",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "20",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "N",
                      "type" : "AliasRef"
                   }
@@ -4714,32 +6461,64 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "32",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "29",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "28",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "24",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "foo",
                         "type" : "Literal"
                      }, {
                         "localId" : "25",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
                      }, {
                         "localId" : "26",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "baz",
                         "type" : "Literal"
                      }, {
                         "localId" : "27",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
@@ -4749,8 +6528,16 @@ module.exports['Distinct'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "31",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "30",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "S",
                      "type" : "AliasRef"
                   }
@@ -4867,22 +6654,115 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "a",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "b",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "47",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "a",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "b",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "44",
                   "alias" : "T",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "43",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        }
+                     },
                      "element" : [ {
                         "localId" : "36",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "34",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "1",
                               "type" : "Literal"
@@ -4891,6 +6771,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "35",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -4899,10 +6780,27 @@ module.exports['Distinct'] = {
                      }, {
                         "localId" : "39",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "37",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -4911,6 +6809,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "38",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "3",
                               "type" : "Literal"
@@ -4919,10 +6818,27 @@ module.exports['Distinct'] = {
                      }, {
                         "localId" : "42",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "40",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "1",
                               "type" : "Literal"
@@ -4931,6 +6847,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "41",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -4942,10 +6859,45 @@ module.exports['Distinct'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "46",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "45",
                      "name" : "T",
-                     "type" : "AliasRef"
+                     "type" : "AliasRef",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
                   }
                }
             }
@@ -4998,92 +6950,136 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "69",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "66",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "65",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "49",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
                      }, {
                         "localId" : "50",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "51",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "52",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "53",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "54",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "55",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "56",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "57",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "58",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "59",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "60",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "61",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "62",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "63",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "64",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
@@ -5094,8 +7090,16 @@ module.exports['Distinct'] = {
                "return" : {
                   "localId" : "68",
                   "distinct" : true,
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "N",
                      "type" : "AliasRef"
                   }
@@ -5177,32 +7181,64 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "79",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "76",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "75",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "71",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "foo",
                         "type" : "Literal"
                      }, {
                         "localId" : "72",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
                      }, {
                         "localId" : "73",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "baz",
                         "type" : "Literal"
                      }, {
                         "localId" : "74",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
@@ -5213,8 +7249,16 @@ module.exports['Distinct'] = {
                "return" : {
                   "localId" : "78",
                   "distinct" : true,
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "S",
                      "type" : "AliasRef"
                   }
@@ -5331,22 +7375,115 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "a",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "b",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "94",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "a",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "b",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "91",
                   "alias" : "T",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "90",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        }
+                     },
                      "element" : [ {
                         "localId" : "83",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "81",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "1",
                               "type" : "Literal"
@@ -5355,6 +7492,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "82",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -5363,10 +7501,27 @@ module.exports['Distinct'] = {
                      }, {
                         "localId" : "86",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "84",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -5375,6 +7530,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "85",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "3",
                               "type" : "Literal"
@@ -5383,10 +7539,27 @@ module.exports['Distinct'] = {
                      }, {
                         "localId" : "89",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "87",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "1",
                               "type" : "Literal"
@@ -5395,6 +7568,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "88",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -5407,10 +7581,45 @@ module.exports['Distinct'] = {
                "return" : {
                   "localId" : "93",
                   "distinct" : true,
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "92",
                      "name" : "T",
-                     "type" : "AliasRef"
+                     "type" : "AliasRef",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
                   }
                }
             }
@@ -5463,92 +7672,136 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "116",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "113",
                   "alias" : "N",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "112",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "96",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
                      }, {
                         "localId" : "97",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "98",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "99",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "100",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "101",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "102",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "103",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "104",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "105",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "4",
                         "type" : "Literal"
                      }, {
                         "localId" : "106",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "107",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "108",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      }, {
                         "localId" : "109",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "110",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2",
                         "type" : "Literal"
                      }, {
                         "localId" : "111",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
@@ -5559,8 +7812,16 @@ module.exports['Distinct'] = {
                "return" : {
                   "localId" : "115",
                   "distinct" : false,
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "N",
                      "type" : "AliasRef"
                   }
@@ -5642,32 +7903,64 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "126",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "123",
                   "alias" : "S",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "122",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "118",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "foo",
                         "type" : "Literal"
                      }, {
                         "localId" : "119",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
                      }, {
                         "localId" : "120",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "baz",
                         "type" : "Literal"
                      }, {
                         "localId" : "121",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
@@ -5678,8 +7971,16 @@ module.exports['Distinct'] = {
                "return" : {
                   "localId" : "125",
                   "distinct" : false,
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "124",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "S",
                      "type" : "AliasRef"
                   }
@@ -5796,22 +8097,115 @@ module.exports['Distinct'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "a",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "b",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "141",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "a",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "b",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "138",
                   "alias" : "T",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "137",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        }
+                     },
                      "element" : [ {
                         "localId" : "130",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "128",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "1",
                               "type" : "Literal"
@@ -5820,6 +8214,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "129",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -5828,10 +8223,27 @@ module.exports['Distinct'] = {
                      }, {
                         "localId" : "133",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "131",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -5840,6 +8252,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "132",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "3",
                               "type" : "Literal"
@@ -5848,10 +8261,27 @@ module.exports['Distinct'] = {
                      }, {
                         "localId" : "136",
                         "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                           "type" : "TupleTypeSpecifier",
+                           "element" : [ {
+                              "name" : "a",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }, {
+                              "name" : "b",
+                              "type" : {
+                                 "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ]
+                        },
                         "element" : [ {
                            "name" : "a",
                            "value" : {
                               "localId" : "134",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "1",
                               "type" : "Literal"
@@ -5860,6 +8290,7 @@ module.exports['Distinct'] = {
                            "name" : "b",
                            "value" : {
                               "localId" : "135",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "2",
                               "type" : "Literal"
@@ -5872,10 +8303,45 @@ module.exports['Distinct'] = {
                "return" : {
                   "localId" : "140",
                   "distinct" : false,
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  },
                   "expression" : {
                      "localId" : "139",
                      "name" : "T",
-                     "type" : "AliasRef"
+                     "type" : "AliasRef",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "name" : "b",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
                   }
                }
             }
@@ -5976,17 +8442,45 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "4",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "3",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "2",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ]
@@ -6023,23 +8517,52 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Condition",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "8",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "7",
                   "alias" : "C",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "6",
                      "dataType" : "{http://hl7.org/fhir}Condition",
                      "templateId" : "condition-qicore-qicore-condition",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ]
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{http://hl7.org/fhir}Encounter",
             "name" : "firstEncounter",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6079,18 +8602,40 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                "type" : "First",
                "source" : {
                   "localId" : "12",
                   "type" : "Query",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "source" : [ {
                      "localId" : "11",
                      "alias" : "E",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "expression" : {
                         "localId" : "10",
                         "dataType" : "{http://hl7.org/fhir}Encounter",
                         "templateId" : "encounter-qicore-qicore-encounter",
-                        "type" : "Retrieve"
+                        "type" : "Retrieve",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{http://hl7.org/fhir}Encounter",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   } ],
                   "relationship" : [ ]
@@ -6098,6 +8643,7 @@ module.exports['SingleObjectAlias'] = {
             }
          }, {
             "localId" : "23",
+            "resultTypeName" : "{http://hl7.org/fhir}Condition",
             "name" : "firstCondition",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6169,31 +8715,56 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "22",
+               "resultTypeName" : "{http://hl7.org/fhir}Condition",
                "type" : "First",
                "source" : {
                   "localId" : "21",
                   "type" : "Query",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "source" : [ {
                      "localId" : "16",
                      "alias" : "C",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "expression" : {
                         "localId" : "15",
                         "dataType" : "{http://hl7.org/fhir}Condition",
                         "templateId" : "condition-qicore-qicore-condition",
-                        "type" : "Retrieve"
+                        "type" : "Retrieve",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{http://hl7.org/fhir}Condition",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      }
                   } ],
                   "relationship" : [ ],
                   "where" : {
                      "localId" : "20",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "18",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "19",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3/2",
                         "type" : "Literal"
@@ -6203,6 +8774,7 @@ module.exports['SingleObjectAlias'] = {
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{http://hl7.org/fhir}Encounter",
             "name" : "singleAlias",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6234,12 +8806,15 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                "type" : "Query",
                "source" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "24",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
@@ -6248,6 +8823,7 @@ module.exports['SingleObjectAlias'] = {
             }
          }, {
             "localId" : "33",
+            "resultTypeName" : "{http://hl7.org/fhir}Encounter",
             "name" : "singleAliasWhere",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6296,12 +8872,15 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "32",
+               "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                "type" : "Query",
                "source" : [ {
                   "localId" : "29",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "28",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
@@ -6309,11 +8888,14 @@ module.exports['SingleObjectAlias'] = {
                "relationship" : [ ],
                "where" : {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "operand" : {
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "IsNull",
                      "operand" : {
                         "localId" : "30",
+                        "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                         "name" : "E",
                         "type" : "AliasRef"
                      }
@@ -6322,6 +8904,7 @@ module.exports['SingleObjectAlias'] = {
             }
          }, {
             "localId" : "40",
+            "resultTypeName" : "{http://hl7.org/fhir}Encounter",
             "name" : "singleAliasWhereToNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6380,12 +8963,15 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "39",
+               "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                "type" : "Query",
                "source" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "34",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
@@ -6393,12 +8979,20 @@ module.exports['SingleObjectAlias'] = {
                "relationship" : [ ],
                "where" : {
                   "localId" : "38",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "operand" : {
                      "localId" : "37",
                      "path" : "period",
                      "scope" : "E",
-                     "type" : "Property"
+                     "type" : "Property",
+                     "resultTypeSpecifier" : {
+                        "type" : "IntervalTypeSpecifier",
+                        "pointType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                }
             }
@@ -6449,22 +9043,58 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "TupleTypeSpecifier",
+               "element" : [ {
+                  "name" : "E",
+                  "type" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "name" : "C",
+                  "type" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ]
+            },
             "expression" : {
                "localId" : "45",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "C",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
                "source" : [ {
                   "localId" : "42",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "41",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
                }, {
                   "localId" : "44",
+                  "resultTypeName" : "{http://hl7.org/fhir}Condition",
                   "alias" : "C",
                   "expression" : {
                      "localId" : "43",
+                     "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "name" : "firstCondition",
                      "type" : "ExpressionRef"
                   }
@@ -6551,32 +9181,100 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "E",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "C",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "name" : "Con",
+                     "type" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            },
             "expression" : {
                "localId" : "53",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "E",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "C",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "name" : "Con",
+                        "type" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }
+               },
                "source" : [ {
                   "localId" : "48",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "47",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
                }, {
                   "localId" : "50",
+                  "resultTypeName" : "{http://hl7.org/fhir}Condition",
                   "alias" : "C",
                   "expression" : {
                      "localId" : "49",
+                     "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "name" : "firstCondition",
                      "type" : "ExpressionRef"
                   }
                }, {
                   "localId" : "52",
                   "alias" : "Con",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "51",
                      "name" : "conditions",
-                     "type" : "ExpressionRef"
+                     "type" : "ExpressionRef",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ ],
@@ -6684,38 +9382,71 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "64",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "56",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "55",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "63",
+                  "resultTypeName" : "{http://hl7.org/fhir}Condition",
                   "alias" : "C",
                   "type" : "With",
                   "expression" : {
                      "localId" : "57",
+                     "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "name" : "firstCondition",
                      "type" : "ExpressionRef"
                   },
                   "suchThat" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "60",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "61",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3/2",
                         "type" : "Literal"
@@ -6801,38 +9532,71 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "75",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "67",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "66",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "74",
+                  "resultTypeName" : "{http://hl7.org/fhir}Condition",
                   "alias" : "C",
                   "type" : "Without",
                   "expression" : {
                      "localId" : "68",
+                     "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "name" : "firstCondition",
                      "type" : "ExpressionRef"
                   },
                   "suchThat" : {
                      "localId" : "73",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "71",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "72",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3",
                         "type" : "Literal"
@@ -6918,38 +9682,71 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "86",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "78",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "77",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{http://hl7.org/fhir}Condition",
                   "alias" : "C",
                   "type" : "With",
                   "expression" : {
                      "localId" : "79",
+                     "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "name" : "firstCondition",
                      "type" : "ExpressionRef"
                   },
                   "suchThat" : {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "82",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "83",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3",
                         "type" : "Literal"
@@ -7035,38 +9832,71 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "97",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "89",
                   "alias" : "E",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "88",
                      "dataType" : "{http://hl7.org/fhir}Encounter",
                      "templateId" : "encounter-qicore-qicore-encounter",
-                     "type" : "Retrieve"
+                     "type" : "Retrieve",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{http://hl7.org/fhir}Encounter",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
                   }
                } ],
                "relationship" : [ {
                   "localId" : "96",
+                  "resultTypeName" : "{http://hl7.org/fhir}Condition",
                   "alias" : "C",
                   "type" : "Without",
                   "expression" : {
                      "localId" : "90",
+                     "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "name" : "firstCondition",
                      "type" : "ExpressionRef"
                   },
                   "suchThat" : {
                      "localId" : "95",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equal",
                      "operand" : [ {
                         "localId" : "93",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "path" : "id",
                         "scope" : "C",
                         "type" : "Property"
                      }, {
                         "localId" : "94",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://cqframework.org/3/2",
                         "type" : "Literal"
@@ -7076,6 +9906,7 @@ module.exports['SingleObjectAlias'] = {
             }
          }, {
             "localId" : "100",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "asNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7091,10 +9922,12 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "99",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Null"
             }
          }, {
             "localId" : "104",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "nullQuery",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7126,12 +9959,15 @@ module.exports['SingleObjectAlias'] = {
             } ],
             "expression" : {
                "localId" : "103",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Query",
                "source" : [ {
                   "localId" : "102",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "alias" : "N",
                   "expression" : {
                      "localId" : "101",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "name" : "asNull",
                      "type" : "ExpressionRef"
                   }
@@ -7188,14 +10024,36 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "TupleTypeSpecifier",
+               "element" : [ {
+                  "name" : "a",
+                  "type" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ]
+            },
             "expression" : {
                "localId" : "110",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "name" : "a",
+                     "type" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
                "source" : [ {
                   "localId" : "106",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "105",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
@@ -7203,13 +10061,34 @@ module.exports['SingleObjectAlias'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "109",
+                  "resultTypeSpecifier" : {
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "name" : "a",
+                        "type" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  },
                   "expression" : {
                      "localId" : "108",
                      "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "name" : "a",
+                           "type" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
                      "element" : [ {
                         "name" : "a",
                         "value" : {
                            "localId" : "107",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "1",
                            "type" : "Literal"
@@ -7289,14 +10168,30 @@ module.exports['SingleObjectAlias'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "120",
                "type" : "Query",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "source" : [ {
                   "localId" : "113",
+                  "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                   "alias" : "E",
                   "expression" : {
                      "localId" : "112",
+                     "resultTypeName" : "{http://hl7.org/fhir}Encounter",
                      "name" : "firstEncounter",
                      "type" : "ExpressionRef"
                   }
@@ -7304,26 +10199,44 @@ module.exports['SingleObjectAlias'] = {
                "relationship" : [ ],
                "return" : {
                   "localId" : "119",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "expression" : {
                      "localId" : "118",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "114",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "foo",
                         "type" : "Literal"
                      }, {
                         "localId" : "115",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"
                      }, {
                         "localId" : "116",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "baz",
                         "type" : "Literal"
                      }, {
                         "localId" : "117",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "bar",
                         "type" : "Literal"

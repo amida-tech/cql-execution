@@ -51,6 +51,7 @@ module.exports['Add'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Ten",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -66,12 +67,14 @@ module.exports['Add'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "10",
                "type" : "Literal"
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Eleven",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -87,12 +90,14 @@ module.exports['Add'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "11",
                "type" : "Literal"
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "OnePlusTwo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -113,14 +118,17 @@ module.exports['Add'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
                }, {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -128,6 +136,7 @@ module.exports['Add'] = {
             }
          }, {
             "localId" : "29",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AddMultiple",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -196,86 +205,105 @@ module.exports['Add'] = {
             } ],
             "expression" : {
                "localId" : "28",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "Add",
                   "operand" : [ {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "type" : "Add",
                      "operand" : [ {
                         "localId" : "22",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "type" : "Add",
                         "operand" : [ {
                            "localId" : "20",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "type" : "Add",
                            "operand" : [ {
                               "localId" : "18",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "type" : "Add",
                               "operand" : [ {
                                  "localId" : "16",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "type" : "Add",
                                  "operand" : [ {
                                     "localId" : "14",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                     "type" : "Add",
                                     "operand" : [ {
                                        "localId" : "12",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                        "type" : "Add",
                                        "operand" : [ {
                                           "localId" : "10",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                           "value" : "1",
                                           "type" : "Literal"
                                        }, {
                                           "localId" : "11",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                           "value" : "2",
                                           "type" : "Literal"
                                        } ]
                                     }, {
                                        "localId" : "13",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                        "value" : "3",
                                        "type" : "Literal"
                                     } ]
                                  }, {
                                     "localId" : "15",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                     "value" : "4",
                                     "type" : "Literal"
                                  } ]
                               }, {
                                  "localId" : "17",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "value" : "5",
                                  "type" : "Literal"
                               } ]
                            }, {
                               "localId" : "19",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                               "value" : "6",
                               "type" : "Literal"
                            } ]
                         }, {
                            "localId" : "21",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "7",
                            "type" : "Literal"
                         } ]
                      }, {
                         "localId" : "23",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "8",
                         "type" : "Literal"
                      } ]
                   }, {
                      "localId" : "25",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "9",
                      "type" : "Literal"
                   } ]
                }, {
                   "localId" : "27",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
@@ -283,6 +311,7 @@ module.exports['Add'] = {
             }
          }, {
             "localId" : "33",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AddVariables",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -312,13 +341,16 @@ module.exports['Add'] = {
             } ],
             "expression" : {
                "localId" : "32",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Ten",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Eleven",
                   "type" : "ExpressionRef"
                } ]
@@ -373,6 +405,7 @@ module.exports['Subtract'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Ten",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -388,12 +421,14 @@ module.exports['Subtract'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "10",
                "type" : "Literal"
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Eleven",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -409,12 +444,14 @@ module.exports['Subtract'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "11",
                "type" : "Literal"
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FiveMinusTwo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -435,14 +472,17 @@ module.exports['Subtract'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
                }, {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -450,6 +490,7 @@ module.exports['Subtract'] = {
             }
          }, {
             "localId" : "17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "SubtractMultiple",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -482,32 +523,39 @@ module.exports['Subtract'] = {
             } ],
             "expression" : {
                "localId" : "16",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "Subtract",
                   "operand" : [ {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "type" : "Subtract",
                      "operand" : [ {
                         "localId" : "10",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "100",
                         "type" : "Literal"
                      }, {
                         "localId" : "11",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "50",
                         "type" : "Literal"
                      } ]
                   }, {
                      "localId" : "13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "25",
                      "type" : "Literal"
                   } ]
                }, {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
@@ -515,6 +563,7 @@ module.exports['Subtract'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "SubtractVariables",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -544,13 +593,16 @@ module.exports['Subtract'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Eleven",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Ten",
                   "type" : "ExpressionRef"
                } ]
@@ -605,6 +657,7 @@ module.exports['Multiply'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Ten",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -620,12 +673,14 @@ module.exports['Multiply'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "10",
                "type" : "Literal"
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Eleven",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -641,12 +696,14 @@ module.exports['Multiply'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "11",
                "type" : "Literal"
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "FiveTimesTwo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -667,14 +724,17 @@ module.exports['Multiply'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
                }, {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -682,6 +742,7 @@ module.exports['Multiply'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MultiplyMultiple",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -720,41 +781,50 @@ module.exports['Multiply'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "Multiply",
                   "operand" : [ {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "type" : "Multiply",
                      "operand" : [ {
                         "localId" : "12",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "type" : "Multiply",
                         "operand" : [ {
                            "localId" : "10",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "1",
                            "type" : "Literal"
                         }, {
                            "localId" : "11",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "2",
                            "type" : "Literal"
                         } ]
                      }, {
                         "localId" : "13",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
                      } ]
                   }, {
                      "localId" : "15",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
                   } ]
                }, {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "5",
                   "type" : "Literal"
@@ -762,6 +832,7 @@ module.exports['Multiply'] = {
             }
          }, {
             "localId" : "23",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MultiplyVariables",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -791,13 +862,16 @@ module.exports['Multiply'] = {
             } ],
             "expression" : {
                "localId" : "22",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Eleven",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "21",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "Ten",
                   "type" : "ExpressionRef"
                } ]
@@ -853,6 +927,7 @@ module.exports['Divide'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Hundred",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -868,12 +943,14 @@ module.exports['Divide'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "100",
                "type" : "Literal"
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Four",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -889,12 +966,14 @@ module.exports['Divide'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "4",
                "type" : "Literal"
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "TenDividedByTwo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -915,11 +994,13 @@ module.exports['Divide'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Divide",
                "operand" : [ {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -928,6 +1009,7 @@ module.exports['Divide'] = {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -936,6 +1018,7 @@ module.exports['Divide'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "TenDividedByFour",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -956,11 +1039,13 @@ module.exports['Divide'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Divide",
                "operand" : [ {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "10",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -969,6 +1054,7 @@ module.exports['Divide'] = {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
@@ -977,6 +1063,7 @@ module.exports['Divide'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "DivideMultiple",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1009,17 +1096,21 @@ module.exports['Divide'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Divide",
                "operand" : [ {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "type" : "Divide",
                   "operand" : [ {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                      "type" : "Divide",
                      "operand" : [ {
                         "type" : "ToDecimal",
                         "operand" : {
                            "localId" : "14",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "1000",
                            "type" : "Literal"
@@ -1028,6 +1119,7 @@ module.exports['Divide'] = {
                         "type" : "ToDecimal",
                         "operand" : {
                            "localId" : "15",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "4",
                            "type" : "Literal"
@@ -1037,6 +1129,7 @@ module.exports['Divide'] = {
                      "type" : "ToDecimal",
                      "operand" : {
                         "localId" : "17",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "10",
                         "type" : "Literal"
@@ -1046,6 +1139,7 @@ module.exports['Divide'] = {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "19",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "5",
                      "type" : "Literal"
@@ -1054,6 +1148,7 @@ module.exports['Divide'] = {
             }
          }, {
             "localId" : "25",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "DivideVariables",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1083,11 +1178,13 @@ module.exports['Divide'] = {
             } ],
             "expression" : {
                "localId" : "24",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Divide",
                "operand" : [ {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "Hundred",
                      "type" : "ExpressionRef"
                   }
@@ -1095,6 +1192,7 @@ module.exports['Divide'] = {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "Four",
                      "type" : "ExpressionRef"
                   }
@@ -1146,6 +1244,7 @@ module.exports['Negate'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "NegativeOne",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1166,9 +1265,11 @@ module.exports['Negate'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Negate",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -1221,6 +1322,7 @@ module.exports['MathPrecedence'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Mixed",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1258,27 +1360,33 @@ module.exports['MathPrecedence'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Subtract",
                "operand" : [ {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "type" : "Add",
                      "operand" : [ {
                         "localId" : "2",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"
                      }, {
                         "localId" : "5",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "type" : "Multiply",
                         "operand" : [ {
                            "localId" : "3",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "5",
                            "type" : "Literal"
                         }, {
                            "localId" : "4",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "10",
                            "type" : "Literal"
@@ -1287,11 +1395,13 @@ module.exports['MathPrecedence'] = {
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "type" : "Divide",
                   "operand" : [ {
                      "type" : "ToDecimal",
                      "operand" : {
                         "localId" : "7",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "15",
                         "type" : "Literal"
@@ -1300,6 +1410,7 @@ module.exports['MathPrecedence'] = {
                      "type" : "ToDecimal",
                      "operand" : {
                         "localId" : "8",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "3",
                         "type" : "Literal"
@@ -1309,6 +1420,7 @@ module.exports['MathPrecedence'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Parenthetical",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1360,36 +1472,44 @@ module.exports['MathPrecedence'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Divide",
                "operand" : [ {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "type" : "Multiply",
                      "operand" : [ {
                         "localId" : "14",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "type" : "Add",
                         "operand" : [ {
                            "localId" : "12",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "1",
                            "type" : "Literal"
                         }, {
                            "localId" : "13",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "5",
                            "type" : "Literal"
                         } ]
                      }, {
                         "localId" : "17",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "type" : "Subtract",
                         "operand" : [ {
                            "localId" : "15",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "10",
                            "type" : "Literal"
                         }, {
                            "localId" : "16",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "15",
                            "type" : "Literal"
@@ -1400,6 +1520,7 @@ module.exports['MathPrecedence'] = {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "19",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "3",
                      "type" : "Literal"
@@ -1452,6 +1573,7 @@ module.exports['Power'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Pow",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1472,14 +1594,17 @@ module.exports['Power'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Power",
                "operand" : [ {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
                }, {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "4",
                   "type" : "Literal"
@@ -1535,6 +1660,7 @@ module.exports['MinValue'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MinInteger",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1559,11 +1685,13 @@ module.exports['MinValue'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "MinValue"
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "MinDecimal",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1588,11 +1716,13 @@ module.exports['MinValue'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "MinValue"
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "MinDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1617,11 +1747,13 @@ module.exports['MinValue'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "valueType" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "MinValue"
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "MinTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1646,11 +1778,13 @@ module.exports['MinValue'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "valueType" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "MinValue"
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "MinWrongType",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1675,6 +1809,7 @@ module.exports['MinValue'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "valueType" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "MinValue"
             }
@@ -1728,6 +1863,7 @@ module.exports['MaxValue'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "MaxInteger",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1752,11 +1888,13 @@ module.exports['MaxValue'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "MaxValue"
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "MaxDecimal",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1781,11 +1919,13 @@ module.exports['MaxValue'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "MaxValue"
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "MaxDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1810,11 +1950,13 @@ module.exports['MaxValue'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "valueType" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "MaxValue"
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "MaxTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1839,11 +1981,13 @@ module.exports['MaxValue'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "valueType" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "MaxValue"
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "MaxWrongType",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1868,6 +2012,7 @@ module.exports['MaxValue'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "valueType" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "MaxValue"
             }
@@ -1918,6 +2063,7 @@ module.exports['TruncatedDivide'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Trunc",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1938,14 +2084,17 @@ module.exports['TruncatedDivide'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "TruncatedDivide",
                "operand" : [ {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
                }, {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
@@ -1953,6 +2102,7 @@ module.exports['TruncatedDivide'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Even",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1973,14 +2123,17 @@ module.exports['TruncatedDivide'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "TruncatedDivide",
                "operand" : [ {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "9",
                   "type" : "Literal"
                }, {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
@@ -2032,6 +2185,7 @@ module.exports['Modulo'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Mod",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2052,14 +2206,17 @@ module.exports['Modulo'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Modulo",
                "operand" : [ {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
                }, {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -2112,6 +2269,7 @@ module.exports['Ceiling'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Ceil",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2132,9 +2290,11 @@ module.exports['Ceiling'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Ceiling",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "10.1",
                   "type" : "Literal"
@@ -2142,6 +2302,7 @@ module.exports['Ceiling'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Even",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2162,11 +2323,13 @@ module.exports['Ceiling'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Ceiling",
                "operand" : {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -2220,6 +2383,7 @@ module.exports['Floor'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "flr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2240,9 +2404,11 @@ module.exports['Floor'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Floor",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "10.1",
                   "type" : "Literal"
@@ -2250,6 +2416,7 @@ module.exports['Floor'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Even",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2270,11 +2437,13 @@ module.exports['Floor'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Floor",
                "operand" : {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -2328,6 +2497,7 @@ module.exports['Truncate'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Trunc",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2348,9 +2518,11 @@ module.exports['Truncate'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Truncate",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "10.1",
                   "type" : "Literal"
@@ -2358,6 +2530,7 @@ module.exports['Truncate'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Even",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2378,11 +2551,13 @@ module.exports['Truncate'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Truncate",
                "operand" : {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -2437,6 +2612,7 @@ module.exports['Abs'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Pos",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2457,9 +2633,11 @@ module.exports['Abs'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Abs",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
@@ -2467,6 +2645,7 @@ module.exports['Abs'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Neg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2494,12 +2673,15 @@ module.exports['Abs'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Abs",
                "operand" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "Negate",
                   "operand" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -2508,6 +2690,7 @@ module.exports['Abs'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Zero",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2528,9 +2711,11 @@ module.exports['Abs'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Abs",
                "operand" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "0",
                   "type" : "Literal"
@@ -2585,6 +2770,7 @@ module.exports['Round'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Up",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2605,9 +2791,11 @@ module.exports['Round'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Round",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "4.56",
                   "type" : "Literal"
@@ -2615,6 +2803,7 @@ module.exports['Round'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Up_percent",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2635,15 +2824,18 @@ module.exports['Round'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Round",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "4.56",
                   "type" : "Literal"
                },
                "precision" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -2651,6 +2843,7 @@ module.exports['Round'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Down",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2671,9 +2864,11 @@ module.exports['Round'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Round",
                "operand" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "4.49",
                   "type" : "Literal"
@@ -2681,6 +2876,7 @@ module.exports['Round'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Down_percent",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2701,15 +2897,18 @@ module.exports['Round'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Round",
                "operand" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "4.43",
                   "type" : "Literal"
                },
                "precision" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -2761,6 +2960,7 @@ module.exports['Ln'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "ln",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2781,11 +2981,13 @@ module.exports['Ln'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Ln",
                "operand" : {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "4",
                      "type" : "Literal"
@@ -2838,6 +3040,7 @@ module.exports['Log'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "log",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2858,11 +3061,13 @@ module.exports['Log'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Log",
                "operand" : [ {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10",
                      "type" : "Literal"
@@ -2871,6 +3076,7 @@ module.exports['Log'] = {
                   "type" : "ToDecimal",
                   "operand" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "10000",
                      "type" : "Literal"
@@ -2933,6 +3139,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Is",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2953,9 +3160,11 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Successor",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -2963,6 +3172,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Rs",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2983,9 +3193,11 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Successor",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "2.2",
                   "type" : "Literal"
@@ -2993,6 +3205,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "ofr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3013,9 +3226,11 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Successor",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2147483647",
                   "type" : "Literal"
@@ -3023,6 +3238,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "y_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3048,12 +3264,15 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
@@ -3062,6 +3281,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ym_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3087,18 +3307,22 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "15",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
@@ -3107,6 +3331,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "25",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymd_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3132,24 +3357,29 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "24",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "23",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "20",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "21",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
@@ -3158,6 +3388,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "32",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdh_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3183,30 +3414,36 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "26",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "29",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3215,6 +3452,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "40",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdhm_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3240,36 +3478,43 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "38",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "35",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3278,6 +3523,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "49",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdhms_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3303,42 +3549,50 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "48",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "47",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "41",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "45",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "second" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3347,6 +3601,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "59",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdhmsm_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3372,48 +3627,57 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "58",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "57",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "50",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "51",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "second" : {
                      "localId" : "55",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "millisecond" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3422,6 +3686,7 @@ module.exports['Successor'] = {
             }
          }, {
             "localId" : "69",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "max_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3447,48 +3712,57 @@ module.exports['Successor'] = {
             } ],
             "expression" : {
                "localId" : "68",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Successor",
                "operand" : {
                   "localId" : "67",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "60",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "9999",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "61",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "31",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "23",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "59",
                      "type" : "Literal"
                   },
                   "second" : {
                      "localId" : "65",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "59",
                      "type" : "Literal"
                   },
                   "millisecond" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "999",
                      "type" : "Literal"
@@ -3551,6 +3825,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Is",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3571,9 +3846,11 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
                   "type" : "Literal"
@@ -3581,6 +3858,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "Rs",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3601,9 +3879,11 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "2.2",
                   "type" : "Literal"
@@ -3611,6 +3891,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "ufr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3636,12 +3917,15 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "Negate",
                   "operand" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2147483648",
                      "type" : "Literal"
@@ -3650,6 +3934,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "y_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3675,12 +3960,15 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
@@ -3689,6 +3977,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "20",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ym_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3714,18 +4003,22 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "19",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
@@ -3734,6 +4027,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "26",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymd_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3759,24 +4053,29 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "25",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "24",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "21",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
@@ -3785,6 +4084,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "33",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdh_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3810,30 +4110,36 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "32",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "27",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "29",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "30",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3842,6 +4148,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdhm_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3867,36 +4174,43 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "35",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "37",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3905,6 +4219,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "50",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdhms_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3930,42 +4245,50 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "49",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "48",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "43",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "44",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "45",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "46",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "second" : {
                      "localId" : "47",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -3974,6 +4297,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "60",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ymdhmsm_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3999,48 +4323,57 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "59",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "58",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "51",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2015",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "52",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "54",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "55",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "second" : {
                      "localId" : "56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "millisecond" : {
                      "localId" : "57",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -4049,6 +4382,7 @@ module.exports['Predecessor'] = {
             }
          }, {
             "localId" : "70",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "min_date",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4074,48 +4408,57 @@ module.exports['Predecessor'] = {
             } ],
             "expression" : {
                "localId" : "69",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Predecessor",
                "operand" : {
                   "localId" : "68",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "61",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0001",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "62",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "63",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "01",
                      "type" : "Literal"
                   },
                   "hour" : {
                      "localId" : "64",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "minute" : {
                      "localId" : "65",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "second" : {
                      "localId" : "66",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
                   },
                   "millisecond" : {
                      "localId" : "67",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "0",
                      "type" : "Literal"
@@ -4190,6 +4533,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "days_10",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4209,12 +4553,14 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "value" : 10,
                "unit" : "days",
                "type" : "Quantity"
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "QL10Days",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4252,6 +4598,7 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "classType" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Instance",
                "element" : [ {
@@ -4260,6 +4607,7 @@ module.exports['Quantity'] = {
                      "type" : "ToDecimal",
                      "operand" : {
                         "localId" : "4",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "10",
                         "type" : "Literal"
@@ -4269,6 +4617,7 @@ module.exports['Quantity'] = {
                   "name" : "unit",
                   "value" : {
                      "localId" : "5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "days",
                      "type" : "Literal"
@@ -4277,6 +4626,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "QL10Min",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4314,6 +4664,7 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "classType" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Instance",
                "element" : [ {
@@ -4322,6 +4673,7 @@ module.exports['Quantity'] = {
                      "type" : "ToDecimal",
                      "operand" : {
                         "localId" : "8",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "10",
                         "type" : "Literal"
@@ -4331,6 +4683,7 @@ module.exports['Quantity'] = {
                   "name" : "unit",
                   "value" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "min",
                      "type" : "Literal"
@@ -4339,6 +4692,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "Jan1_2000",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4359,21 +4713,25 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "DateTime",
                "year" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2000",
                   "type" : "Literal"
                },
                "month" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
                },
                "day" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "1",
                   "type" : "Literal"
@@ -4381,6 +4739,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "20",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "add_q_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4410,19 +4769,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "19",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Days",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "24",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "add_d_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4452,19 +4815,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "23",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "21",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "name" : "Jan1_2000",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "28",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "sub_q_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4494,19 +4861,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Days",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "32",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "sub_d_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4536,19 +4907,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "name" : "Jan1_2000",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "36",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "add_q_q_diff",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4578,19 +4953,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "35",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Add",
                "operand" : [ {
                   "localId" : "33",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Days",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "34",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Min",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "40",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "sub_q_q_diff",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4620,19 +4999,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Subtract",
                "operand" : [ {
                   "localId" : "37",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Days",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "38",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Min",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "44",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "div_q_d",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4658,15 +5041,18 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "43",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Divide",
                "operand" : [ {
                   "localId" : "41",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                }, {
                   "type" : "ToQuantity",
                   "operand" : {
                      "localId" : "42",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -4675,6 +5061,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "48",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "div_q_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4704,19 +5091,23 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "47",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Divide",
                "operand" : [ {
                   "localId" : "45",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                }, {
                   "localId" : "46",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Days",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "52",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "mul_q_d",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4742,15 +5133,18 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "49",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                }, {
                   "type" : "ToQuantity",
                   "operand" : {
                      "localId" : "50",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
@@ -4759,6 +5153,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "56",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "mul_d_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4784,23 +5179,27 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "55",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Multiply",
                "operand" : [ {
                   "type" : "ToQuantity",
                   "operand" : {
                      "localId" : "53",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   }
                }, {
                   "localId" : "54",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QL10Days",
                   "type" : "ExpressionRef"
                } ]
             }
          }, {
             "localId" : "60",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "mul_q_q",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4830,14 +5229,17 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "59",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "57",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 2,
                   "unit" : "m",
                   "type" : "Quantity"
                }, {
                   "localId" : "58",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 10,
                   "unit" : "m",
                   "type" : "Quantity"
@@ -4845,6 +5247,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "64",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "mul_q_q_diff",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4874,14 +5277,17 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "63",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Multiply",
                "operand" : [ {
                   "localId" : "61",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 2,
                   "unit" : "m",
                   "type" : "Quantity"
                }, {
                   "localId" : "62",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 10,
                   "unit" : "/d",
                   "type" : "Quantity"
@@ -4889,6 +5295,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "67",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "neg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4913,15 +5320,18 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "66",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Negate",
                "operand" : {
                   "localId" : "65",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "days_10",
                   "type" : "ExpressionRef"
                }
             }
          }, {
             "localId" : "70",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "abs",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4948,15 +5358,18 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "69",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Abs",
                "operand" : {
                   "localId" : "68",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "neg",
                   "type" : "ExpressionRef"
                }
             }
          }, {
             "localId" : "76",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MultiplyUcum",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5003,23 +5416,28 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "75",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "73",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "type" : "Multiply",
                   "operand" : [ {
                      "localId" : "71",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 5,
                      "unit" : "m",
                      "type" : "Quantity"
                   }, {
                      "localId" : "72",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 25,
                      "unit" : "km",
                      "type" : "Quantity"
                   } ]
                }, {
                   "localId" : "74",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 125000,
                   "unit" : "m2",
                   "type" : "Quantity"
@@ -5027,6 +5445,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "82",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "DivideUcum",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5073,23 +5492,28 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "81",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "79",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "type" : "Divide",
                   "operand" : [ {
                      "localId" : "77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 20,
                      "unit" : "m2",
                      "type" : "Quantity"
                   }, {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 5,
                      "unit" : "m",
                      "type" : "Quantity"
                   } ]
                }, {
                   "localId" : "80",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 4,
                   "unit" : "m",
                   "type" : "Quantity"
@@ -5097,6 +5521,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "88",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "AddUcum",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5143,23 +5568,28 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "87",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "85",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "type" : "Add",
                   "operand" : [ {
                      "localId" : "83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 5,
                      "unit" : "m",
                      "type" : "Quantity"
                   }, {
                      "localId" : "84",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 5,
                      "unit" : "km",
                      "type" : "Quantity"
                   } ]
                }, {
                   "localId" : "86",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 5005,
                   "unit" : "m",
                   "type" : "Quantity"
@@ -5167,6 +5597,7 @@ module.exports['Quantity'] = {
             }
          }, {
             "localId" : "94",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SubtractUcum",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5213,23 +5644,28 @@ module.exports['Quantity'] = {
             } ],
             "expression" : {
                "localId" : "93",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Equal",
                "operand" : [ {
                   "localId" : "91",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "type" : "Subtract",
                   "operand" : [ {
                      "localId" : "89",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 25,
                      "unit" : "km",
                      "type" : "Quantity"
                   }, {
                      "localId" : "90",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 5,
                      "unit" : "m",
                      "type" : "Quantity"
                   } ]
                }, {
                   "localId" : "92",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 24995,
                   "unit" : "m",
                   "type" : "Quantity"

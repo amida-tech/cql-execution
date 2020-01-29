@@ -66,6 +66,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "stringStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -97,12 +98,14 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "valueType" : "{urn:hl7-org:elm-types:r1}String",
                "value" : "str",
                "type" : "Literal"
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "stringNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -128,15 +131,18 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "asType" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "As",
                "operand" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "boolTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -168,9 +174,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "true",
                   "type" : "Literal"
@@ -178,6 +186,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "boolFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -209,9 +218,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "false",
                   "type" : "Literal"
@@ -219,6 +230,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "20",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "decimalValid",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -250,9 +262,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "19",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "10.2",
                   "type" : "Literal"
@@ -260,6 +274,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "24",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "decimalInvalid",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -291,9 +306,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "23",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "abc",
                   "type" : "Literal"
@@ -301,6 +318,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "28",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "integerValid",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -332,9 +350,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "10",
                   "type" : "Literal"
@@ -342,6 +362,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "32",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "integerDropDecimal",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -373,9 +394,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "30",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "10.2",
                   "type" : "Literal"
@@ -383,6 +406,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "36",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "integerInvalid",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -414,9 +438,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "35",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "34",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "abc",
                   "type" : "Literal"
@@ -424,6 +450,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "40",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "quantityStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -455,9 +482,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "38",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "10 'A'",
                   "type" : "Literal"
@@ -465,6 +494,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "44",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "posQuantityStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -496,9 +526,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "43",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "42",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "+10 'A'",
                   "type" : "Literal"
@@ -506,6 +538,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "48",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "negQuantityStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -537,9 +570,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "47",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "46",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "-10 'A'",
                   "type" : "Literal"
@@ -547,6 +582,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "52",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "quantityStrDecimal",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -578,9 +614,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "50",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "10.0 'mA'",
                   "type" : "Literal"
@@ -588,6 +626,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "56",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "dateTimeStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -619,9 +658,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "55",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "54",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2015-01-02",
                   "type" : "Literal"
@@ -629,6 +670,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "60",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "dateStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -660,9 +702,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "59",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "ToDate",
                "operand" : {
                   "localId" : "58",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2015-01-02",
                   "type" : "Literal"
@@ -670,6 +714,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "64",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "NullConvert",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -701,9 +746,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "63",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "62",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -711,6 +758,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "68",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "ZDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -742,9 +790,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "67",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "66",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2014-01-01T14:30:00.0Z",
                   "type" : "Literal"
@@ -752,6 +802,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "72",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "TimezoneDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -783,9 +834,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "71",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "70",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2014-01-01T14:30:00.0-07:00",
                   "type" : "Literal"
@@ -793,6 +846,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "76",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "ZTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -824,9 +878,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "75",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "74",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T14:30:00.0Z",
                   "type" : "Literal"
@@ -834,6 +890,7 @@ module.exports['FromString'] = {
             }
          }, {
             "localId" : "80",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimezoneTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -865,9 +922,11 @@ module.exports['FromString'] = {
             } ],
             "expression" : {
                "localId" : "79",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "78",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T14:30:00.0-07:00",
                   "type" : "Literal"
@@ -922,6 +981,7 @@ module.exports['FromInteger'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "string10",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -947,9 +1007,11 @@ module.exports['FromInteger'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
@@ -957,6 +1019,7 @@ module.exports['FromInteger'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "decimal10",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -982,9 +1045,11 @@ module.exports['FromInteger'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "10",
                   "type" : "Literal"
@@ -992,6 +1057,7 @@ module.exports['FromInteger'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "intNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1017,15 +1083,18 @@ module.exports['FromInteger'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "asType" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "As",
                "operand" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "intInt",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1051,6 +1120,7 @@ module.exports['FromInteger'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "10",
                "type" : "Literal"
@@ -1104,6 +1174,7 @@ module.exports['FromQuantity'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "quantityStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1135,9 +1206,11 @@ module.exports['FromQuantity'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 10,
                   "unit" : "A",
                   "type" : "Quantity"
@@ -1145,6 +1218,7 @@ module.exports['FromQuantity'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "negQuantityStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1181,12 +1255,15 @@ module.exports['FromQuantity'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "type" : "Negate",
                   "operand" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 10,
                      "unit" : "A",
                      "type" : "Quantity"
@@ -1195,6 +1272,7 @@ module.exports['FromQuantity'] = {
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "posQuantityStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1231,9 +1309,11 @@ module.exports['FromQuantity'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 10,
                   "unit" : "A",
                   "type" : "Quantity"
@@ -1241,6 +1321,7 @@ module.exports['FromQuantity'] = {
             }
          }, {
             "localId" : "17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "quantityQuantity",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1272,6 +1353,7 @@ module.exports['FromQuantity'] = {
             } ],
             "expression" : {
                "localId" : "16",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "value" : 10,
                "unit" : "A",
                "type" : "Quantity"
@@ -1325,6 +1407,7 @@ module.exports['FromBoolean'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "booleanTrueStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1350,9 +1433,11 @@ module.exports['FromBoolean'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "value" : "true",
                   "type" : "Literal"
@@ -1360,6 +1445,7 @@ module.exports['FromBoolean'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "booleanFalseStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1385,9 +1471,11 @@ module.exports['FromBoolean'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "value" : "false",
                   "type" : "Literal"
@@ -1395,6 +1483,7 @@ module.exports['FromBoolean'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "booleanTrueBool",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1420,12 +1509,14 @@ module.exports['FromBoolean'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                "value" : "true",
                "type" : "Literal"
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "booleanFalseBool",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1451,6 +1542,7 @@ module.exports['FromBoolean'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                "value" : "false",
                "type" : "Literal"
@@ -1503,6 +1595,7 @@ module.exports['FromDateTime'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "dateTimeToStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1528,9 +1621,11 @@ module.exports['FromDateTime'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1576,6 +1671,7 @@ module.exports['FromDateTime'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "dateTimeToDate",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1601,9 +1697,11 @@ module.exports['FromDateTime'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "ToDate",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1649,6 +1747,7 @@ module.exports['FromDateTime'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "dateTimeToDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1674,6 +1773,7 @@ module.exports['FromDateTime'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "DateTime",
                "year" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1766,6 +1866,7 @@ module.exports['FromDate'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "dateYMDToDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1791,9 +1892,11 @@ module.exports['FromDate'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1814,6 +1917,7 @@ module.exports['FromDate'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "dateYMToDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1839,9 +1943,11 @@ module.exports['FromDate'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1857,6 +1963,7 @@ module.exports['FromDate'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "dateYToDateTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1882,9 +1989,11 @@ module.exports['FromDate'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "ToDateTime",
                "operand" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1895,6 +2004,7 @@ module.exports['FromDate'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
             "name" : "dateToDate",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1920,6 +2030,7 @@ module.exports['FromDate'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                "type" : "Date",
                "year" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -1939,6 +2050,7 @@ module.exports['FromDate'] = {
             }
          }, {
             "localId" : "20",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "dateToStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1964,9 +2076,11 @@ module.exports['FromDate'] = {
             } ],
             "expression" : {
                "localId" : "19",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -2032,6 +2146,7 @@ module.exports['FromTime'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "timeStr",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2057,9 +2172,11 @@ module.exports['FromTime'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "ToString",
                "operand" : {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                   "type" : "Time",
                   "hour" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -2075,6 +2192,7 @@ module.exports['FromTime'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "timeTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2100,6 +2218,7 @@ module.exports['FromTime'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "Time",
                "hour" : {
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -2161,6 +2280,7 @@ module.exports['FromCode'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2180,6 +2300,7 @@ module.exports['FromCode'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "valueType" : "{urn:hl7-org:elm-types:r1}String",
                "value" : "bar",
                "type" : "Literal"
@@ -2237,6 +2358,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "NoSign",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2263,9 +2385,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "0.0",
                   "type" : "Literal"
@@ -2273,6 +2397,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "PositiveSign",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2299,9 +2424,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "+1.1",
                   "type" : "Literal"
@@ -2309,6 +2436,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "NegativeSign",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2335,9 +2463,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "-1.1",
                   "type" : "Literal"
@@ -2345,6 +2475,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "TooPrecise",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2371,9 +2502,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : ".444444444",
                   "type" : "Literal"
@@ -2381,6 +2514,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "TooLargeDec",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2407,9 +2541,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "444444444444444444444444444444",
                   "type" : "Literal"
@@ -2417,6 +2553,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "TooSmallDec",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2443,9 +2580,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "-444444444444444444444444444444",
                   "type" : "Literal"
@@ -2453,6 +2592,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "24",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "NullDecimal",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2492,17 +2632,21 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "23",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "20",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "21",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -2510,6 +2654,7 @@ module.exports['ToDecimal'] = {
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "WrongFormat",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2536,9 +2681,11 @@ module.exports['ToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "type" : "ToDecimal",
                "operand" : {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "+.1",
                   "type" : "Literal"
@@ -2594,6 +2741,7 @@ module.exports['ToInteger'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "NoSign",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2620,9 +2768,11 @@ module.exports['ToInteger'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "12345",
                   "type" : "Literal"
@@ -2630,6 +2780,7 @@ module.exports['ToInteger'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "PositiveSign",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2656,9 +2807,11 @@ module.exports['ToInteger'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "+12345",
                   "type" : "Literal"
@@ -2666,6 +2819,7 @@ module.exports['ToInteger'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "NegativeSign",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2692,9 +2846,11 @@ module.exports['ToInteger'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "-12345",
                   "type" : "Literal"
@@ -2702,6 +2858,7 @@ module.exports['ToInteger'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "TooLargeInt",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2728,9 +2885,11 @@ module.exports['ToInteger'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2147483648",
                   "type" : "Literal"
@@ -2738,6 +2897,7 @@ module.exports['ToInteger'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "TooSmallInt",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2764,9 +2924,11 @@ module.exports['ToInteger'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "type" : "ToInteger",
                "operand" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "-2147483649",
                   "type" : "Literal"
@@ -2821,6 +2983,7 @@ module.exports['ToQuantity'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "WrongFormatQuantity",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2847,9 +3010,11 @@ module.exports['ToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "abc",
                   "type" : "Literal"
@@ -2857,6 +3022,7 @@ module.exports['ToQuantity'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "TooLargeQuantity",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2883,9 +3049,11 @@ module.exports['ToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "444444444444444444444444444444 ''",
                   "type" : "Literal"
@@ -2893,6 +3061,7 @@ module.exports['ToQuantity'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "TooSmallQuantity",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2919,9 +3088,11 @@ module.exports['ToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "-444444444444444444444444444444 ''",
                   "type" : "Literal"
@@ -2929,6 +3100,7 @@ module.exports['ToQuantity'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "NullArg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2968,17 +3140,21 @@ module.exports['ToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "ToQuantity",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -3035,6 +3211,7 @@ module.exports['ToRatio'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
             "name" : "NullArg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3074,17 +3251,21 @@ module.exports['ToRatio'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
                "type" : "ToRatio",
                "operand" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -3092,6 +3273,7 @@ module.exports['ToRatio'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
             "name" : "IsValid",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3118,9 +3300,11 @@ module.exports['ToRatio'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
                "type" : "ToRatio",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg':2.0 'mg'",
                   "type" : "Literal"
@@ -3128,6 +3312,7 @@ module.exports['ToRatio'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
             "name" : "IsValidWithCustomUCUM",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3154,9 +3339,11 @@ module.exports['ToRatio'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
                "type" : "ToRatio",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 '{foo:bar }':2.0 'mg'",
                   "type" : "Literal"
@@ -3164,6 +3351,7 @@ module.exports['ToRatio'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
             "name" : "InvalidSeparator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3190,9 +3378,11 @@ module.exports['ToRatio'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
                "type" : "ToRatio",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg';2.0 'mg'",
                   "type" : "Literal"
@@ -3200,6 +3390,7 @@ module.exports['ToRatio'] = {
             }
          }, {
             "localId" : "18",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
             "name" : "InvalidNumerator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3226,9 +3417,11 @@ module.exports['ToRatio'] = {
             } ],
             "expression" : {
                "localId" : "17",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
                "type" : "ToRatio",
                "operand" : {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'cc':2.0 'mg'",
                   "type" : "Literal"
@@ -3236,6 +3429,7 @@ module.exports['ToRatio'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
             "name" : "InvalidDenominator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3262,9 +3456,11 @@ module.exports['ToRatio'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Ratio",
                "type" : "ToRatio",
                "operand" : {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg':2.0 'cc'",
                   "type" : "Literal"
@@ -3328,6 +3524,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "NullArgTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3367,17 +3564,21 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "3",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -3385,6 +3586,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "IncorrectFormatTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3411,9 +3613,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "10:00PM",
                   "type" : "Literal"
@@ -3421,6 +3625,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "InvalidTime",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3447,9 +3652,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "25:99.000+00.00",
                   "type" : "Literal"
@@ -3457,6 +3664,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeH",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3483,9 +3691,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02",
                   "type" : "Literal"
@@ -3493,6 +3703,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "18",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeHM",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3519,9 +3730,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "17",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04",
                   "type" : "Literal"
@@ -3529,6 +3742,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeHMS",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3555,9 +3769,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04:59",
                   "type" : "Literal"
@@ -3565,6 +3781,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "24",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeHMSMs",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3591,9 +3808,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "23",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04:59.123",
                   "type" : "Literal"
@@ -3601,6 +3820,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeHMSMsZ",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3627,9 +3847,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "25",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04:59.123Z",
                   "type" : "Literal"
@@ -3637,6 +3859,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "30",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeHMSMsTimezone",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3663,9 +3886,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "29",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "28",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04:59.123+01",
                   "type" : "Literal"
@@ -3673,6 +3898,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "33",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "TimeHMSMsFullTimezone",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3699,9 +3925,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "32",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "31",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04:59.123+01:00",
                   "type" : "Literal"
@@ -3709,6 +3937,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "36",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "HourTooHigh",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3735,9 +3964,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "35",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "34",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T24",
                   "type" : "Literal"
@@ -3745,6 +3976,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "39",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "MinuteTooHigh",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3771,9 +4003,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "38",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "37",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T23:60",
                   "type" : "Literal"
@@ -3781,6 +4015,7 @@ module.exports['ToTime'] = {
             }
          }, {
             "localId" : "42",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
             "name" : "SecondTooHigh",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3807,9 +4042,11 @@ module.exports['ToTime'] = {
             } ],
             "expression" : {
                "localId" : "41",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Time",
                "type" : "ToTime",
                "operand" : {
                   "localId" : "40",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T23:59:60",
                   "type" : "Literal"
@@ -3871,6 +4108,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "UpperCaseTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3897,9 +4135,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "TRUE",
                   "type" : "Literal"
@@ -3907,6 +4147,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "UpperCaseFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3933,9 +4174,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "FALSE",
                   "type" : "Literal"
@@ -3943,6 +4186,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LowerCaseTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3969,9 +4213,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "true",
                   "type" : "Literal"
@@ -3979,6 +4225,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LowerCaseFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4005,9 +4252,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "false",
                   "type" : "Literal"
@@ -4015,6 +4264,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "UpperCaseT",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4041,9 +4291,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T",
                   "type" : "Literal"
@@ -4051,6 +4303,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "UpperCaseF",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4077,9 +4330,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "F",
                   "type" : "Literal"
@@ -4087,6 +4342,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "22",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LowerCaseT",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4113,9 +4369,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "21",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "t",
                   "type" : "Literal"
@@ -4123,6 +4381,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "25",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LowerCaseF",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4149,9 +4408,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "24",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "23",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "f",
                   "type" : "Literal"
@@ -4159,6 +4420,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "28",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4185,9 +4447,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "y",
                   "type" : "Literal"
@@ -4195,6 +4459,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4221,9 +4486,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "29",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "0",
                   "type" : "Literal"
@@ -4231,6 +4498,7 @@ module.exports['ToBoolean'] = {
             }
          }, {
             "localId" : "34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4257,9 +4525,11 @@ module.exports['ToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "33",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ToBoolean",
                "operand" : {
                   "localId" : "32",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "falsetto",
                   "type" : "Literal"
@@ -4312,6 +4582,7 @@ module.exports['ToConcept'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "IsValid",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4360,15 +4631,18 @@ module.exports['ToConcept'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
                "type" : "ToConcept",
                "operand" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "system",
                      "value" : {
                         "localId" : "2",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://loinc.org",
                         "type" : "Literal"
@@ -4377,6 +4651,7 @@ module.exports['ToConcept'] = {
                      "name" : "code",
                      "value" : {
                         "localId" : "3",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "8480-6",
                         "type" : "Literal"
@@ -4386,6 +4661,7 @@ module.exports['ToConcept'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4418,17 +4694,21 @@ module.exports['ToConcept'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
                "type" : "ToConcept",
                "operand" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -4483,6 +4763,7 @@ module.exports['ConvertsToBoolean'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrueWithTrueValue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4509,9 +4790,11 @@ module.exports['ConvertsToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToBoolean",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "y",
                   "type" : "Literal"
@@ -4519,6 +4802,7 @@ module.exports['ConvertsToBoolean'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrueWithFalseValue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4545,9 +4829,11 @@ module.exports['ConvertsToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToBoolean",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "0",
                   "type" : "Literal"
@@ -4555,6 +4841,7 @@ module.exports['ConvertsToBoolean'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4581,9 +4868,11 @@ module.exports['ConvertsToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToBoolean",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -4591,6 +4880,7 @@ module.exports['ConvertsToBoolean'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4623,17 +4913,21 @@ module.exports['ConvertsToBoolean'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToBoolean",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -4687,6 +4981,7 @@ module.exports['ConvertsToDate'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4713,9 +5008,11 @@ module.exports['ConvertsToDate'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDate",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2015-01-01",
                   "type" : "Literal"
@@ -4723,6 +5020,7 @@ module.exports['ConvertsToDate'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4749,9 +5047,11 @@ module.exports['ConvertsToDate'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDate",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -4759,6 +5059,7 @@ module.exports['ConvertsToDate'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4791,17 +5092,21 @@ module.exports['ConvertsToDate'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDate",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "name" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -4856,6 +5161,7 @@ module.exports['ConvertsToDateTime'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4882,9 +5188,11 @@ module.exports['ConvertsToDateTime'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDateTime",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "2014-01-01T14:30:00.0Z",
                   "type" : "Literal"
@@ -4892,6 +5200,7 @@ module.exports['ConvertsToDateTime'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrueWithDateValue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4912,9 +5221,11 @@ module.exports['ConvertsToDateTime'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDateTime",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -4935,6 +5246,7 @@ module.exports['ConvertsToDateTime'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4961,9 +5273,11 @@ module.exports['ConvertsToDateTime'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDateTime",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -4971,6 +5285,7 @@ module.exports['ConvertsToDateTime'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5003,17 +5318,21 @@ module.exports['ConvertsToDateTime'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDateTime",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -5067,6 +5386,7 @@ module.exports['ConvertsToDecimal'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5093,9 +5413,11 @@ module.exports['ConvertsToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDecimal",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "0.1",
                   "type" : "Literal"
@@ -5103,6 +5425,7 @@ module.exports['ConvertsToDecimal'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5129,9 +5452,11 @@ module.exports['ConvertsToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDecimal",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -5139,6 +5464,7 @@ module.exports['ConvertsToDecimal'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5171,17 +5497,21 @@ module.exports['ConvertsToDecimal'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToDecimal",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                      "name" : "{urn:hl7-org:elm-types:r1}Decimal",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -5235,6 +5565,7 @@ module.exports['ConvertsToInteger'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5261,9 +5592,11 @@ module.exports['ConvertsToInteger'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToInteger",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "101",
                   "type" : "Literal"
@@ -5271,6 +5604,7 @@ module.exports['ConvertsToInteger'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5297,9 +5631,11 @@ module.exports['ConvertsToInteger'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToInteger",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -5307,6 +5643,7 @@ module.exports['ConvertsToInteger'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5339,17 +5676,21 @@ module.exports['ConvertsToInteger'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToInteger",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "name" : "{urn:hl7-org:elm-types:r1}Integer",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -5406,6 +5747,7 @@ module.exports['ConvertsToQuantity'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrueWithDecimal",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5426,9 +5768,11 @@ module.exports['ConvertsToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToQuantity",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                   "value" : "0.1",
                   "type" : "Literal"
@@ -5436,6 +5780,7 @@ module.exports['ConvertsToQuantity'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrueWithInteger",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5456,9 +5801,11 @@ module.exports['ConvertsToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToQuantity",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "101",
                   "type" : "Literal"
@@ -5466,6 +5813,7 @@ module.exports['ConvertsToQuantity'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrueWithString",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5492,9 +5840,11 @@ module.exports['ConvertsToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToQuantity",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg'",
                   "type" : "Literal"
@@ -5502,6 +5852,7 @@ module.exports['ConvertsToQuantity'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5528,9 +5879,11 @@ module.exports['ConvertsToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToQuantity",
                "operand" : {
                   "localId" : "11",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -5538,6 +5891,7 @@ module.exports['ConvertsToQuantity'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalseWithInvalidUcum",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5564,9 +5918,11 @@ module.exports['ConvertsToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToQuantity",
                "operand" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'cc'",
                   "type" : "Literal"
@@ -5574,6 +5930,7 @@ module.exports['ConvertsToQuantity'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5606,17 +5963,21 @@ module.exports['ConvertsToQuantity'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToQuantity",
                "operand" : {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -5671,6 +6032,7 @@ module.exports['ConvertsToRatio'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5697,9 +6059,11 @@ module.exports['ConvertsToRatio'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToRatio",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg':2.0 'mg'",
                   "type" : "Literal"
@@ -5707,6 +6071,7 @@ module.exports['ConvertsToRatio'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5733,9 +6098,11 @@ module.exports['ConvertsToRatio'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToRatio",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg';2.0 'mg'",
                   "type" : "Literal"
@@ -5743,6 +6110,7 @@ module.exports['ConvertsToRatio'] = {
             }
          }, {
             "localId" : "10",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalseWithInvalidUcum",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5769,9 +6137,11 @@ module.exports['ConvertsToRatio'] = {
             } ],
             "expression" : {
                "localId" : "9",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToRatio",
                "operand" : {
                   "localId" : "8",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "1.0 'mg';2.0 'cc'",
                   "type" : "Literal"
@@ -5779,6 +6149,7 @@ module.exports['ConvertsToRatio'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5811,17 +6182,21 @@ module.exports['ConvertsToRatio'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToRatio",
                "operand" : {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -5875,6 +6250,7 @@ module.exports['ConvertsToString'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5895,9 +6271,11 @@ module.exports['ConvertsToString'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToString",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "value" : "true",
                   "type" : "Literal"
@@ -5905,6 +6283,7 @@ module.exports['ConvertsToString'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5953,15 +6332,18 @@ module.exports['ConvertsToString'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToString",
                "operand" : {
                   "localId" : "7",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "system",
                      "value" : {
                         "localId" : "5",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "http://loinc.org",
                         "type" : "Literal"
@@ -5970,6 +6352,7 @@ module.exports['ConvertsToString'] = {
                      "name" : "code",
                      "value" : {
                         "localId" : "6",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "8480-6",
                         "type" : "Literal"
@@ -5979,6 +6362,7 @@ module.exports['ConvertsToString'] = {
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6011,17 +6395,21 @@ module.exports['ConvertsToString'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToString",
                "operand" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "10",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }
@@ -6075,6 +6463,7 @@ module.exports['ConvertsToTime'] = {
             }
          }, {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsTrue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6101,9 +6490,11 @@ module.exports['ConvertsToTime'] = {
             } ],
             "expression" : {
                "localId" : "3",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToTime",
                "operand" : {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "T02:04:59.123+01:00",
                   "type" : "Literal"
@@ -6111,6 +6502,7 @@ module.exports['ConvertsToTime'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFalse",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6137,9 +6529,11 @@ module.exports['ConvertsToTime'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToTime",
                "operand" : {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
@@ -6147,6 +6541,7 @@ module.exports['ConvertsToTime'] = {
             }
          }, {
             "localId" : "12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6179,17 +6574,21 @@ module.exports['ConvertsToTime'] = {
             } ],
             "expression" : {
                "localId" : "11",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "ConvertsToTime",
                "operand" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "strict" : false,
                   "type" : "As",
                   "operand" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
                   "asTypeSpecifier" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "name" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "NamedTypeSpecifier"
                   }

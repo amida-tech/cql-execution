@@ -61,7 +61,14 @@ module.exports['Retrieve'] = {
             "localId" : "3",
             "name" : "SNOMED",
             "id" : "2.16.840.1.113883.6.96",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "valueSets" : {
@@ -69,35 +76,59 @@ module.exports['Retrieve'] = {
             "localId" : "4",
             "name" : "Ambulatory/ED Visit",
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1061",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          }, {
             "localId" : "5",
             "name" : "Annual Wellness Visit",
             "id" : "2.16.840.1.113883.3.526.3.1240",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "codes" : {
          "def" : [ {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Viral pharyngitis code",
             "id" : "1532007",
             "display" : "Viral pharyngitis (disorder)",
             "accessLevel" : "Public",
             "codeSystem" : {
                "localId" : "6",
-               "name" : "SNOMED"
+               "name" : "SNOMED",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       },
       "concepts" : {
          "def" : [ {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "Viral pharyngitis",
             "display" : "Viral pharyngitis (disorder)",
             "accessLevel" : "Public",
             "code" : [ {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "Viral pharyngitis code"
             } ]
          } ]
@@ -133,11 +164,25 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Condition",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "10",
                "dataType" : "{http://hl7.org/fhir}Condition",
                "templateId" : "condition-qicore-qicore-condition",
-               "type" : "Retrieve"
+               "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          }, {
             "localId" : "13",
@@ -158,11 +203,25 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "12",
                "dataType" : "{http://hl7.org/fhir}Encounter",
                "templateId" : "encounter-qicore-qicore-encounter",
-               "type" : "Retrieve"
+               "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          }, {
             "localId" : "15",
@@ -189,16 +248,37 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Condition",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "14",
                "dataType" : "{http://hl7.org/fhir}Condition",
                "templateId" : "condition-qicore-qicore-condition",
                "codeProperty" : "code",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "name" : "Acute Pharyngitis",
                   "libraryName" : "included",
-                  "type" : "ValueSetRef"
+                  "type" : "ValueSetRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
@@ -226,15 +306,36 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "16",
                "dataType" : "{http://hl7.org/fhir}Encounter",
                "templateId" : "encounter-qicore-qicore-encounter",
                "codeProperty" : "type",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "name" : "Ambulatory/ED Visit",
-                  "type" : "ValueSetRef"
+                  "type" : "ValueSetRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
@@ -262,15 +363,36 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "18",
                "dataType" : "{http://hl7.org/fhir}Encounter",
                "templateId" : "encounter-qicore-qicore-encounter",
                "codeProperty" : "type",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "name" : "Ambulatory/ED Visit",
-                  "type" : "ValueSetRef"
+                  "type" : "ValueSetRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
@@ -298,15 +420,36 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Condition",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "20",
                "dataType" : "{http://hl7.org/fhir}Condition",
                "templateId" : "condition-qicore-qicore-condition",
                "codeProperty" : "code",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "name" : "Ambulatory/ED Visit",
-                  "type" : "ValueSetRef"
+                  "type" : "ValueSetRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
@@ -334,15 +477,36 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Encounter",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "22",
                "dataType" : "{http://hl7.org/fhir}Encounter",
                "templateId" : "encounter-qicore-qicore-encounter",
                "codeProperty" : "class",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Encounter",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "name" : "Ambulatory/ED Visit",
-                  "type" : "ValueSetRef"
+                  "type" : "ValueSetRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
@@ -370,17 +534,32 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Condition",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "24",
                "dataType" : "{http://hl7.org/fhir}Condition",
                "templateId" : "condition-qicore-qicore-condition",
                "codeProperty" : "code",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "type" : "ToList",
                   "operand" : {
                      "type" : "ToConcept",
                      "operand" : {
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "Viral pharyngitis code",
                         "type" : "CodeRef"
                      }
@@ -412,15 +591,30 @@ module.exports['Retrieve'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{http://hl7.org/fhir}Condition",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "26",
                "dataType" : "{http://hl7.org/fhir}Condition",
                "templateId" : "condition-qicore-qicore-condition",
                "codeProperty" : "code",
                "type" : "Retrieve",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "codes" : {
                   "type" : "ToList",
                   "operand" : {
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
                      "name" : "Viral pharyngitis",
                      "type" : "ConceptRef"
                   }
@@ -464,7 +658,14 @@ module.exports['Included'] = {
             "localId" : "2",
             "name" : "SNOMED",
             "id" : "2.16.840.1.113883.6.96",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "valueSets" : {
@@ -472,7 +673,14 @@ module.exports['Included'] = {
             "localId" : "3",
             "name" : "Acute Pharyngitis",
             "id" : "2.16.840.1.113883.3.464.1003.102.12.1011",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       }
    }

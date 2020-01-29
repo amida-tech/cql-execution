@@ -33,17 +33,61 @@ module.exports.FunctionDef = class FunctionDef extends Expression
   exec: (ctx) ->
     @
 
+module.exports.OverloadableFunctionDef = class OverloadableFunctionDef extends Expression
+  constructor: (json) ->
+    super
+    @name = json.name
+    @defs = [new FunctionDef(json);]
+  addOverload: (json) ->
+    @defs.push(new FunctionDef(json));
+  exec: (ctx) ->
+    @
+
 module.exports.FunctionRef = class FunctionRef extends Expression
   constructor: (json) ->
     super
     @name = json.name
     @library = json.libraryName
   exec: (ctx) ->
-    functionDef = if @library then ctx.get(@library)?.get(@name) else ctx.get(@name)
+    console.log('Function:', @name)
+    overloadableFunctionDef = if @library then ctx.get(@library)?.get(@name) else ctx.get(@name)
+    defs = overloadableFunctionDef.defs
     args = @execArgs(ctx)
-    child_ctx = if @library then ctx.getLibraryContext(@library)?.childContext() else ctx.childContext()
-    if args.length != functionDef.parameters.length
+    # We must determine which function to call (in the potential case of overloaded functions).
+    # First narrow the function list to only those w/ matching number of arguments
+    defs = defs.filter (def) -> def.parameters.length == args.length
+    # If there is still more than one matching function, match on type
+    # FUNCTIONDEF:
+    # "operand" : [ {
+    #     "name" : "a",
+    #     "operandTypeSpecifier" : {
+    #       "localId" : "98",
+    #       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+    #       "name" : "{urn:hl7-org:elm-types:r1}Integer",
+    #       "type" : "NamedTypeSpecifier"
+    #     }
+    # } ]
+    # FUNCTIONREF
+    # "operand" : [ {
+    #   "localId" : "122",
+    #   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+    #   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+    #   "value" : "36",
+    #   "type" : "Literal"
+    # } ]
+    if (defs.length > 1)
+      refArgs = @args ? [@arg] ? []
+      defs = defs.filter (def) ->
+        def.parameters.every (defParam, i) ->
+          defParam.operandTypeSpecifier.resultTypeName == refArgs[i].resultTypeName
+
+    if defs.length == 0
       throw new Error("incorrect number of arguments supplied")
+    else
+      functionDef = defs[0]
+
+    # Now execute the function
+    child_ctx = if @library then ctx.getLibraryContext(@library)?.childContext() else ctx.childContext()
     for p, i in functionDef.parameters
       child_ctx.set(p.name,args[i])
     functionDef.expression.execute(child_ctx)
@@ -52,9 +96,8 @@ module.exports.OperandRef = class OperandRef extends Expression
   constructor: (json) ->
     @name = json.name
   exec: (ctx) ->
-    ctx.get(@name) 
+    ctx.get(@name)
 
-     
 module.exports.IdentifierRef = class IdentifierRef extends Expression
   constructor: (json) ->
     super

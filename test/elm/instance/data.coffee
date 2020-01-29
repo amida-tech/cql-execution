@@ -69,6 +69,7 @@ module.exports['Instance'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "QuantityA",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -106,12 +107,14 @@ module.exports['Instance'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "classType" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Instance",
                "element" : [ {
                   "name" : "unit",
                   "value" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "a",
                      "type" : "Literal"
@@ -122,6 +125,7 @@ module.exports['Instance'] = {
                      "type" : "ToDecimal",
                      "operand" : {
                         "localId" : "3",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "12",
                         "type" : "Literal"
@@ -131,6 +135,7 @@ module.exports['Instance'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "CodeA",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -194,12 +199,14 @@ module.exports['Instance'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "classType" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Instance",
                "element" : [ {
                   "name" : "system",
                   "value" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "http://loinc.org",
                      "type" : "Literal"
@@ -208,6 +215,7 @@ module.exports['Instance'] = {
                   "name" : "code",
                   "value" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "12345",
                      "type" : "Literal"
@@ -216,6 +224,7 @@ module.exports['Instance'] = {
                   "name" : "version",
                   "value" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "1",
                      "type" : "Literal"
@@ -224,6 +233,7 @@ module.exports['Instance'] = {
                   "name" : "display",
                   "value" : {
                      "localId" : "9",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "Test Code",
                      "type" : "Literal"
@@ -232,6 +242,7 @@ module.exports['Instance'] = {
             }
          }, {
             "localId" : "16",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "ConceptA",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -280,6 +291,7 @@ module.exports['Instance'] = {
             } ],
             "expression" : {
                "localId" : "15",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
                "classType" : "{urn:hl7-org:elm-types:r1}Concept",
                "type" : "Instance",
                "element" : [ {
@@ -287,8 +299,16 @@ module.exports['Instance'] = {
                   "value" : {
                      "localId" : "13",
                      "type" : "List",
+                     "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "name" : "{urn:hl7-org:elm-types:r1}Code",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
                      "element" : [ {
                         "localId" : "12",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "CodeA",
                         "type" : "ExpressionRef"
                      } ]
@@ -297,6 +317,7 @@ module.exports['Instance'] = {
                   "name" : "display",
                   "value" : {
                      "localId" : "14",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "Test Concept",
                      "type" : "Literal"
@@ -305,6 +326,7 @@ module.exports['Instance'] = {
             }
          }, {
             "localId" : "20",
+            "resultTypeName" : "{http://hl7.org/fhir}Medication",
             "name" : "Med",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -342,12 +364,14 @@ module.exports['Instance'] = {
             } ],
             "expression" : {
                "localId" : "19",
+               "resultTypeName" : "{http://hl7.org/fhir}Medication",
                "classType" : "{http://hl7.org/fhir}Medication",
                "type" : "Instance",
                "element" : [ {
                   "name" : "name",
                   "value" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "Best Med Ever",
                      "type" : "Literal"
@@ -356,6 +380,7 @@ module.exports['Instance'] = {
                   "name" : "isBrand",
                   "value" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "value" : "false",
                      "type" : "Literal"
@@ -364,6 +389,7 @@ module.exports['Instance'] = {
             }
          }, {
             "localId" : "23",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
             "name" : "val",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -393,10 +419,12 @@ module.exports['Instance'] = {
             } ],
             "expression" : {
                "localId" : "22",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                "path" : "value",
                "type" : "Property",
                "source" : {
                   "localId" : "21",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "name" : "QuantityA",
                   "type" : "ExpressionRef"
                }

@@ -41,18 +41,39 @@ module.exports['ValueSetDef'] = {
             "localId" : "2",
             "name" : "Known",
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1061",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          }, {
             "localId" : "3",
             "name" : "Unknown One Arg",
             "id" : "1.2.3.4.5.6.7.8.9",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          }, {
             "localId" : "4",
             "name" : "Unknown Two Arg",
             "id" : "1.2.3.4.5.6.7.8.9",
             "version" : "1",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "statements" : {
@@ -69,6 +90,7 @@ module.exports['ValueSetDef'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "Foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -88,6 +110,7 @@ module.exports['ValueSetDef'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "valueType" : "{urn:hl7-org:elm-types:r1}String",
                "value" : "Bar",
                "type" : "Literal"
@@ -130,7 +153,14 @@ module.exports['ValueSetRef'] = {
             "localId" : "2",
             "name" : "Acute Pharyngitis",
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1001",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "statements" : {
@@ -164,10 +194,24 @@ module.exports['ValueSetRef'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "3",
                "name" : "Acute Pharyngitis",
-               "type" : "ValueSetRef"
+               "type" : "ValueSetRef",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       }
@@ -229,23 +273,51 @@ module.exports['InValueSet'] = {
             "localId" : "2",
             "name" : "Female",
             "id" : "2.16.840.1.113883.3.560.100.2",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          }, {
             "localId" : "3",
             "name" : "Versioned Female",
             "id" : "2.16.840.1.113883.3.560.100.2",
             "version" : "20121025",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          }, {
             "localId" : "4",
             "name" : "SharedCodes",
             "id" : "2.16.840.1.113883.3.000.000.0",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          }, {
             "localId" : "5",
             "name" : "ImproperSharedCodes",
             "id" : "2.16.840.1.113883.3.000.000.1",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "statements" : {
@@ -262,6 +334,7 @@ module.exports['InValueSet'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "String",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -291,20 +364,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "F",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "7",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SharedCodesFoo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -334,20 +417,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "10",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "foo",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "11",
-                  "name" : "SharedCodes"
+                  "name" : "SharedCodes",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "SharedCodesNoMatch",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -377,20 +470,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "16",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "baz",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "15",
-                  "name" : "SharedCodes"
+                  "name" : "SharedCodes",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ImproperSharedCodesCodeValue",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -420,20 +523,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "codeValue",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "19",
-                  "name" : "ImproperSharedCodes"
+                  "name" : "ImproperSharedCodes",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "25",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "StringInVersionedValueSet",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -463,20 +576,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "24",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "F",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "23",
-                  "name" : "Versioned Female"
+                  "name" : "Versioned Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "30",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ShortCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -517,15 +640,18 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "29",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "27",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "26",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -534,11 +660,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "28",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "36",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "MediumCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -590,15 +724,18 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "35",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "33",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "31",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -607,6 +744,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "32",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "2.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -615,11 +753,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "34",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "43",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LongCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -682,15 +828,18 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "42",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "40",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "37",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -699,6 +848,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "38",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "2.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -707,6 +857,7 @@ module.exports['InValueSet'] = {
                      "name" : "version",
                      "value" : {
                         "localId" : "39",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "HL7V2.5",
                         "type" : "Literal"
@@ -715,11 +866,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "41",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "47",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "WrongString",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -749,20 +908,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "44",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "M",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "45",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "WrongStringInVersionedValueSet",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -792,20 +961,30 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "48",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "M",
                   "type" : "Literal"
                },
                "valueset" : {
                   "localId" : "49",
-                  "name" : "Versioned Female"
+                  "name" : "Versioned Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "56",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "WrongShortCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -846,15 +1025,18 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "55",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "53",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "52",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "M",
                         "type" : "Literal"
@@ -863,11 +1045,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "54",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "62",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "WrongMediumCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -919,15 +1109,18 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "61",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "59",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "57",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -936,6 +1129,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "58",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "3.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -944,11 +1138,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "60",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "69",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LongCodeDifferentVersion",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1011,15 +1213,18 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "68",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "66",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "63",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -1028,6 +1233,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "64",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "2.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -1036,6 +1242,7 @@ module.exports['InValueSet'] = {
                      "name" : "version",
                      "value" : {
                         "localId" : "65",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "HL7V2.6",
                         "type" : "Literal"
@@ -1044,11 +1251,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "67",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "76",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullCode",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1107,9 +1322,11 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "75",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "73",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
@@ -1119,6 +1336,7 @@ module.exports['InValueSet'] = {
                         "type" : "As",
                         "operand" : {
                            "localId" : "70",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                            "type" : "Null"
                         }
                      }
@@ -1126,6 +1344,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "71",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "2.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -1134,6 +1353,7 @@ module.exports['InValueSet'] = {
                      "name" : "version",
                      "value" : {
                         "localId" : "72",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "HL7V2.6",
                         "type" : "Literal"
@@ -1142,11 +1362,19 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "74",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "86",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "InListOfCodes",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1234,18 +1462,28 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "85",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "AnyInValueSet",
                "codes" : {
                   "localId" : "83",
                   "type" : "List",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "element" : [ {
                      "localId" : "78",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "classType" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "Instance",
                      "element" : [ {
                         "name" : "code",
                         "value" : {
                            "localId" : "77",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "M",
                            "type" : "Literal"
@@ -1253,12 +1491,14 @@ module.exports['InValueSet'] = {
                      } ]
                   }, {
                      "localId" : "82",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "classType" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "Instance",
                      "element" : [ {
                         "name" : "code",
                         "value" : {
                            "localId" : "79",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "F",
                            "type" : "Literal"
@@ -1267,6 +1507,7 @@ module.exports['InValueSet'] = {
                         "name" : "system",
                         "value" : {
                            "localId" : "80",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "2.16.840.1.113883.18.2",
                            "type" : "Literal"
@@ -1275,6 +1516,7 @@ module.exports['InValueSet'] = {
                         "name" : "version",
                         "value" : {
                            "localId" : "81",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "HL7V2.5",
                            "type" : "Literal"
@@ -1284,7 +1526,14 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "84",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
@@ -1364,17 +1613,33 @@ module.exports['InValueSet'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "93",
                "type" : "List",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "element" : [ {
                   "localId" : "88",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "87",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "M",
                         "type" : "Literal"
@@ -1382,12 +1647,14 @@ module.exports['InValueSet'] = {
                   } ]
                }, {
                   "localId" : "92",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "89",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -1396,6 +1663,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "90",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "2.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -1404,6 +1672,7 @@ module.exports['InValueSet'] = {
                      "name" : "version",
                      "value" : {
                         "localId" : "91",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "HL7V2.5",
                         "type" : "Literal"
@@ -1477,17 +1746,33 @@ module.exports['InValueSet'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "100",
                "type" : "List",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "element" : [ {
                   "localId" : "96",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "95",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "M",
                         "type" : "Literal"
@@ -1495,12 +1780,14 @@ module.exports['InValueSet'] = {
                   } ]
                }, {
                   "localId" : "99",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "classType" : "{urn:hl7-org:elm-types:r1}Code",
                   "type" : "Instance",
                   "element" : [ {
                      "name" : "code",
                      "value" : {
                         "localId" : "97",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "F",
                         "type" : "Literal"
@@ -1509,6 +1796,7 @@ module.exports['InValueSet'] = {
                      "name" : "system",
                      "value" : {
                         "localId" : "98",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "3.16.840.1.113883.18.2",
                         "type" : "Literal"
@@ -1518,6 +1806,7 @@ module.exports['InValueSet'] = {
             }
          }, {
             "localId" : "105",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "InListOfCodesExpressionRef",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1547,19 +1836,35 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "104",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "AnyInValueSet",
                "codes" : {
                   "localId" : "102",
                   "name" : "ListOfCodes",
-                  "type" : "ExpressionRef"
+                  "type" : "ExpressionRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                },
                "valueset" : {
                   "localId" : "103",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "109",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "InWrongListOfCodes",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1589,19 +1894,35 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "108",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "AnyInValueSet",
                "codes" : {
                   "localId" : "106",
                   "name" : "WrongListOfCodes",
-                  "type" : "ExpressionRef"
+                  "type" : "ExpressionRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                },
                "valueset" : {
                   "localId" : "107",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          }, {
             "localId" : "121",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ListOfCodesWithNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1698,18 +2019,28 @@ module.exports['InValueSet'] = {
             } ],
             "expression" : {
                "localId" : "120",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "AnyInValueSet",
                "codes" : {
                   "localId" : "118",
                   "type" : "List",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "element" : [ {
                      "localId" : "111",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "classType" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "Instance",
                      "element" : [ {
                         "name" : "code",
                         "value" : {
                            "localId" : "110",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "M",
                            "type" : "Literal"
@@ -1717,25 +2048,30 @@ module.exports['InValueSet'] = {
                      } ]
                   }, {
                      "localId" : "114",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "strict" : false,
                      "type" : "As",
                      "operand" : {
                         "localId" : "112",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                         "type" : "Null"
                      },
                      "asTypeSpecifier" : {
                         "localId" : "113",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "{urn:hl7-org:elm-types:r1}Code",
                         "type" : "NamedTypeSpecifier"
                      }
                   }, {
                      "localId" : "117",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "classType" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "Instance",
                      "element" : [ {
                         "name" : "code",
                         "value" : {
                            "localId" : "115",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "F",
                            "type" : "Literal"
@@ -1744,6 +2080,7 @@ module.exports['InValueSet'] = {
                         "name" : "system",
                         "value" : {
                            "localId" : "116",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "2.16.840.1.113883.18.2",
                            "type" : "Literal"
@@ -1753,7 +2090,14 @@ module.exports['InValueSet'] = {
                },
                "valueset" : {
                   "localId" : "119",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          } ]
@@ -1794,7 +2138,14 @@ module.exports['Patient Property In ValueSet'] = {
             "localId" : "2",
             "name" : "Female",
             "id" : "2.16.840.1.113883.3.560.100.2",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "statements" : {
@@ -1811,6 +2162,7 @@ module.exports['Patient Property In ValueSet'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsFemale",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1850,20 +2202,30 @@ module.exports['Patient Property In ValueSet'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "InValueSet",
                "code" : {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "path" : "gender",
                   "type" : "Property",
                   "source" : {
                      "localId" : "3",
+                     "resultTypeName" : "{http://hl7.org/fhir}Patient",
                      "name" : "Patient",
                      "type" : "ExpressionRef"
                   }
                },
                "valueset" : {
                   "localId" : "5",
-                  "name" : "Female"
+                  "name" : "Female",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                }
             }
          } ]
@@ -1905,19 +2267,34 @@ module.exports['CodeDef'] = {
             "localId" : "2",
             "name" : "LOINC",
             "id" : "http://loinc.org",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "codes" : {
          "def" : [ {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Tobacco smoking status code",
             "id" : "72166-2",
             "display" : "Tobacco smoking status",
             "accessLevel" : "Public",
             "codeSystem" : {
                "localId" : "3",
-               "name" : "LOINC"
+               "name" : "LOINC",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       },
@@ -1935,6 +2312,7 @@ module.exports['CodeDef'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "Foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1954,6 +2332,7 @@ module.exports['CodeDef'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "valueType" : "{urn:hl7-org:elm-types:r1}String",
                "value" : "Bar",
                "type" : "Literal"
@@ -1997,19 +2376,34 @@ module.exports['CodeRef'] = {
             "localId" : "2",
             "name" : "LOINC",
             "id" : "http://loinc.org",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "codes" : {
          "def" : [ {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Tobacco smoking status code",
             "id" : "72166-2",
             "display" : "Tobacco smoking status",
             "accessLevel" : "Public",
             "codeSystem" : {
                "localId" : "3",
-               "name" : "LOINC"
+               "name" : "LOINC",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       },
@@ -2027,6 +2421,7 @@ module.exports['CodeRef'] = {
             }
          }, {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2046,6 +2441,7 @@ module.exports['CodeRef'] = {
             } ],
             "expression" : {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "Tobacco smoking status code",
                "type" : "CodeRef"
             }
@@ -2089,30 +2485,47 @@ module.exports['ConceptDef'] = {
             "localId" : "2",
             "name" : "LOINC",
             "id" : "http://loinc.org",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "codes" : {
          "def" : [ {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Tobacco smoking status code",
             "id" : "72166-2",
             "display" : "Tobacco smoking status",
             "accessLevel" : "Public",
             "codeSystem" : {
                "localId" : "3",
-               "name" : "LOINC"
+               "name" : "LOINC",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       },
       "concepts" : {
          "def" : [ {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "Tobacco smoking status",
             "display" : "Tobacco smoking status",
             "accessLevel" : "Public",
             "code" : [ {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "Tobacco smoking status code"
             } ]
          } ]
@@ -2131,6 +2544,7 @@ module.exports['ConceptDef'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "Foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2150,6 +2564,7 @@ module.exports['ConceptDef'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "valueType" : "{urn:hl7-org:elm-types:r1}String",
                "value" : "Bar",
                "type" : "Literal"
@@ -2194,30 +2609,47 @@ module.exports['ConceptRef'] = {
             "localId" : "2",
             "name" : "LOINC",
             "id" : "http://loinc.org",
-            "accessLevel" : "Public"
+            "accessLevel" : "Public",
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
          } ]
       },
       "codes" : {
          "def" : [ {
             "localId" : "4",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Tobacco smoking status code",
             "id" : "72166-2",
             "display" : "Tobacco smoking status",
             "accessLevel" : "Public",
             "codeSystem" : {
                "localId" : "3",
-               "name" : "LOINC"
+               "name" : "LOINC",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }
             }
          } ]
       },
       "concepts" : {
          "def" : [ {
             "localId" : "6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "Tobacco smoking status",
             "display" : "Tobacco smoking status",
             "accessLevel" : "Public",
             "code" : [ {
                "localId" : "5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "Tobacco smoking status code"
             } ]
          } ]
@@ -2236,6 +2668,7 @@ module.exports['ConceptRef'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
             "name" : "Foo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2255,6 +2688,7 @@ module.exports['ConceptRef'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
                "name" : "Tobacco smoking status",
                "type" : "ConceptRef"
             }
@@ -2311,6 +2745,7 @@ module.exports['CalculateAge'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Years",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2330,6 +2765,7 @@ module.exports['CalculateAge'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAge",
                "operand" : {
@@ -2346,6 +2782,7 @@ module.exports['CalculateAge'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Months",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2365,6 +2802,7 @@ module.exports['CalculateAge'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Month",
                "type" : "CalculateAge",
                "operand" : {
@@ -2381,6 +2819,7 @@ module.exports['CalculateAge'] = {
             }
          }, {
             "localId" : "7",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Days",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2400,6 +2839,7 @@ module.exports['CalculateAge'] = {
             } ],
             "expression" : {
                "localId" : "6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Day",
                "type" : "CalculateAge",
                "operand" : {
@@ -2413,6 +2853,7 @@ module.exports['CalculateAge'] = {
             }
          }, {
             "localId" : "9",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Hours",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2432,6 +2873,7 @@ module.exports['CalculateAge'] = {
             } ],
             "expression" : {
                "localId" : "8",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Hour",
                "type" : "CalculateAge",
                "operand" : {
@@ -2445,6 +2887,7 @@ module.exports['CalculateAge'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Minutes",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2464,6 +2907,7 @@ module.exports['CalculateAge'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Minute",
                "type" : "CalculateAge",
                "operand" : {
@@ -2477,6 +2921,7 @@ module.exports['CalculateAge'] = {
             }
          }, {
             "localId" : "13",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "Seconds",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2496,6 +2941,7 @@ module.exports['CalculateAge'] = {
             } ],
             "expression" : {
                "localId" : "12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Second",
                "type" : "CalculateAge",
                "operand" : {
@@ -2559,6 +3005,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AgeAt2012",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2586,6 +3033,7 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
@@ -2597,9 +3045,11 @@ module.exports['CalculateAgeAt'] = {
                   }
                }, {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "2",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2012",
                      "type" : "Literal"
@@ -2608,6 +3058,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AgeAt19810216",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2635,6 +3086,7 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
@@ -2646,21 +3098,25 @@ module.exports['CalculateAgeAt'] = {
                   }
                }, {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "6",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1981",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "7",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "8",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "16",
                      "type" : "Literal"
@@ -2669,6 +3125,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "15",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AgeAt1975",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2696,6 +3153,7 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
@@ -2707,9 +3165,11 @@ module.exports['CalculateAgeAt'] = {
                   }
                }, {
                   "localId" : "13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1975",
                      "type" : "Literal"
@@ -2718,6 +3178,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "21",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AgeInYearsDateTimeArg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2745,6 +3206,7 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
@@ -2756,21 +3218,25 @@ module.exports['CalculateAgeAt'] = {
                   }
                }, {
                   "localId" : "19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "16",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2012",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "17",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -2779,6 +3245,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "28",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "CalculateAgeInYearsDateTimeArg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2807,10 +3274,12 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
                   "localId" : "22",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -2854,21 +3323,25 @@ module.exports['CalculateAgeAt'] = {
                   }
                }, {
                   "localId" : "26",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "localId" : "23",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2012",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "25",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -2877,6 +3350,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "AgeInYearsDateArg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2904,6 +3378,7 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "33",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
@@ -2918,21 +3393,25 @@ module.exports['CalculateAgeAt'] = {
                   }
                }, {
                   "localId" : "32",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                   "type" : "Date",
                   "year" : {
                      "localId" : "29",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "2012",
                      "type" : "Literal"
                   },
                   "month" : {
                      "localId" : "30",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "12",
                      "type" : "Literal"
                   },
                   "day" : {
                      "localId" : "31",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                      "value" : "1",
                      "type" : "Literal"
@@ -2941,6 +3420,7 @@ module.exports['CalculateAgeAt'] = {
             }
          }, {
             "localId" : "41",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "CalculateAgeInYearsDateArg",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2969,10 +3449,12 @@ module.exports['CalculateAgeAt'] = {
             } ],
             "expression" : {
                "localId" : "40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "precision" : "Year",
                "type" : "CalculateAgeAt",
                "operand" : [ {
                   "localId" : "35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "DateTime",
                   "year" : {
                      "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
@@ -3018,21 +3500,25 @@ module.exports['CalculateAgeAt'] = {
                   "type" : "ToDateTime",
                   "operand" : {
                      "localId" : "39",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
                      "type" : "Date",
                      "year" : {
                         "localId" : "36",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "2012",
                         "type" : "Literal"
                      },
                      "month" : {
                         "localId" : "37",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "12",
                         "type" : "Literal"
                      },
                      "day" : {
                         "localId" : "38",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                         "value" : "1",
                         "type" : "Literal"

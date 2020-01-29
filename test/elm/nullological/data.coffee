@@ -47,6 +47,7 @@ module.exports['Nil'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "Nil",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -62,6 +63,7 @@ module.exports['Nil'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Null"
             }
          } ]
@@ -115,6 +117,7 @@ module.exports['IsNull'] = {
             }
          }, {
             "localId" : "3",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "Nil",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -130,10 +133,12 @@ module.exports['IsNull'] = {
             } ],
             "expression" : {
                "localId" : "2",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Null"
             }
          }, {
             "localId" : "5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
             "name" : "One",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -149,12 +154,14 @@ module.exports['IsNull'] = {
             } ],
             "expression" : {
                "localId" : "4",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                "value" : "1",
                "type" : "Literal"
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullIsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -175,14 +182,17 @@ module.exports['IsNull'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "IsNull",
                "operand" : {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }
             }
          }, {
             "localId" : "11",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NullVarIsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -207,15 +217,18 @@ module.exports['IsNull'] = {
             } ],
             "expression" : {
                "localId" : "10",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "IsNull",
                "operand" : {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "name" : "Nil",
                   "type" : "ExpressionRef"
                }
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "StringIsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -240,9 +253,11 @@ module.exports['IsNull'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "IsNull",
                "operand" : {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "",
                   "type" : "Literal"
@@ -250,6 +265,7 @@ module.exports['IsNull'] = {
             }
          }, {
             "localId" : "17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NonNullVarIsNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -274,9 +290,11 @@ module.exports['IsNull'] = {
             } ],
             "expression" : {
                "localId" : "16",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "IsNull",
                "operand" : {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "name" : "One",
                   "type" : "ExpressionRef"
                }
@@ -336,6 +354,7 @@ module.exports['Coalesce'] = {
             }
          }, {
             "localId" : "8",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "NullNullHelloNullWorld",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -371,23 +390,29 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "7",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "2",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }, {
                   "localId" : "3",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }, {
                   "localId" : "4",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Hello",
                   "type" : "Literal"
                }, {
                   "localId" : "5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }, {
                   "localId" : "6",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "World",
                   "type" : "Literal"
@@ -395,6 +420,7 @@ module.exports['Coalesce'] = {
             }
          }, {
             "localId" : "14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FooNullNullBar",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -429,9 +455,11 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "13",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "9",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Foo",
                   "type" : "Literal"
@@ -440,6 +468,7 @@ module.exports['Coalesce'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "10",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
@@ -447,10 +476,12 @@ module.exports['Coalesce'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "11",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Bar",
                   "type" : "Literal"
@@ -458,6 +489,7 @@ module.exports['Coalesce'] = {
             }
          }, {
             "localId" : "19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "AllNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -478,20 +510,25 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "18",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "15",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }, {
                   "localId" : "16",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                }, {
                   "localId" : "17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                   "type" : "Null"
                } ]
             }
          }, {
             "localId" : "27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ListArgStartsWithNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -534,15 +571,24 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "25",
                   "type" : "List",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "element" : [ {
                      "asType" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "As",
                      "operand" : {
                         "localId" : "20",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                         "type" : "Null"
                      }
                   }, {
@@ -550,10 +596,12 @@ module.exports['Coalesce'] = {
                      "type" : "As",
                      "operand" : {
                         "localId" : "21",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                         "type" : "Null"
                      }
                   }, {
                      "localId" : "22",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "One",
                      "type" : "Literal"
@@ -562,10 +610,12 @@ module.exports['Coalesce'] = {
                      "type" : "As",
                      "operand" : {
                         "localId" : "23",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                         "type" : "Null"
                      }
                   }, {
                      "localId" : "24",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "Two",
                      "type" : "Literal"
@@ -574,6 +624,7 @@ module.exports['Coalesce'] = {
             }
          }, {
             "localId" : "34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "ListArgAllNull",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -601,21 +652,33 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "33",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "32",
                   "type" : "List",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}Any",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
                   "element" : [ {
                      "localId" : "28",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }, {
                      "localId" : "29",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }, {
                      "localId" : "30",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }, {
                      "localId" : "31",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   } ]
                } ]
@@ -655,14 +718,29 @@ module.exports['Coalesce'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "40",
                "type" : "List",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "element" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}String",
                   "type" : "As",
                   "operand" : {
                      "localId" : "35",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
@@ -670,10 +748,12 @@ module.exports['Coalesce'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "37",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "One",
                   "type" : "Literal"
@@ -682,10 +762,12 @@ module.exports['Coalesce'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Two",
                   "type" : "Literal"
@@ -693,6 +775,7 @@ module.exports['Coalesce'] = {
             }
          }, {
             "localId" : "44",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ListExpressionRef",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -719,15 +802,24 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "43",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "42",
                   "name" : "ListWithNull",
-                  "type" : "ExpressionRef"
+                  "type" : "ExpressionRef",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                } ]
             }
          }, {
             "localId" : "47",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
             "name" : "RetrieveAsList",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -754,12 +846,20 @@ module.exports['Coalesce'] = {
             } ],
             "expression" : {
                "localId" : "46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                "type" : "Coalesce",
                "operand" : [ {
                   "localId" : "45",
                   "dataType" : "{http://hl7.org/fhir}Encounter",
                   "templateId" : "encounter-qicore-qicore-encounter",
-                  "type" : "Retrieve"
+                  "type" : "Retrieve",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "name" : "{http://hl7.org/fhir}Encounter",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
                } ]
             }
          }, {
@@ -782,14 +882,29 @@ module.exports['Coalesce'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }
+            },
             "expression" : {
                "localId" : "51",
                "type" : "List",
+               "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               },
                "element" : [ {
                   "asType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "type" : "As",
                   "operand" : {
                      "localId" : "48",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
@@ -797,10 +912,12 @@ module.exports['Coalesce'] = {
                   "type" : "As",
                   "operand" : {
                      "localId" : "49",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "50",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "3",
                   "type" : "Literal"
@@ -842,18 +959,58 @@ module.exports['Coalesce'] = {
                   } ]
                }
             } ],
+            "resultTypeSpecifier" : {
+               "type" : "ChoiceTypeSpecifier",
+               "choice" : [ {
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               } ]
+            },
             "expression" : {
                "localId" : "56",
                "type" : "Coalesce",
+               "resultTypeSpecifier" : {
+                  "type" : "ChoiceTypeSpecifier",
+                  "choice" : [ {
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               },
                "operand" : [ {
                   "localId" : "55",
                   "type" : "Union",
+                  "resultTypeSpecifier" : {
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "type" : "ChoiceTypeSpecifier",
+                        "choice" : [ {
+                           "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        } ]
+                     }
+                  },
                   "operand" : [ {
                      "type" : "As",
                      "operand" : {
                         "localId" : "53",
                         "name" : "ListA",
-                        "type" : "ExpressionRef"
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      },
                      "asTypeSpecifier" : {
                         "type" : "ListTypeSpecifier",
@@ -873,7 +1030,14 @@ module.exports['Coalesce'] = {
                      "operand" : {
                         "localId" : "54",
                         "name" : "ListWithNull",
-                        "type" : "ExpressionRef"
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
                      },
                      "asTypeSpecifier" : {
                         "type" : "ListTypeSpecifier",

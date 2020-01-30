@@ -1,5 +1,6 @@
 { Expression } = require './expression'
 { build } = require './builder'
+{ equals } = require '../util/comparison'
 
 module.exports.ExpressionDef = class ExpressionDef extends Expression
   constructor: (json) ->
@@ -49,7 +50,6 @@ module.exports.FunctionRef = class FunctionRef extends Expression
     @name = json.name
     @library = json.libraryName
   exec: (ctx) ->
-    console.log('Function:', @name)
     overloadableFunctionDef = if @library then ctx.get(@library)?.get(@name) else ctx.get(@name)
     defs = overloadableFunctionDef.defs
     args = @execArgs(ctx)
@@ -78,8 +78,10 @@ module.exports.FunctionRef = class FunctionRef extends Expression
     if (defs.length > 1)
       refArgs = @args ? [@arg] ? []
       defs = defs.filter (def) ->
-        def.parameters.every (defParam, i) ->
-          defParam.operandTypeSpecifier.resultTypeName == refArgs[i].resultTypeName
+        defTypes = def.parameters.map (p) -> p.operandTypeSpecifier?.resultTypeName ? p.operandTypeSpecifier?.resultTypeSpecifier
+        argTypes = refArgs.map (a) -> a?.resultTypeName ? a?.resultTypeSpecifier
+        defTypes.every (defType, i) ->
+          equals(defType, argTypes[i])
 
     if defs.length == 0
       throw new Error("incorrect number of arguments supplied")

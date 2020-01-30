@@ -10,6 +10,8 @@ module.exports.Expression = class Expression
       @localId = json.localId
     if json.resultTypeName?
       @resultTypeName = json.resultTypeName
+    if json.resultTypeSpecifier
+      @resultTypeSpecifier = json.resultTypeSpecifier
 
   execute: (ctx) ->
     if @localId?

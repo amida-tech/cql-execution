@@ -1,6 +1,7 @@
 should = require 'should'
 setup = require '../../setup'
 data = require './data'
+{ Interval } = require '../../../lib/datatypes/interval'
 
 describe 'ExpressionDef', ->
   @beforeEach ->
@@ -56,14 +57,14 @@ describe.only 'FunctionOverloads', ->
   it 'should be able to distinguish functions by argument types using literals' , ->
     @integerTimesTwoLiteral.exec(@ctx).should.equal 72
     @stringTimesTwoLiteral.exec(@ctx).should.equal 'Well, Well'
-    #@intervalTimesTwoLiteral.exec(@ctx).should.equal new Interval(8,10)
+    @intervalTimesTwoLiteral.exec(@ctx).should.eql new Interval(8,10)
 
   it 'should be able to distinguish functions by argument types using expressions' , ->
     @integerTimesTwoExpression.exec(@ctx).should.equal 14
     @stringTimesTwoExpression.exec(@ctx).should.equal 'FooBar, FooBar'
-    #@intervalTimesTwoExpression.exec(@ctx).should.equal new Interval(2,20)
+    @intervalTimesTwoExpression.exec(@ctx).should.eql new Interval(2,20)
 
   it 'should be able to distinguish functions by argument types using functions' , ->
     @integerTimesTwoFunction.exec(@ctx).should.equal 60
     @stringTimesTwoFunction.exec(@ctx).should.equal 'Hello Bob, Hello Bob'
-    #@intervalTimesTwoFunction.exec(@ctx).should.equal new Interval(0,120)
+    @intervalTimesTwoFunction.exec(@ctx).should.eql new Interval(0,120)

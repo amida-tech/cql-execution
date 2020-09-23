@@ -11110,7 +11110,9 @@ var FunctionRef = /*#__PURE__*/function (_Expression4) {
           var match = true;
 
           for (var i = 0; i < args.length && match; i++) {
-            match = ctx.matchesTypeSpecifier(args[i], f.parameters[i].operandTypeSpecifier);
+            if (args[i] !== null) {
+              match = ctx.matchesTypeSpecifier(args[i], f.parameters[i].operandTypeSpecifier);
+            }
           }
 
           return match;
@@ -11934,8 +11936,17 @@ var As = /*#__PURE__*/function (_Expression) {
     _classCallCheck(this, As);
 
     _this = _super.call(this, json);
-    _this.asType = json.asType;
-    _this.asTypeSpecifier = json.asTypeSpecifier;
+
+    if (json.asTypeSpecifier) {
+      _this.asTypeSpecifier = json.asTypeSpecifier;
+    } else if (json.asType) {
+      // convert it to a NamedTypedSpecifier
+      _this.asTypeSpecifier = {
+        name: json.asType,
+        type: 'NamedTypeSpecifier'
+      };
+    }
+
     _this.strict = json.strict != null ? json.strict : false;
     return _this;
   }
@@ -11943,8 +11954,24 @@ var As = /*#__PURE__*/function (_Expression) {
   _createClass(As, [{
     key: "exec",
     value: function exec(ctx) {
-      // TODO: Currently just returns the arg (which works for null, but probably not others)
-      return this.execArgs(ctx);
+      var arg = this.execArgs(ctx); // If it is null, return null
+
+      if (arg == null) {
+        return null;
+      }
+
+      if (typeof arg._is !== 'function' && !isSystemType(this.asTypeSpecifier)) {
+        // We need an _is implementation in order to check non System types
+        // If this is not found then we should just return the arg to match old functionality.
+        return arg;
+      }
+
+      if (ctx.matchesTypeSpecifier(arg, this.asTypeSpecifier)) {
+        // TODO: request patient source to change type identification
+        return arg;
+      } else {
+        return null;
+      }
     }
   }]);
 
@@ -12783,6 +12810,10 @@ var Is = /*#__PURE__*/function (_Expression24) {
     key: "exec",
     value: function exec(ctx) {
       var arg = this.execArgs(ctx);
+
+      if (arg === null) {
+        return false;
+      }
 
       if (typeof arg._is !== 'function' && !isSystemType(this.isTypeSpecifier)) {
         // We need an _is implementation in order to check non System types
@@ -14448,7 +14479,7 @@ module.exports = {
 };
 },{}],48:[function(require,module,exports){
 //! moment.js
-//! version : 2.27.0
+//! version : 2.28.0
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -18853,7 +18884,7 @@ module.exports = {
             eras = this.localeData().eras();
         for (i = 0, l = eras.length; i < l; ++i) {
             // truncate time
-            val = this.startOf('day').valueOf();
+            val = this.clone().startOf('day').valueOf();
 
             if (eras[i].since <= val && val <= eras[i].until) {
                 return eras[i].name;
@@ -18873,7 +18904,7 @@ module.exports = {
             eras = this.localeData().eras();
         for (i = 0, l = eras.length; i < l; ++i) {
             // truncate time
-            val = this.startOf('day').valueOf();
+            val = this.clone().startOf('day').valueOf();
 
             if (eras[i].since <= val && val <= eras[i].until) {
                 return eras[i].narrow;
@@ -18893,7 +18924,7 @@ module.exports = {
             eras = this.localeData().eras();
         for (i = 0, l = eras.length; i < l; ++i) {
             // truncate time
-            val = this.startOf('day').valueOf();
+            val = this.clone().startOf('day').valueOf();
 
             if (eras[i].since <= val && val <= eras[i].until) {
                 return eras[i].abbr;
@@ -18916,7 +18947,7 @@ module.exports = {
             dir = eras[i].since <= eras[i].until ? +1 : -1;
 
             // truncate time
-            val = this.startOf('day').valueOf();
+            val = this.clone().startOf('day').valueOf();
 
             if (
                 (eras[i].since <= val && val <= eras[i].until) ||
@@ -20067,7 +20098,7 @@ module.exports = {
 
     //! moment.js
 
-    hooks.version = '2.27.0';
+    hooks.version = '2.28.0';
 
     setHookCallback(createLocal);
 

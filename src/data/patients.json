@@ -6572,6 +6572,9 @@
       "resource": {
         "resourceType": "Encounter",
         "id": "9ff13252-9299-44f4-773a-19db01af425b",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter"]
+        },
         "status": "finished",
         "class": {
           "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -6608,8 +6611,8 @@
               }
             ],
             "period": {
-              "start": "2020-03-14T02:18:59-04:00",
-              "end": "2020-03-14T02:33:59-04:00"
+              "start": "2019-03-14T02:18:59-04:00",
+              "end": "2019-03-14T02:33:59-04:00"
             },
             "individual": {
               "reference": "urn:uuid:c2d26221-3f2d-33e6-bb85-3732a6c601fc",
@@ -6618,8 +6621,8 @@
           }
         ],
         "period": {
-          "start": "2020-03-14T02:18:59-04:00",
-          "end": "2020-03-14T02:33:59-04:00"
+          "start": "2019-03-14T02:18:59-04:00",
+          "end": "2019-03-14T02:33:59-04:00"
         },
         "serviceProvider": {
           "reference": "urn:uuid:b75a65a9-dad5-3f25-af9e-4c53b33fc682",
@@ -6762,7 +6765,6 @@
         },
         "effectiveDateTime": "2019-03-14T02:18:59-04:00",
         "issued": "2019-03-14T02:18:59.128-04:00",
-        "value": [7.63],
         "valueQuantity": {
           "value": 7.53,
           "unit": "%",
@@ -7809,6 +7811,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "5ab9be97-8fed-b4b7-8df4-65656521fa11",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -7906,6 +7911,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "77127f3b-8f89-eee1-26a4-74c9ff668dd7",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -7953,6 +7961,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "49e04a2a-7317-ceca-3aaf-ca98fef9705b",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8000,6 +8011,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "733a6885-ea73-e90a-c3f0-94482037405a",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8047,6 +8061,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "eb217ee5-6575-9780-3f6f-b02c54380b41",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8094,6 +8111,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "cfcb9cab-495e-14ee-4a42-cf4b29e2069a",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8141,6 +8161,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "1fa4139c-12e6-3f00-d167-a90de0a24bb3",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8188,6 +8211,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "ddb8b4b1-e8d7-f48d-2672-3634b083297c",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8235,6 +8261,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "06fd8630-11e8-941b-94ef-2709eb3b30b5",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {
@@ -8282,6 +8311,9 @@
       "resource": {
         "resourceType": "Observation",
         "id": "93cd46f5-f7de-5ea8-54bb-08d895de5e48",
+        "meta": {
+          "profile": ["http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation"]
+        },
         "status": "final",
         "category": [
           {

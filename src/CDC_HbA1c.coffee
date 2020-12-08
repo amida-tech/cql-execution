@@ -131,7 +131,7 @@ module.exports = {
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1085",
             "accessLevel" : "Public"
          }, {
-            "name" : "Observation",
+            "name" : "Observation enc",
             "id" : "2.16.840.1.113762.1.4.1181.72",
             "accessLevel" : "Public"
          }, {
@@ -363,24 +363,6 @@ module.exports = {
                         "name" : "MeasurementPeriod",
                         "type" : "ParameterRef"
                      } ]
-                  }
-               }
-            }
-         }, {
-            "name" : "test POS",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                  "codeProperty" : "type",
-                  "codeComparator" : "in",
-                  "type" : "Retrieve",
-                  "codes" : {
-                     "name" : "Telehealth POS",
-                     "type" : "ValueSetRef"
                   }
                }
             }
@@ -700,24 +682,6 @@ module.exports = {
                } ]
             }
          }, {
-            "name" : "diabetes test",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                  "codeProperty" : "code",
-                  "codeComparator" : "in",
-                  "type" : "Retrieve",
-                  "codes" : {
-                     "name" : "Diabetes",
-                     "type" : "ValueSetRef"
-                  }
-               }
-            }
-         }, {
             "name" : "nonacute outpatient encounters with diabetes",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -786,7 +750,7 @@ module.exports = {
                                  "codeComparator" : "in",
                                  "type" : "Retrieve",
                                  "codes" : {
-                                    "name" : "Observation",
+                                    "name" : "Observation enc",
                                     "type" : "ValueSetRef"
                                  }
                               }
@@ -1269,35 +1233,9 @@ module.exports = {
             "context" : "Patient",
             "accessLevel" : "Public",
             "expression" : {
-               "type" : "Intersect",
+               "type" : "And",
                "operand" : [ {
-                  "type" : "As",
-                  "operand" : {
-                     "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                     "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                     "codeProperty" : "type",
-                     "codeComparator" : "in",
-                     "type" : "Retrieve",
-                     "codes" : {
-                        "name" : "Acute Inpatient",
-                        "type" : "ValueSetRef"
-                     }
-                  },
-                  "asTypeSpecifier" : {
-                     "type" : "ListTypeSpecifier",
-                     "elementType" : {
-                        "type" : "ChoiceTypeSpecifier",
-                        "choice" : [ {
-                           "name" : "{http://hl7.org/fhir/us/qicore}Condition",
-                           "type" : "NamedTypeSpecifier"
-                        }, {
-                           "name" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                           "type" : "NamedTypeSpecifier"
-                        } ]
-                     }
-                  }
-               }, {
-                  "type" : "As",
+                  "type" : "Exists",
                   "operand" : {
                      "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
                      "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
@@ -1308,33 +1246,33 @@ module.exports = {
                         "name" : "Advanced Illness",
                         "type" : "ValueSetRef"
                      }
-                  },
-                  "asTypeSpecifier" : {
-                     "type" : "ListTypeSpecifier",
-                     "elementType" : {
-                        "type" : "ChoiceTypeSpecifier",
-                        "choice" : [ {
-                           "name" : "{http://hl7.org/fhir/us/qicore}Condition",
-                           "type" : "NamedTypeSpecifier"
-                        }, {
-                           "name" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                           "type" : "NamedTypeSpecifier"
-                        } ]
+                  }
+               }, {
+                  "type" : "Exists",
+                  "operand" : {
+                     "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
+                     "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
+                     "codeProperty" : "type",
+                     "codeComparator" : "in",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "name" : "Acute Inpatient",
+                        "type" : "ValueSetRef"
                      }
                   }
                } ]
             }
          }, {
-            "name" : "Acute Inpatient with Advanced Illness bool",
+            "name" : "Acute inpatient discharge with Advanced Illness",
             "context" : "Patient",
             "accessLevel" : "Public",
             "expression" : {
                "type" : "Exists",
                "operand" : {
-                  "type" : "Intersect",
-                  "operand" : [ {
-                     "type" : "As",
-                     "operand" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
                         "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
                         "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
                         "codeProperty" : "type",
@@ -1344,23 +1282,12 @@ module.exports = {
                            "name" : "Acute Inpatient",
                            "type" : "ValueSetRef"
                         }
-                     },
-                     "asTypeSpecifier" : {
-                        "type" : "ListTypeSpecifier",
-                        "elementType" : {
-                           "type" : "ChoiceTypeSpecifier",
-                           "choice" : [ {
-                              "name" : "{http://hl7.org/fhir/us/qicore}Condition",
-                              "type" : "NamedTypeSpecifier"
-                           }, {
-                              "name" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                              "type" : "NamedTypeSpecifier"
-                           } ]
-                        }
                      }
-                  }, {
-                     "type" : "As",
-                     "operand" : {
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "AI",
+                     "type" : "With",
+                     "expression" : {
                         "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
                         "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
                         "codeProperty" : "code",
@@ -1371,50 +1298,19 @@ module.exports = {
                            "type" : "ValueSetRef"
                         }
                      },
-                     "asTypeSpecifier" : {
-                        "type" : "ListTypeSpecifier",
-                        "elementType" : {
-                           "type" : "ChoiceTypeSpecifier",
-                           "choice" : [ {
-                              "name" : "{http://hl7.org/fhir/us/qicore}Condition",
-                              "type" : "NamedTypeSpecifier"
-                           }, {
-                              "name" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                              "type" : "NamedTypeSpecifier"
-                           } ]
-                        }
+                     "suchThat" : {
+                        "type" : "Equivalent",
+                        "operand" : [ {
+                           "path" : "status",
+                           "scope" : "E",
+                           "type" : "Property"
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "finished",
+                           "type" : "Literal"
+                        } ]
                      }
                   } ]
-               }
-            }
-         }, {
-            "name" : "acute inpatient discharge with Advanced Illness",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "type" : "Query",
-                  "source" : [ {
-                     "alias" : "E",
-                     "expression" : {
-                        "name" : "Acute Inpatient with Advanced Illness",
-                        "type" : "ExpressionRef"
-                     }
-                  } ],
-                  "relationship" : [ ],
-                  "where" : {
-                     "type" : "Equivalent",
-                     "operand" : [ {
-                        "path" : "status",
-                        "scope" : "E",
-                        "type" : "Property"
-                     }, {
-                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                        "value" : "finished",
-                        "type" : "Literal"
-                     } ]
-                  }
                }
             }
          }, {
@@ -1429,10 +1325,10 @@ module.exports = {
                }, {
                   "type" : "Or",
                   "operand" : [ {
-                     "name" : "acute inpatient discharge with Advanced Illness",
+                     "name" : "Acute inpatient discharge with Advanced Illness",
                      "type" : "ExpressionRef"
                   }, {
-                     "name" : "Acute Inpatient with Advanced Illness bool",
+                     "name" : "Acute Inpatient with Advanced Illness",
                      "type" : "ExpressionRef"
                   } ]
                } ]
@@ -1462,6 +1358,90 @@ module.exports = {
                   "name" : "diabetes diagnosis by medication",
                   "type" : "ExpressionRef"
                } ]
+            }
+         }, {
+            "name" : "test HBa1C",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
+                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+                  "codeProperty" : "code",
+                  "codeComparator" : "in",
+                  "type" : "Retrieve",
+                  "codes" : {
+                     "name" : "HbA1c Lab Test",
+                     "type" : "ValueSetRef"
+                  }
+               }
+            }
+         }, {
+            "name" : "test asdf",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
+                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "name" : "test values",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
+                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+                  "codeProperty" : "code",
+                  "codeComparator" : "in",
+                  "type" : "Retrieve",
+                  "codes" : {
+                     "name" : "HbA1c Lab Test",
+                     "type" : "ValueSetRef"
+                  }
+               }
+            }
+         }, {
+            "name" : "test les than 7",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
+                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+                  "codeProperty" : "code",
+                  "codeComparator" : "in",
+                  "type" : "Retrieve",
+                  "codes" : {
+                     "name" : "HbA1c Level Less Than 7.0",
+                     "type" : "ValueSetRef"
+                  }
+               }
+            }
+         }, {
+            "name" : "test less < 8 ",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
+                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+                  "codeProperty" : "code",
+                  "codeComparator" : "in",
+                  "type" : "Retrieve",
+                  "codes" : {
+                     "name" : "HbA1c Level Greater Than or Equal to 7.0 and Less Than 8.0",
+                     "type" : "ValueSetRef"
+                  }
+               }
             }
          }, {
             "name" : "HbA1c < 8",

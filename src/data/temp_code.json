@@ -3726,12 +3726,12 @@
           "version": "2021"
         },
         {
-          "code": "E13.628",
+          "code": "E13.630",
           "system": "ICD10CM",
           "version": "2021"
         },
         {
-          "code": "E13.630",
+          "code": "E13.628",
           "system": "ICD10CM",
           "version": "2021"
         },

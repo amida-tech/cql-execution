@@ -7881,10 +7881,10 @@
             {
               "system": "http://loinc.org",
               "code": "17856-6",
-              "display": "Hba1c lab test"
+              "display": "Hba1c Lab Test"
             }
           ],
-          "text": "HbA1c lab test"
+          "text": "HbA1c Lab Test"
         },
         "subject": {
           "reference": "urn:uuid:440487f4-1137-f542-8127-dc98e392d21e"
@@ -7892,8 +7892,8 @@
         "encounter": {
           "reference": "urn:uuid:1b79bb05-6b91-348b-f52b-50bb53dc854a"
         },
-        "effectiveDateTime": "2020-03-14T02:18:59-04:00",
-        "issued": "2020-03-14T02:18:59.128-04:00",
+        "effectiveDateTime": "2019-03-14T02:18:59-04:00",
+        "issued": "2019-03-14T02:18:59.128-04:00",
         "valueQuantity": {
           "value": 31.164,
           "unit": "%",

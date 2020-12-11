@@ -122,7 +122,7 @@ class Observation extends DomainResource
   Describes what was observed. Sometimes this is called the observation "code".
   @returns {CodeableConcept}
   ###
-  name: -> if @json['name'] then new CodeableConcept(@json['name'])
+  code: -> if @json['code'] then new CodeableConcept(@json['code'])
   
   ###*
   The information determined as a result of making the observation, if the information has a simple value.

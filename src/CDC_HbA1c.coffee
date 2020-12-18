@@ -151,14 +151,6 @@ module.exports = {
             "id" : "2.16.840.1.113883.3.464.1003.101.12.1084",
             "accessLevel" : "Public"
          }, {
-            "name" : "HbA1c Level Less Than 7.0",
-            "id" : "2.16.840.1.113883.3.464.1003.198.11.1024",
-            "accessLevel" : "Public"
-         }, {
-            "name" : "HbA1c Level Greater Than or Equal to 7.0 and Less Than 8.0",
-            "id" : "2.16.840.1.113883.3.464.1003.198.11.1024",
-            "accessLevel" : "Public"
-         }, {
             "name" : "Hospice Encounter",
             "id" : "2.16.840.1.113762.1.4.1182.2",
             "accessLevel" : "Public"
@@ -299,7 +291,7 @@ module.exports = {
                      "type" : "Literal"
                   } ]
                }, {
-                  "type" : "Less",
+                  "type" : "LessOrEqual",
                   "operand" : [ {
                      "precision" : "Year",
                      "type" : "CalculateAgeAt",
@@ -593,336 +585,390 @@ module.exports = {
                }
             }
          }, {
+            "name" : "nonacute diabetes discharges-list",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Distinct",
+               "operand" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
+                        "codeProperty" : "type",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Nonacute Inpatient Stay",
+                           "type" : "ValueSetRef"
+                        }
+                     }
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "Dia",
+                     "type" : "With",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+                        "codeProperty" : "code",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Diabetes",
+                           "type" : "ValueSetRef"
+                        }
+                     },
+                     "suchThat" : {
+                        "type" : "Equivalent",
+                        "operand" : [ {
+                           "path" : "status",
+                           "scope" : "E",
+                           "type" : "Property"
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "finished",
+                           "type" : "Literal"
+                        } ]
+                     }
+                  } ]
+               }
+            }
+         }, {
             "name" : "nonacute diabetes discharges",
             "context" : "Patient",
             "accessLevel" : "Public",
             "expression" : {
-               "type" : "Query",
-               "source" : [ {
-                  "alias" : "E",
-                  "expression" : {
-                     "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                     "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                     "codeProperty" : "type",
-                     "codeComparator" : "in",
-                     "type" : "Retrieve",
-                     "codes" : {
-                        "name" : "Nonacute Inpatient Stay",
-                        "type" : "ValueSetRef"
-                     }
-                  }
-               } ],
-               "relationship" : [ {
-                  "alias" : "Dia",
-                  "type" : "With",
-                  "expression" : {
-                     "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                     "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                     "codeProperty" : "code",
-                     "codeComparator" : "in",
-                     "type" : "Retrieve",
-                     "codes" : {
-                        "name" : "Diabetes",
-                        "type" : "ValueSetRef"
-                     }
-                  },
-                  "suchThat" : {
-                     "type" : "Equivalent",
-                     "operand" : [ {
-                        "path" : "status",
-                        "scope" : "E",
-                        "type" : "Property"
-                     }, {
-                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                        "value" : "finished",
-                        "type" : "Literal"
-                     } ]
-                  }
-               } ]
+               "type" : "Count",
+               "source" : {
+                  "name" : "nonacute diabetes discharges-list",
+                  "type" : "ExpressionRef"
+               }
             }
          }, {
             "name" : "nonacute diabetes discharges on claim",
             "context" : "Patient",
             "accessLevel" : "Public",
             "expression" : {
-               "type" : "Query",
-               "source" : [ {
-                  "alias" : "E",
-                  "expression" : {
-                     "name" : "nonacute diabetes discharges",
-                     "type" : "ExpressionRef"
-                  }
-               } ],
-               "relationship" : [ {
-                  "alias" : "C",
-                  "type" : "With",
-                  "expression" : {
-                     "dataType" : "{http://hl7.org/fhir/us/qicore}Claim",
-                     "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim",
-                     "codeProperty" : "type",
-                     "codeComparator" : "in",
-                     "type" : "Retrieve",
-                     "codes" : {
-                        "name" : "Nonacute Inpatient Stay",
-                        "type" : "ValueSetRef"
+               "type" : "Count",
+               "source" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
+                        "name" : "nonacute diabetes discharges-list",
+                        "type" : "ExpressionRef"
                      }
-                  },
-                  "suchThat" : {
-                     "type" : "Equal",
-                     "operand" : [ {
-                        "path" : "subject",
-                        "scope" : "E",
-                        "type" : "Property"
-                     }, {
-                        "path" : "patient",
-                        "scope" : "C",
-                        "type" : "Property"
-                     } ]
-                  }
-               } ]
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "C",
+                     "type" : "With",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Claim",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim",
+                        "codeProperty" : "type",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Nonacute Inpatient Stay",
+                           "type" : "ValueSetRef"
+                        }
+                     },
+                     "suchThat" : {
+                        "type" : "Equal",
+                        "operand" : [ {
+                           "path" : "subject",
+                           "scope" : "E",
+                           "type" : "Property"
+                        }, {
+                           "path" : "patient",
+                           "scope" : "C",
+                           "type" : "Property"
+                        } ]
+                     }
+                  } ]
+               }
             }
          }, {
-            "name" : "nonacute outpatient encounters with diabetes",
+            "name" : "out",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
+                        "codeProperty" : "type",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Telehealth POS",
+                           "type" : "ValueSetRef"
+                        }
+                     }
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "c",
+                     "type" : "With",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+                        "codeProperty" : "code",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Diabetes",
+                           "type" : "ValueSetRef"
+                        }
+                     },
+                     "suchThat" : {
+                        "type" : "In",
+                        "operand" : [ {
+                           "type" : "Start",
+                           "operand" : {
+                              "path" : "period",
+                              "scope" : "E",
+                              "type" : "Property"
+                           }
+                        }, {
+                           "name" : "MeasurementPeriod",
+                           "type" : "ParameterRef"
+                        } ]
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "tele",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
+                        "codeProperty" : "type",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Telehealth Modifier",
+                           "type" : "ValueSetRef"
+                        }
+                     }
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "c",
+                     "type" : "With",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+                        "codeProperty" : "code",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Diabetes",
+                           "type" : "ValueSetRef"
+                        }
+                     },
+                     "suchThat" : {
+                        "type" : "In",
+                        "operand" : [ {
+                           "type" : "Start",
+                           "operand" : {
+                              "path" : "period",
+                              "scope" : "E",
+                              "type" : "Property"
+                           }
+                        }, {
+                           "name" : "MeasurementPeriod",
+                           "type" : "ParameterRef"
+                        } ]
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "telephone vis",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
+                        "codeProperty" : "type",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Telephone Visits",
+                           "type" : "ValueSetRef"
+                        }
+                     }
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "c",
+                     "type" : "With",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+                        "codeProperty" : "code",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Diabetes",
+                           "type" : "ValueSetRef"
+                        }
+                     },
+                     "suchThat" : {
+                        "type" : "In",
+                        "operand" : [ {
+                           "type" : "Start",
+                           "operand" : {
+                              "path" : "period",
+                              "scope" : "E",
+                              "type" : "Property"
+                           }
+                        }, {
+                           "name" : "MeasurementPeriod",
+                           "type" : "ParameterRef"
+                        } ]
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "online assess",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "E",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
+                        "codeProperty" : "type",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Online Assessments",
+                           "type" : "ValueSetRef"
+                        }
+                     }
+                  } ],
+                  "relationship" : [ {
+                     "alias" : "c",
+                     "type" : "With",
+                     "expression" : {
+                        "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
+                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
+                        "codeProperty" : "code",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Diabetes",
+                           "type" : "ValueSetRef"
+                        }
+                     },
+                     "suchThat" : {
+                        "type" : "In",
+                        "operand" : [ {
+                           "type" : "Start",
+                           "operand" : {
+                              "path" : "period",
+                              "scope" : "E",
+                              "type" : "Property"
+                           }
+                        }, {
+                           "name" : "MeasurementPeriod",
+                           "type" : "ParameterRef"
+                        } ]
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "out-tele-online",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Case",
+               "comparand" : {
+                  "type" : "Or",
+                  "operand" : [ {
+                     "type" : "Or",
+                     "operand" : [ {
+                        "type" : "Or",
+                        "operand" : [ {
+                           "name" : "out",
+                           "type" : "ExpressionRef"
+                        }, {
+                           "name" : "tele",
+                           "type" : "ExpressionRef"
+                        } ]
+                     }, {
+                        "name" : "telephone vis",
+                        "type" : "ExpressionRef"
+                     } ]
+                  }, {
+                     "name" : "online assess",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "caseItem" : [ {
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "true",
+                     "type" : "Literal"
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  }
+               } ],
+               "else" : {
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "0",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "name" : "atleast 2 remote or nonacute inpatient encounters with diabetes",
             "context" : "Patient",
             "accessLevel" : "Public",
             "expression" : {
                "type" : "GreaterOrEqual",
                "operand" : [ {
-                  "type" : "Count",
-                  "source" : {
-                     "type" : "List",
-                     "element" : [ {
-                        "type" : "Exists",
-                        "operand" : {
-                           "type" : "Query",
-                           "source" : [ {
-                              "alias" : "E",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                                 "codeProperty" : "type",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Outpatient",
-                                    "type" : "ValueSetRef"
-                                 }
-                              }
-                           } ],
-                           "relationship" : [ {
-                              "alias" : "dia",
-                              "type" : "With",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                                 "codeProperty" : "code",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Diabetes",
-                                    "type" : "ValueSetRef"
-                                 }
-                              },
-                              "suchThat" : {
-                                 "type" : "Equal",
-                                 "operand" : [ {
-                                    "path" : "status",
-                                    "scope" : "E",
-                                    "type" : "Property"
-                                 }, {
-                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                                    "value" : "finished",
-                                    "type" : "Literal"
-                                 } ]
-                              }
-                           } ]
-                        }
+                  "type" : "Add",
+                  "operand" : [ {
+                     "type" : "Add",
+                     "operand" : [ {
+                        "name" : "nonacute diabetes discharges",
+                        "type" : "ExpressionRef"
                      }, {
-                        "type" : "Exists",
-                        "operand" : {
-                           "type" : "Query",
-                           "source" : [ {
-                              "alias" : "F",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                                 "codeProperty" : "type",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Observation enc",
-                                    "type" : "ValueSetRef"
-                                 }
-                              }
-                           } ],
-                           "relationship" : [ {
-                              "alias" : "dia",
-                              "type" : "With",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                                 "codeProperty" : "code",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Diabetes",
-                                    "type" : "ValueSetRef"
-                                 }
-                              },
-                              "suchThat" : {
-                                 "type" : "Equal",
-                                 "operand" : [ {
-                                    "path" : "status",
-                                    "scope" : "F",
-                                    "type" : "Property"
-                                 }, {
-                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                                    "value" : "finished",
-                                    "type" : "Literal"
-                                 } ]
-                              }
-                           } ]
-                        }
-                     }, {
-                        "type" : "Exists",
-                        "operand" : {
-                           "type" : "Query",
-                           "source" : [ {
-                              "alias" : "G",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                                 "codeProperty" : "type",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Telephone Visits",
-                                    "type" : "ValueSetRef"
-                                 }
-                              }
-                           } ],
-                           "relationship" : [ {
-                              "alias" : "dia",
-                              "type" : "With",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                                 "codeProperty" : "code",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Diabetes",
-                                    "type" : "ValueSetRef"
-                                 }
-                              },
-                              "suchThat" : {
-                                 "type" : "Equal",
-                                 "operand" : [ {
-                                    "path" : "status",
-                                    "scope" : "G",
-                                    "type" : "Property"
-                                 }, {
-                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                                    "value" : "finished",
-                                    "type" : "Literal"
-                                 } ]
-                              }
-                           } ]
-                        }
-                     }, {
-                        "type" : "Exists",
-                        "operand" : {
-                           "type" : "Query",
-                           "source" : [ {
-                              "alias" : "H",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                                 "codeProperty" : "type",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Online Assessments",
-                                    "type" : "ValueSetRef"
-                                 }
-                              }
-                           } ],
-                           "relationship" : [ {
-                              "alias" : "dia",
-                              "type" : "With",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                                 "codeProperty" : "code",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Diabetes",
-                                    "type" : "ValueSetRef"
-                                 }
-                              },
-                              "suchThat" : {
-                                 "type" : "Equal",
-                                 "operand" : [ {
-                                    "path" : "status",
-                                    "scope" : "H",
-                                    "type" : "Property"
-                                 }, {
-                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                                    "value" : "finished",
-                                    "type" : "Literal"
-                                 } ]
-                              }
-                           } ]
-                        }
-                     }, {
-                        "type" : "Exists",
-                        "operand" : {
-                           "type" : "Query",
-                           "source" : [ {
-                              "alias" : "I",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Encounter",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter",
-                                 "codeProperty" : "type",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "ED",
-                                    "type" : "ValueSetRef"
-                                 }
-                              }
-                           } ],
-                           "relationship" : [ {
-                              "alias" : "dia",
-                              "type" : "With",
-                              "expression" : {
-                                 "dataType" : "{http://hl7.org/fhir/us/qicore}Condition",
-                                 "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition",
-                                 "codeProperty" : "code",
-                                 "codeComparator" : "in",
-                                 "type" : "Retrieve",
-                                 "codes" : {
-                                    "name" : "Diabetes",
-                                    "type" : "ValueSetRef"
-                                 }
-                              },
-                              "suchThat" : {
-                                 "type" : "Equal",
-                                 "operand" : [ {
-                                    "path" : "status",
-                                    "scope" : "I",
-                                    "type" : "Property"
-                                 }, {
-                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
-                                    "value" : "finished",
-                                    "type" : "Literal"
-                                 } ]
-                              }
-                           } ]
-                        }
+                        "name" : "nonacute diabetes discharges on claim",
+                        "type" : "ExpressionRef"
                      } ]
-                  }
+                  }, {
+                     "name" : "out-tele-online",
+                     "type" : "ExpressionRef"
+                  } ]
                }, {
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "2",
@@ -1351,7 +1397,7 @@ module.exports = {
                         "type" : "ExpressionRef"
                      } ]
                   }, {
-                     "name" : "nonacute outpatient encounters with diabetes",
+                     "name" : "atleast 2 remote or nonacute inpatient encounters with diabetes",
                      "type" : "ExpressionRef"
                   } ]
                }, {
@@ -1360,131 +1406,50 @@ module.exports = {
                } ]
             }
          }, {
-            "name" : "test HBa1C",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                  "codeProperty" : "code",
-                  "codeComparator" : "in",
-                  "type" : "Retrieve",
-                  "codes" : {
-                     "name" : "HbA1c Lab Test",
-                     "type" : "ValueSetRef"
-                  }
-               }
-            }
-         }, {
-            "name" : "test asdf",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                  "type" : "Retrieve"
-               }
-            }
-         }, {
-            "name" : "test values",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                  "codeProperty" : "code",
-                  "codeComparator" : "in",
-                  "type" : "Retrieve",
-                  "codes" : {
-                     "name" : "HbA1c Lab Test",
-                     "type" : "ValueSetRef"
-                  }
-               }
-            }
-         }, {
-            "name" : "test les than 7",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                  "codeProperty" : "code",
-                  "codeComparator" : "in",
-                  "type" : "Retrieve",
-                  "codes" : {
-                     "name" : "HbA1c Level Less Than 7.0",
-                     "type" : "ValueSetRef"
-                  }
-               }
-            }
-         }, {
-            "name" : "test less < 8 ",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "expression" : {
-               "type" : "Exists",
-               "operand" : {
-                  "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                  "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                  "codeProperty" : "code",
-                  "codeComparator" : "in",
-                  "type" : "Retrieve",
-                  "codes" : {
-                     "name" : "HbA1c Level Greater Than or Equal to 7.0 and Less Than 8.0",
-                     "type" : "ValueSetRef"
-                  }
-               }
-            }
-         }, {
             "name" : "HbA1c < 8",
             "context" : "Patient",
             "accessLevel" : "Public",
             "expression" : {
                "type" : "Exists",
                "operand" : {
-                  "type" : "Intersect",
-                  "operand" : [ {
-                     "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                     "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                     "codeProperty" : "code",
-                     "codeComparator" : "in",
-                     "type" : "Retrieve",
-                     "codes" : {
-                        "name" : "HbA1c Lab Test",
-                        "type" : "ValueSetRef"
+                  "type" : "ToList",
+                  "operand" : {
+                     "type" : "Last",
+                     "source" : {
+                        "type" : "Query",
+                        "source" : [ {
+                           "alias" : "O",
+                           "expression" : {
+                              "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
+                              "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
+                              "codeProperty" : "code",
+                              "codeComparator" : "in",
+                              "type" : "Retrieve",
+                              "codes" : {
+                                 "name" : "HbA1c Lab Test",
+                                 "type" : "ValueSetRef"
+                              }
+                           }
+                        } ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "type" : "Less",
+                           "operand" : [ {
+                              "asType" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "As",
+                              "operand" : {
+                                 "path" : "value",
+                                 "scope" : "O",
+                                 "type" : "Property"
+                              }
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "value" : "8",
+                              "type" : "Literal"
+                           } ]
+                        }
                      }
-                  }, {
-                     "type" : "Union",
-                     "operand" : [ {
-                        "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                        "codeProperty" : "code",
-                        "codeComparator" : "in",
-                        "type" : "Retrieve",
-                        "codes" : {
-                           "name" : "HbA1c Level Less Than 7.0",
-                           "type" : "ValueSetRef"
-                        }
-                     }, {
-                        "dataType" : "{http://hl7.org/fhir/us/qicore}Observation",
-                        "templateId" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation",
-                        "codeProperty" : "code",
-                        "codeComparator" : "in",
-                        "type" : "Retrieve",
-                        "codes" : {
-                           "name" : "HbA1c Level Greater Than or Equal to 7.0 and Less Than 8.0",
-                           "type" : "ValueSetRef"
-                        }
-                     } ]
-                  } ]
+                  }
                }
             }
          }, {
@@ -1498,15 +1463,24 @@ module.exports = {
                   "operand" : [ {
                      "type" : "And",
                      "operand" : [ {
-                        "name" : "HbA1c < 8",
-                        "type" : "ExpressionRef"
+                        "type" : "And",
+                        "operand" : [ {
+                           "name" : "HbA1c < 8",
+                           "type" : "ExpressionRef"
+                        }, {
+                           "name" : "DiabetesCondition",
+                           "type" : "ExpressionRef"
+                        } ]
                      }, {
-                        "name" : "DiabetesCondition",
+                        "name" : "InitialPopulation",
                         "type" : "ExpressionRef"
                      } ]
                   }, {
-                     "name" : "InitialPopulation",
-                     "type" : "ExpressionRef"
+                     "type" : "Not",
+                     "operand" : {
+                        "name" : "diabetes exclusions",
+                        "type" : "ExpressionRef"
+                     }
                   } ]
                },
                "caseItem" : [ {

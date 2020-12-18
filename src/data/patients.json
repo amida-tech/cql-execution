@@ -2761,11 +2761,11 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "410620009",
-                "display": "Well child visit (procedure)"
+                "code": "112690009",
+                "display": "Nonacute Inpatient Visit"
               }
             ],
-            "text": "Well child visit (procedure)"
+            "text": "Nonacute Inpatient"
           }
         ],
         "subject": {

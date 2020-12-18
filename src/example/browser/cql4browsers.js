@@ -4259,7 +4259,6 @@
 
     ValueSetDef.prototype.exec = function(ctx) {
       var ref, valueset;
-      console.log(ctx)
       valueset = (ref = ctx.codeService.findValueSet(this.id, this.version)) != null ? ref : new dt.ValueSet(this.id, this.version);
       ctx.rootContext().set(this.name, valueset);
       return valueset;
@@ -5391,7 +5390,9 @@
       return records;
     };
 
-    Retrieve.prototype.recordMatchesCodesOrVS = function(record, codes) {
+    Retrieve.prototype.recordMatchesCodesOrVS = function(record, valueset) {
+      var codes;
+      codes = valueset.codes;
       if (typeIsArray(codes)) {
         return codes.some((function(_this) {
           return function(c) {
@@ -32294,9 +32295,9 @@
     @returns {CodeableConcept}
      */
 
-    Observation.prototype.name = function() {
-      if (this.json['name']) {
-        return new CodeableConcept(this.json['name']);
+    Observation.prototype.code = function() {
+      if (this.json['code']) {
+        return new CodeableConcept(this.json['code']);
       }
     };
 

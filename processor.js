@@ -9,6 +9,7 @@ const { executeA1c } = require('./exec-files/exec-cdc_hba1c-lessThanEight');
 const { executeImmunization } = require('./exec-files/exec-childhood-immunization-status');
 const { executeDepression } = require('./exec-files/exec-depression-screening');
 const { executeAsthma } = require('./exec-files/exec-medication-management-for-people-with-asthma');
+const { executeReadmission } = require('./exec-files/exec-readmission');
 const connectionUrl = `http://${config.host}:${config.port}/cql_service_connector`;
 
 const a1cPath = path.normalize('data/patients/a1c');
@@ -16,6 +17,7 @@ const asthmaPath = path.normalize('data/patients/asthma');
 const depressionPath = path.normalize('data/patients/depression');
 const diabetesPath = path.normalize('data/patients/diabetes');
 const immunizationPath = path.normalize('data/patients/immunization');
+const readmissionPath = path.normalize('data/patients/readmission');
 
 const watcher = dir =>
   watch(dir, (options = { recursive: true, filter: /\.json$/ }), function (event, filename) {
@@ -39,6 +41,8 @@ const watcher = dir =>
               data = executeDiabetes(patients);
             } else if (filename.startsWith(immunizationPath)) {
               data = executeImmunization(patients);
+            } else if (filename.startsWith(readmissionPath)) {
+              data = executeReadmission(patients);
             }
             if (data) {
               axios.post(connectionUrl, data).then(
@@ -54,7 +58,7 @@ const watcher = dir =>
           }
         });
       }
-  });
+    });
   });
 
 watcher(config.directory);
